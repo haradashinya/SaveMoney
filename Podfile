@@ -1,0 +1,5 @@
+platform :ios,"6.0"
+pod "JSONKit", "~> 1.4"
+pod "AFNetworking", "~> 1.0"
+pod "BlocksKit","~> 1.5.0"
+pod "AdMob","~> 6.0.0"

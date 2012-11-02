@@ -1,0 +1,11 @@
+# A sample Gemfile
+source "https://rubygems.org"
+
+# gem "rails"
+#
+gem "sinatra"
+gem "mongoid"
+gem "mongo"
+gem "rspec"
+gem "rack-test"
+gem 'bson_ext'
