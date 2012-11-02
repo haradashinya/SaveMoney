@@ -1,4 +1,5 @@
 require File.dirname(__FILE__) + "/spec_helper"
+UUID = 33.to_s
 
 
 
@@ -13,7 +14,7 @@ describe "App" do
 	end
 
 	def current_user
-		return User.find_by(:uuid => "33")
+		return User.find_by(:uuid => UUID)
 	end
 
 	describe "success response" do
@@ -31,7 +32,7 @@ describe "App" do
 	describe "create users" do
 		describe "create via uuid" do
 			before "post /users" do
-				post "/users/",{:uuid  => "33"}
+				post "/users/",{:uuid  => UUID}
 			end
 			it "should exist user in Mongoid" do
 				current_user.uuid.should match(/33/)

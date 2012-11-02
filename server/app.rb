@@ -31,4 +31,6 @@ post "/users/:uuid/drinks/" do
 	type = params[:type].downcase.split(" ").join("_")
 	user = User.find_or_create_by(:uuid => params[:uuid])
 	user.drinks.create({:type => type,:price => price})
+
+	puts user.total_price
 end
