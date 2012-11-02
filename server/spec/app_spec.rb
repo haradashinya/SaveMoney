@@ -1,10 +1,19 @@
 require File.dirname(__FILE__) + "/spec_helper"
 
+
+
+
+
+
 describe "App" do
 	include Rack::Test::Methods
 
 	def app
 		@app ||= Sinatra::Application
+	end
+
+	def current_user
+		return User.find_by(:uuid => "33")
 	end
 
 	describe "success response" do
@@ -25,25 +34,23 @@ describe "App" do
 				post "/users/",{:uuid  => "33"}
 			end
 			it "should exist user in Mongoid" do
-				user = User.find_by(:uuid => "33")
-				user.uuid.should match(/33/)
+				current_user.uuid.should match(/33/)
 			end
 		end
 	end
 
 
-# post "/users/:uuid/" do
-# 	user = User.find_or_create_by(:uuid => params[:uuid])
-# 	puts user
-# 	puts params[:price]
-# end
 	describe "create drinks" do
 		before "get current user" do
-			post "/users/",{:uuid => "33"}
+			post "/users/#{current_user.uuid}/drinks/" ,{:type => "drip_coffee",:price => 3.0}
 		end
 
 		it "should create drinks" do
-			user = User.find_by(:uuid => "33")
+			current_user.drinks.first.type.should == "drip_coffee"
+		end
+		after(:all) do
+			current_user.drinks.delete_all
+			current_user.drinks.count.should == 0
 		end
 	end
 
