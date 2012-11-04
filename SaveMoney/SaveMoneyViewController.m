@@ -48,16 +48,19 @@
 -(void)addCurrentPriceLabel
 {
     self.currentCoffee = [drink.types objectAtIndex:0];
-    currentPriceLabel = [[UILabel alloc] initWithFrame:CGRectMake(180, 220, 100, 50)];
+    currentPriceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,300,320, 50)];
     [currentPriceLabel setTextAlignment:NSTextAlignmentCenter];
-    currentPriceLabel.text = [NSString stringWithFormat:@"%.1f $",[drink priceForCoffee:[self.currentCoffee valueForKey:@"name"]]];
+    currentPriceLabel.text = [NSString stringWithFormat:@"Price: %.1f $",[drink priceForCoffee:[self.currentCoffee valueForKey:@"name"]]];
+    currentPriceLabel.font = [UIFont boldSystemFontOfSize:20];
+    
     [self.view addSubview:currentPriceLabel];
+    
     
 }
 -(void)addCoffeePickerView
 {
     
-    coffeePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,100,320,162)];
+    coffeePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,100,320,200)];
     coffeePickerView.delegate = nil;
 
     coffeePickerView.delegate = self;
@@ -163,6 +166,25 @@
 {
     [self removeObserver:self forKeyPath:@"currentCoffee"];
     [super didReceiveMemoryWarning];
+}
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,145,50)];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    label.opaque=NO;
+    label.backgroundColor=[UIColor clearColor];
+    if (row % 2 == 0){
+        label.textColor = [UIColor blueColor];
+    }else{
+        label.textColor = [UIColor redColor];
+    }
+    UIFont *font = [UIFont boldSystemFontOfSize:20];
+    label.font = font;
+    
+    NSString *str = [[drink.types objectAtIndex:row] valueForKey:@"name"];
+    [label setText:str];
+    return label;
+
 }
 
 @end
