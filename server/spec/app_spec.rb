@@ -63,6 +63,25 @@ describe "App" do
 
 		it "should ranking is working" do
 
+			User.all.to_a.reverse!.sort_by!{|user| user.total_price }.each_with_index do |user,index| 
+				if user.uuid = "33"
+					puts "total price is #{user.total_price}"
+					puts  "Your rank is #{index + 1}"
+				end
+			end
+
+			u1 = User.find_by({:uuid => "33"})
+			u2 = User.find_by({:uuid => "10"})
+			u3 = User.find_by({:uuid => "11"})
+
+			u1.total_price.should == 3.0
+			u1.current_rank.should == 3
+
+			u2.total_price.should == 3.5
+			u2.current_rank.should == 2
+
+			u3.total_price.should == 7.5
+			u3.current_rank.should == 1
 		end
 
 	end
