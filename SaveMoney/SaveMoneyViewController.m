@@ -141,7 +141,8 @@
 -(void)pressedSaveBtn:(id)sender
 {
     [drink performCreateWith:[self.currentCoffee valueForKey:@"name"]];
-//    drink.totalPrice += [[self.currentCoffee valueForKey:@"price"] floatValue];
+    moneyLabel.text = @"updating.";
+    //    drink.totalPrice += [[self.currentCoffee valueForKey:@"price"] floatValue];
 }
 - (void)didReceiveMemoryWarning
 {

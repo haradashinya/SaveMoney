@@ -2,7 +2,7 @@ class User
 	include Mongoid::Document
 
 	field :uuid
-	has_many :drinks
+	has_many :drinks, dependent: :destroy
 
 
 	def total_price

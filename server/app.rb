@@ -1,4 +1,5 @@
 require "rubygems"
+require "pry"
 require "mongoid"
 require "sinatra"
 require "json"
@@ -31,12 +32,9 @@ get "/users/:uuid/drinks/total_price/" do
 	return {:total => user.total_price}.to_json
 end
 
-
-
 post "/users/:uuid/drinks/" do
 	price = params[:price].to_f
 	type = params[:type].downcase.split(" ").join("_")
 	user = User.find_or_create_by(:uuid => params[:uuid])
 	user.drinks.create({:type => type,:price => price})
-	puts user.total_price
 end
