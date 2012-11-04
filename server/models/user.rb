@@ -27,6 +27,12 @@ class User
 	end
 
 
+	def self.current_rank(uuid)
+		selected_user = User.find_by({:uuid => uuid})
+		selected_user.current_rank
+	end
+
+
 
 
 end
