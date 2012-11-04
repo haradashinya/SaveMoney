@@ -7,6 +7,8 @@
 //
 
 #import "HomeViewController.h"
+#import "User.h"
+#import "Drink.h"
 
 
 @interface HomeViewController ()
@@ -15,6 +17,7 @@
 @implementation HomeViewController
 {
     User *user;
+    Drink *drink;
 
 }
 
@@ -34,7 +37,9 @@
     [[Admob alloc] addAdmobOn:self];
     
     user = [User shared];
+    drink = [Drink shared];
     [user create];
+    [drink performTotalPrice];
     
 	// Do any additional setup after loading the view.
 }

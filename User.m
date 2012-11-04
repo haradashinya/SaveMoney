@@ -71,11 +71,6 @@
 }
 
 
--(void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
-{
-    NSLog(@"change is %@",challenge);
-}
-
 
 -(void)get
 {

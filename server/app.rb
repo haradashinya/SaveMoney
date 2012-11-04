@@ -21,9 +21,16 @@ end
 
 post "/users/" do
 	user = User.find_or_create_by(:uuid => params[:uuid])
-	puts user
 	return user
 end
+
+
+get "/users/:uuid/drinks/total_price/" do
+	content_type :json
+	user = User.find_by(:uuid => params[:uuid])
+	return {:total => user.total_price}.to_json
+end
+
 
 
 post "/users/:uuid/drinks/" do
@@ -31,6 +38,5 @@ post "/users/:uuid/drinks/" do
 	type = params[:type].downcase.split(" ").join("_")
 	user = User.find_or_create_by(:uuid => params[:uuid])
 	user.drinks.create({:type => type,:price => price})
-
 	puts user.total_price
 end

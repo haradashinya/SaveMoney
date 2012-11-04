@@ -13,8 +13,13 @@
 @interface Drink : NSObject <NSURLConnectionDataDelegate,NSURLConnectionDelegate>
 
 @property (nonatomic,strong) NSMutableArray *types;
+@property  float totalPrice;
+@property id delegate;
 +(id)shared;
 -(float)priceForCoffee:(NSString *)name;
 -(void)performCreateWith:(NSString *)name;
 -(void)create;
+-(void)performTotalPrice;
+
+-(void)updateCurrentPriceLabel;
 @end
