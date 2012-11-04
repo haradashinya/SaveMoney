@@ -15,6 +15,7 @@
 @implementation RankViewController
 {
     UILabel *rankRabel;
+    User *user;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -22,9 +23,17 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self.view setBackgroundColor:[UIColor whiteColor]];
+        user = [User shared];
+        user.delegate = self;
         // Custom initialization
     }
     return self;
+}
+// get /rank/ accesss when view appear.
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"appear!");
+    [user getRank];
 }
 
 - (void)viewDidLoad
@@ -46,6 +55,12 @@
     [rankRabel setTextAlignment:NSTextAlignmentCenter];
     [self.view addSubview:rankRabel];
     
+}
+// handle received self.received
+-(void)receivedRank
+{
+    NSLog(@"successs!");
+    NSLog(@"%i",user.rank);
 }
 
 @end

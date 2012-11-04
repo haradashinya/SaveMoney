@@ -32,6 +32,13 @@ get "/users/:uuid/drinks/total_price/" do
 	return {:total => user.total_price}.to_json
 end
 
+get "/users/:uuid/rank/" do
+	content_type :json
+	uuid = params[:uuid]
+	return {:rank => User.current_rank(uuid)}.to_json
+end
+
+
 post "/users/:uuid/drinks/" do
 	price = params[:price].to_f
 	type = params[:type].downcase.split(" ").join("_")

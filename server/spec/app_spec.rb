@@ -93,12 +93,12 @@ describe "App" do
 	end
 
 
-		after(:all) do
-				users = User.all
-				User.delete_all
-				Drink.delete_all
-				User.count.should == 0
-		end
+		# after(:all) do
+		# 		users = User.all
+		# 		User.delete_all
+		# 		Drink.delete_all
+		# 		User.count.should == 0
+		# end
 end
 
 

@@ -86,11 +86,23 @@
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"%@",[error localizedDescription]);
     }];
-    
-    
-    
     [operation start];
     
 }
 
+-(void)getRank
+{
+    NSString *urlStr = [NSString stringWithFormat:@"%@/users/%@/rank/",BASE_URL,[self uuid]];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        self.rank = [[JSON valueForKey:@"rank"] intValue];
+        [self.delegate receivedRank];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"%@",[error localizedDescription]);
+    }];
+    [operation start];
+    
+}
 @end

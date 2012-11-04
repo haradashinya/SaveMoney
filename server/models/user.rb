@@ -27,6 +27,7 @@ class User
 	end
 
 
+	# override instance method for class method
 	def self.current_rank(uuid)
 		selected_user = User.find_by({:uuid => uuid})
 		selected_user.current_rank
