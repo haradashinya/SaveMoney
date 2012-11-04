@@ -50,7 +50,7 @@
     self.currentCoffee = [drink.types objectAtIndex:0];
     currentPriceLabel = [[UILabel alloc] initWithFrame:CGRectMake(180, 220, 100, 50)];
     [currentPriceLabel setTextAlignment:NSTextAlignmentCenter];
-    currentPriceLabel.text = [NSString stringWithFormat:@"%.2f $",[drink priceForCoffee:[self.currentCoffee valueForKey:@"name"]]];
+    currentPriceLabel.text = [NSString stringWithFormat:@"%.1f $",[drink priceForCoffee:[self.currentCoffee valueForKey:@"name"]]];
     [self.view addSubview:currentPriceLabel];
     
 }
@@ -69,7 +69,6 @@
 {
     moneyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
-    moneyLabel.text = [NSString stringWithFormat:@"You've saved %@ $",@"..."];
     [self.view addSubview:moneyLabel];
     
 
@@ -120,7 +119,6 @@
     if ([keyPath isEqualToString:@"currentCoffee"]){
         [self updateCurrentLabel];
     }else if ([keyPath isEqualToString:@"totalPrice"]){
-        NSLog(@"hello");
         [self updateCurrentPriceLabel];
     }
 }
@@ -128,7 +126,6 @@
 -(void)updateCurrentLabel
 {
     float price = [[self.currentCoffee valueForKey:@"price"] floatValue];
-    NSLog(@"self.currentName is %@",self.currentCoffee);
     currentPriceLabel.text = [NSString stringWithFormat:@"%.1f $",price];
 }
 
@@ -144,7 +141,7 @@
 -(void)pressedSaveBtn:(id)sender
 {
     [drink performCreateWith:[self.currentCoffee valueForKey:@"name"]];
-    drink.totalPrice += [[self.currentCoffee valueForKey:@"price"] floatValue];
+//    drink.totalPrice += [[self.currentCoffee valueForKey:@"price"] floatValue];
 }
 - (void)didReceiveMemoryWarning
 {

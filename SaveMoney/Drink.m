@@ -92,6 +92,8 @@
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     NSLog(@"response is %@",[response  description]);
+    // update total price
+    [self performTotalPrice];
     
 }
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
