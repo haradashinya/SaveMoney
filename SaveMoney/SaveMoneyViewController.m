@@ -121,6 +121,7 @@
         [self updateCurrentLabel];
     }else if ([keyPath isEqualToString:@"totalPrice"]){
         NSLog(@"hello");
+        [self updateCurrentPriceLabel];
     }
 }
 
@@ -143,7 +144,7 @@
 -(void)pressedSaveBtn:(id)sender
 {
     [drink performCreateWith:[self.currentCoffee valueForKey:@"name"]];
-    NSLog(@"self.currentCoffee is %@",self.currentCoffee);
+    drink.totalPrice += [[self.currentCoffee valueForKey:@"price"] floatValue];
 }
 - (void)didReceiveMemoryWarning
 {
