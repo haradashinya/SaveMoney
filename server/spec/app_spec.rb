@@ -30,11 +30,12 @@ describe "App" do
 	end
 
 
-	describe "create drinks" do
-		before "get current user" do
+
+	describe "Ranking" do
+
+		before(:all) do
 
 			post "/users/#{current_user.uuid}/drinks/" ,{:type => "drip_coffee",:price => 3.0}
-
 			#create user10
 			post "/users/",{:uuid => 10}
 			post "/users/10/drinks/" ,{:type => "cafe_late",:price => 3.5}
@@ -43,24 +44,34 @@ describe "App" do
 			post "/users/",{:uuid => 11}
 			post "/users/11/drinks/",{:type => "cafe_late",:price => 4}
 			post "/users/11/drinks/",{:type => "cafe_late",:price => 3.5}
-
 		end
+
 
 		it "should create drinks" do
 			current_user.drinks.first.type.should == "drip_coffee"
 		end
-
+		it "should calc by total_price" do
+			user = User.find_by({:uuid => '11'})
+			user.total_price.should == 7.5 
+		end
 
 		it "should create another user" do
-
 			another_user = User.find_by({:uuid => "10"})
 			another_user.uuid.should == "10"
-
 		end
 
 
+		it "should ranking is working" do
+
+		end
 
 	end
+
+
+
+
+
+
 
 
 	describe "ranking" do
