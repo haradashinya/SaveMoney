@@ -24,7 +24,7 @@
     if (self) {
         [self.view setBackgroundColor:[UIColor whiteColor]];
         user = [User shared];
-        user.delegate = self;
+        [user setDelegate:self];
         // Custom initialization
     }
     return self;
@@ -34,6 +34,13 @@
 {
     NSLog(@"appear!");
     [user getRank];
+}
+
+// handle received self.received
+-(void)receivedRank
+{
+    NSLog(@"successs!");
+    NSLog(@"%i",user.rank);
 }
 
 - (void)viewDidLoad
@@ -55,12 +62,6 @@
     [rankRabel setTextAlignment:NSTextAlignmentCenter];
     [self.view addSubview:rankRabel];
     
-}
-// handle received self.received
--(void)receivedRank
-{
-    NSLog(@"successs!");
-    NSLog(@"%i",user.rank);
 }
 
 @end

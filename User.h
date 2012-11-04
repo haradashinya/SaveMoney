@@ -12,9 +12,14 @@
 #import <AFNetworking.h>
 
 
+@protocol RankDelegate <NSObject>
+@required
+- (void)receivedRank;
+@end
+
 @interface User : NSObject <NSURLConnectionDelegate,NSURLConnectionDataDelegate>
 @property int rank;
-@property (nonatomic,strong) id delegate;
+@property (nonatomic,strong) id <RankDelegate> delegate;
 +(id)shared;
 -(NSString *)uuid;
 -(void)create;

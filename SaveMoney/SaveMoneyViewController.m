@@ -57,12 +57,28 @@
 -(void)addCoffeePickerView
 {
     
-    coffeePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,100, 320, 10)];
+    coffeePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,100,320,162)];
+    coffeePickerView.delegate = nil;
+
     coffeePickerView.delegate = self;
+    
     coffeePickerView.dataSource = self;
+    
+    CGRect frame = coffeePickerView.frame;
+    coffeePickerView.frame= frame;
+    
     coffeePickerView.showsSelectionIndicator = YES;
     [coffeePickerView selectedRowInComponent:0];
+    coffeePickerView.backgroundColor = [UIColor whiteColor];
+    coffeePickerView.layer.zPosition = -400;
+    [coffeePickerView setNeedsDisplay];
+    [coffeePickerView reloadAllComponents];
+
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(200,85,120,192)];
+//    imageView.image = [UIImage imageNamed:@"_cafelate.png"];
+    
     [self.view addSubview:coffeePickerView];
+//    [self.view addSubview:imageView];
     
 }
 -(void)addCofeeImg
@@ -76,7 +92,7 @@
 -(void)addSaveButton
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn.frame = CGRectMake(0,370,320,50);
+    btn.frame = CGRectMake(0,360,320,50);
     [btn setTitle:@"Save!" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(pressedSaveBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -100,11 +116,11 @@
 
 -(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
-    return 30.0f;
+    return 50.0f;
 }
 -(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {
-    return 300.0f;
+    return 320.0f;
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
@@ -128,7 +144,6 @@
     float price = [[self.currentCoffee valueForKey:@"price"] floatValue];
     currentPriceLabel.text = [NSString stringWithFormat:@"%.1f $",price];
 }
-
 
 
 

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface RankViewController : UIViewController
+@interface RankViewController : UIViewController<RankDelegate>
 
 @end
