@@ -43,6 +43,9 @@
     [self addObserver:self forKeyPath:@"currentCoffee" options:NSKeyValueObservingOptionNew context:nil];
     [drink addObserver:self forKeyPath:@"totalPrice" options:NSKeyValueObservingOptionNew context:nil];
 	// Do any additional setup after loading the view.
+    
+    [[Helper alloc] putBackgroundOn:self.view];
+    
 }
 
 -(void)addCurrentPriceLabel

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0611B713163A953800F916D8 /* SaveMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0611B712163A953800F916D8 /* SaveMoneyViewController.m */; };
+		065D649D1647BEA9006468CE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 065D649B1647BEA9006468CE /* background.png */; };
+		065D649E1647BEA9006468CE /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065D649C1647BEA9006468CE /* background@2x.png */; };
+		065D64A11647BED6006468CE /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D64A01647BED6006468CE /* Helper.m */; };
 		066FF0441643C77E004A9968 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 066FF0431643C77E004A9968 /* Drink.m */; };
 		068A27AB163B20AB00F209CA /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 068A27AA163B20AB00F209CA /* libGoogleAdMobAds.a */; };
 		068A27AE163B20BF00F209CA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068A27AD163B20BF00F209CA /* MessageUI.framework */; };
@@ -53,6 +56,10 @@
 /* Begin PBXFileReference section */
 		0611B711163A953800F916D8 /* SaveMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveMoneyViewController.h; sourceTree = "<group>"; };
 		0611B712163A953800F916D8 /* SaveMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveMoneyViewController.m; sourceTree = "<group>"; };
+		065D649B1647BEA9006468CE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		065D649C1647BEA9006468CE /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		065D649F1647BED6006468CE /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		065D64A01647BED6006468CE /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		066FF0421643C77E004A9968 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
 		066FF0431643C77E004A9968 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
 		068A27A1163B20AB00F209CA /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
@@ -191,6 +198,8 @@
 		06C5D523163BC47700E3776A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				065D649B1647BEA9006468CE /* background.png */,
+				065D649C1647BEA9006468CE /* background@2x.png */,
 				06C5D524163BC48300E3776A /* _cafelate@2x.png */,
 				06C5D525163BC48300E3776A /* _cafelate.png */,
 			);
@@ -200,6 +209,8 @@
 		06F65D1C16398438007749EB = {
 			isa = PBXGroup;
 			children = (
+				065D649F1647BED6006468CE /* Helper.h */,
+				065D64A01647BED6006468CE /* Helper.m */,
 				06C5D521163BC20A00E3776A /* ad */,
 				068A2849163B2A7800F209CA /* Admob.h */,
 				068A284A163B2A7800F209CA /* Admob.m */,
@@ -365,6 +376,8 @@
 				06F65D4516398439007749EB /* MainStoryboard.storyboard in Resources */,
 				06C5D526163BC48300E3776A /* _cafelate@2x.png in Resources */,
 				06C5D527163BC48300E3776A /* _cafelate.png in Resources */,
+				065D649D1647BEA9006468CE /* background.png in Resources */,
+				065D649E1647BEA9006468CE /* background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +435,7 @@
 				068A284B163B2A7800F209CA /* Admob.m in Sources */,
 				06BF3539163D4FBA00F34C75 /* User.m in Sources */,
 				066FF0441643C77E004A9968 /* Drink.m in Sources */,
+				065D64A11647BED6006468CE /* Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

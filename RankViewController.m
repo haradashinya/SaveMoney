@@ -45,6 +45,8 @@
 
 - (void)viewDidLoad
 {
+    
+    [[Helper alloc] putBackgroundOn:self.view];
     [super viewDidLoad];
     [self renderRankLabel];
 	// Do any additional setup after loading the view.
@@ -58,9 +60,12 @@
 -(void)renderRankLabel
 {
     rankRabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 320, 480)];
+    rankRabel.backgroundColor = [UIColor clearColor];
     rankRabel.text = @"Your rank";
     [rankRabel setTextAlignment:NSTextAlignmentCenter];
+    
     [self.view addSubview:rankRabel];
+    
     
 }
 

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "Helper.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface RankViewController : UIViewController<RankDelegate>
 

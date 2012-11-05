@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Admob.h"
 #import "User.h"
+#import "Helper.h"
 
 
 @interface HomeViewController : UIViewController

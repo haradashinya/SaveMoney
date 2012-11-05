@@ -33,7 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    [[Helper alloc] putBackgroundOn:self.view];
+
     [[Admob alloc] addAdmobOn:self];
     
     user = [User shared];
