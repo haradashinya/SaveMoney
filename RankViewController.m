@@ -62,6 +62,7 @@
     rankRabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 320, 480)];
     rankRabel.backgroundColor = [UIColor clearColor];
     rankRabel.text = @"Your rank";
+
     [rankRabel setTextAlignment:NSTextAlignmentCenter];
     
     [self.view addSubview:rankRabel];

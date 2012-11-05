@@ -55,6 +55,7 @@
     [currentPriceLabel setTextAlignment:NSTextAlignmentCenter];
     currentPriceLabel.text = [NSString stringWithFormat:@"Price: %.1f $",[drink priceForCoffee:[self.currentCoffee valueForKey:@"name"]]];
     currentPriceLabel.font = [UIFont boldSystemFontOfSize:20];
+    currentPriceLabel.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:currentPriceLabel];
     
@@ -75,16 +76,12 @@
     
     coffeePickerView.showsSelectionIndicator = YES;
     [coffeePickerView selectedRowInComponent:0];
-    coffeePickerView.backgroundColor = [UIColor whiteColor];
-    coffeePickerView.layer.zPosition = -400;
+    coffeePickerView.backgroundColor = [UIColor clearColor];
     [coffeePickerView setNeedsDisplay];
     [coffeePickerView reloadAllComponents];
 
-//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(200,85,120,192)];
-//    imageView.image = [UIImage imageNamed:@"_cafelate.png"];
     
     [self.view addSubview:coffeePickerView];
-//    [self.view addSubview:imageView];
     
 }
 -(void)addCofeeImg
@@ -157,6 +154,7 @@
 -(void)updateCurrentPriceLabel
 {
     moneyLabel.text = [NSString stringWithFormat:@"You've saved %.1f $",drink.totalPrice];
+    moneyLabel.backgroundColor = [UIColor clearColor];
 }
 
 -(void)pressedSaveBtn:(id)sender
