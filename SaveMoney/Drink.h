@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import "Helper.h"
 #define BASE_URL @"http://localhost:9393"
 
 @interface Drink : NSObject <NSURLConnectionDataDelegate,NSURLConnectionDelegate>

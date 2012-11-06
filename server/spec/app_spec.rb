@@ -1,11 +1,6 @@
 require File.dirname(__FILE__) + "/spec_helper"
 UUID = 33.to_s
 
-
-
-
-
-
 describe "App" do
 	include Rack::Test::Methods
 
@@ -33,13 +28,13 @@ describe "App" do
 
 	describe "Ranking" do
 
-		before(:all) do
 
+		before(:all) do
+			binding.pry
 			post "/users/#{current_user.uuid}/drinks/" ,{:type => "drip_coffee",:price => 3.0}
 			#create user10
 			post "/users/",{:uuid => 10}
 			post "/users/10/drinks/" ,{:type => "cafe_late",:price => 3.5}
-
 			# create user11
 			post "/users/",{:uuid => 11}
 			post "/users/11/drinks/",{:type => "cafe_late",:price => 4}
@@ -52,6 +47,8 @@ describe "App" do
 		end
 		it "should calc by total_price" do
 			user = User.find_by({:uuid => '11'})
+			user.drinks.map{|drink| p drink}
+			p user.total_price
 			user.total_price.should == 7.5 
 		end
 
@@ -68,38 +65,15 @@ describe "App" do
 		end
 
 	end
-
-
-
-
-
-
-
-
-	describe "ranking" do
-
-
-		it "should ranking work correctly working" do
-			users = User.all
-			res = []
-			# users.sort_by!{|user| user.total_price.to_f}
-			users.map{|user| res.push user.drinks.map{|drink| drink.price}}
-			p res
-		end
-
-
-
-
-	end
-
-
-		# after(:all) do
-		# 		users = User.all
-		# 		User.delete_all
-		# 		Drink.delete_all
-		# 		User.count.should == 0
-		# end
 end
+
+
+
+
+
+
+
+
 
 
 

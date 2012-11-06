@@ -20,4 +20,15 @@
 
 }
 
+
+-(void)showNetWorkErrorAlertView
+{
+    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"It happened network error." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    CGAffineTransform myTransform = CGAffineTransformMakeTranslation(0.0, 70.0);
+    [myAlertView setTransform:myTransform];
+    [myAlertView show];
+
+    
+}
+
 @end

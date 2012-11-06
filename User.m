@@ -51,7 +51,6 @@
     
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
 
-    NSLog(@"%@",[[request URL] description]);
     [NSURLConnection connectionWithRequest:request delegate:self];
     
 }
@@ -98,6 +97,7 @@
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.rank = [[JSON valueForKey:@"rank"] intValue];
+        self.total = [[JSON valueForKey:@"total"] intValue];
         [self.delegate receivedRank];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"%@",[error localizedDescription]);

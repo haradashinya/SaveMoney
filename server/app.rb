@@ -35,7 +35,7 @@ end
 get "/users/:uuid/rank/" do
 	content_type :json
 	uuid = params[:uuid]
-	return {:rank => User.current_rank(uuid)}.to_json
+	return {:rank => User.current_rank(uuid),:total => User.all.count}.to_json
 end
 
 
@@ -45,3 +45,8 @@ post "/users/:uuid/drinks/" do
 	user = User.find_or_create_by(:uuid => params[:uuid])
 	user.drinks.create({:type => type,:price => price})
 end
+
+
+
+
+

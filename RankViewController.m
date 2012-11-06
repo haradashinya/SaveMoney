@@ -22,7 +22,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self.view setBackgroundColor:[UIColor whiteColor]];
         user = [User shared];
         [user setDelegate:self];
         // Custom initialization
@@ -41,6 +40,12 @@
 {
     NSLog(@"successs!");
     NSLog(@"%i",user.rank);
+    [self updateRankLabel];
+    
+}
+-(void)updateRankLabel
+{
+    rankRabel.text = [NSString stringWithFormat:@"You're %i of the", user.rank];
 }
 
 - (void)viewDidLoad

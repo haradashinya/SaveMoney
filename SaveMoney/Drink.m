@@ -19,7 +19,9 @@
         NSMutableDictionary *drip = [@{@"name" : @"Drip Coffee",@"price" : @3.0} mutableCopy];
         NSMutableDictionary *green = [@{@"name" : @"Green Tea",@"price" : @4.0} mutableCopy];
         NSMutableDictionary *cafe = [@{@"name" : @"Cafe late",@"price" : @3.5} mutableCopy];
-        drink.types = [@[drip,green,cafe] mutableCopy];
+        NSMutableDictionary *cocoa = [@{@"name" : @"Cocoa", @"price" : @3.0} mutableCopy];
+        NSMutableDictionary *tea = [@{@"name" : @"Tea", @"price" : @3.0} mutableCopy];
+        drink.types = [@[drip,green,cafe,cocoa,tea] mutableCopy];
     }
     return drink;
 }
@@ -65,8 +67,6 @@
 -(void)performTotalPrice
 {
     NSString *uuid = [[User alloc] uuid];
-    
-    
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/users/%@/drinks/total_price/",BASE_URL,uuid]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -77,9 +77,9 @@
         NSLog(@"self.totalPrice is %f",self.totalPrice);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"%@",[error localizedDescription]);
+        NSLog(@"supeerr errror");
+        [[Helper alloc] showNetWorkErrorAlertView];
     }];
-    
-    
     
     [operation start];
     
@@ -98,8 +98,10 @@
 }
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    NSLog(@"Error %@",[error localizedDescription]);
+    
+    [[Helper alloc] showNetWorkErrorAlertView];
 }
+
 
 
 

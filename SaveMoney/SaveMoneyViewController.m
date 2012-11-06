@@ -95,10 +95,11 @@
 -(void)addSaveButton
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn.frame = CGRectMake(0,360,320,50);
+    btn.frame = CGRectMake(-10,360,340,50);
     [btn setTitle:@"Save!" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(pressedSaveBtn:) forControlEvents:UIControlEventTouchUpInside];
+    btn.layer.cornerRadius = 0.0f;
     
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{

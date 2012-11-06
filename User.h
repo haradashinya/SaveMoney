@@ -19,6 +19,7 @@
 
 @interface User : NSObject <NSURLConnectionDelegate,NSURLConnectionDataDelegate>
 @property int rank;
+@property int total;
 @property (nonatomic,strong) id <RankDelegate> delegate;
 +(id)shared;
 -(NSString *)uuid;
