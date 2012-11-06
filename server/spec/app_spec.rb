@@ -39,8 +39,9 @@ describe "App" do
 			post "/users/10/drinks/" ,{:type => "cafe_late",:price => 3.5}
 			# create user11
 			post "/users/",{:uuid => 11}
-			post "/users/11/drinks/",{:type => "cafe_late",:price => 4}
-			post "/users/11/drinks/",{:type => "cafe_late",:price => 3.5}
+			10.times do
+				post "/users/11/drinks/",{:type => "cafe_late",:price => 3.5}
+			end
 		end
 
 
@@ -49,9 +50,14 @@ describe "App" do
 		end
 		it "should calc by total_price" do
 			user = User.find_by({:uuid => '11'})
-			user.drinks.map{|drink| p drink}
-			p user.total_price
-			user.total_price.should == 7.5 
+			user.drinks.count.should == 10
+			user.total_price.should == 35
+		end
+
+		it "should 10 drinks created correctly when post 'user/:uuid/drinks/" do
+			user = User.find_by({:uuid => '11'})
+			user.drinks.count.should == 10
+
 		end
 
 		it "should create another user" do
