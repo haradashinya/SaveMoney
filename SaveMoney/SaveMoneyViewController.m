@@ -42,7 +42,7 @@
     [self addCofeeImg];
     [self addObserver:self forKeyPath:@"currentCoffee" options:NSKeyValueObservingOptionNew context:nil];
     [drink addObserver:self forKeyPath:@"totalPrice" options:NSKeyValueObservingOptionNew context:nil];
-	// Do any additional setup after loading the view.
+    [self renderEditButton];
     
     [[Helper alloc] putBackgroundOn:self.view];
     
@@ -93,6 +93,27 @@
     
 
 }
+
+-(void)renderEditButton
+{
+    UIButton *editButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    editButton.frame = CGRectMake(250,moneyLabel.frame.origin.y,100, 50);
+    [editButton setTitle:@"Edit" forState:UIControlStateNormal];
+    [editButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    editButton.layer.cornerRadius = 25;
+    [editButton addTarget:self action:@selector(goToCoffeeEditView:) forControlEvents:UIControlEventAllTouchEvents];
+    [self.view addSubview:editButton];
+    
+}
+-(void)goToCoffeeEditView:(id)sender
+{
+    
+    UIView *editView = [[EditDrinkView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:editView];
+    
+    
+}
+
 -(void)addSaveButton
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];

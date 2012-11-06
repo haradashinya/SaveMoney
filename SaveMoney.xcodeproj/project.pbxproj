@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0611B713163A953800F916D8 /* SaveMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0611B712163A953800F916D8 /* SaveMoneyViewController.m */; };
+		06312AB0164944BB003C62CC /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06312AAF164944BB003C62CC /* iRate.m */; };
+		06312ABA1649476A003C62CC /* EditDrinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06312AB91649476A003C62CC /* EditDrinkViewController.m */; };
+		06312ABD16494A27003C62CC /* EditDrinkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06312ABC16494A27003C62CC /* EditDrinkView.m */; };
 		065D649D1647BEA9006468CE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 065D649B1647BEA9006468CE /* background.png */; };
 		065D649E1647BEA9006468CE /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065D649C1647BEA9006468CE /* background@2x.png */; };
 		065D64A11647BED6006468CE /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D64A01647BED6006468CE /* Helper.m */; };
@@ -56,6 +59,12 @@
 /* Begin PBXFileReference section */
 		0611B711163A953800F916D8 /* SaveMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveMoneyViewController.h; sourceTree = "<group>"; };
 		0611B712163A953800F916D8 /* SaveMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveMoneyViewController.m; sourceTree = "<group>"; };
+		06312AAE164944BB003C62CC /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = iRate/iRate/iRate.h; sourceTree = "<group>"; };
+		06312AAF164944BB003C62CC /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = iRate/iRate/iRate.m; sourceTree = "<group>"; };
+		06312AB81649476A003C62CC /* EditDrinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDrinkViewController.h; sourceTree = "<group>"; };
+		06312AB91649476A003C62CC /* EditDrinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDrinkViewController.m; sourceTree = "<group>"; };
+		06312ABB16494A27003C62CC /* EditDrinkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDrinkView.h; sourceTree = "<group>"; };
+		06312ABC16494A27003C62CC /* EditDrinkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDrinkView.m; sourceTree = "<group>"; };
 		065D649B1647BEA9006468CE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		065D649C1647BEA9006468CE /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		065D649F1647BED6006468CE /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
@@ -209,6 +218,12 @@
 		06F65D1C16398438007749EB = {
 			isa = PBXGroup;
 			children = (
+				06312ABB16494A27003C62CC /* EditDrinkView.h */,
+				06312ABC16494A27003C62CC /* EditDrinkView.m */,
+				06312AB81649476A003C62CC /* EditDrinkViewController.h */,
+				06312AB91649476A003C62CC /* EditDrinkViewController.m */,
+				06312AAE164944BB003C62CC /* iRate.h */,
+				06312AAF164944BB003C62CC /* iRate.m */,
 				065D649F1647BED6006468CE /* Helper.h */,
 				065D64A01647BED6006468CE /* Helper.m */,
 				06C5D521163BC20A00E3776A /* ad */,
@@ -436,6 +451,9 @@
 				06BF3539163D4FBA00F34C75 /* User.m in Sources */,
 				066FF0441643C77E004A9968 /* Drink.m in Sources */,
 				065D64A11647BED6006468CE /* Helper.m in Sources */,
+				06312AB0164944BB003C62CC /* iRate.m in Sources */,
+				06312ABA1649476A003C62CC /* EditDrinkViewController.m in Sources */,
+				06312ABD16494A27003C62CC /* EditDrinkView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
