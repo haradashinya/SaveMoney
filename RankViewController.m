@@ -31,21 +31,18 @@
 // get /rank/ accesss when view appear.
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"appear!");
     [user getRank];
 }
 
 // handle received self.received
--(void)receivedRank
+-(void)receivedRankAndTotal
 {
-    NSLog(@"successs!");
-    NSLog(@"%i",user.rank);
     [self updateRankLabel];
     
 }
 -(void)updateRankLabel
 {
-    rankRabel.text = [NSString stringWithFormat:@"You're %i of the", user.rank];
+    rankRabel.text = [NSString stringWithFormat:@"You're %i th out of %i", user.rank,user.total];
 }
 
 - (void)viewDidLoad
@@ -65,13 +62,11 @@
 -(void)renderRankLabel
 {
     rankRabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 320, 480)];
-    rankRabel.backgroundColor = [UIColor clearColor];
     rankRabel.text = @"Your rank";
+    rankRabel.backgroundColor = [UIColor clearColor];
 
     [rankRabel setTextAlignment:NSTextAlignmentCenter];
-    
     [self.view addSubview:rankRabel];
-    
     
 }
 

@@ -14,7 +14,7 @@
 
 @protocol RankDelegate <NSObject>
 @required
-- (void)receivedRank;
+- (void)receivedRankAndTotal;
 @end
 
 @interface User : NSObject <NSURLConnectionDelegate,NSURLConnectionDataDelegate>
@@ -25,6 +25,5 @@
 -(NSString *)uuid;
 -(void)create;
 -(void)getRank;
--(void)receivedRank;
 
 @end

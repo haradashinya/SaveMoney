@@ -98,7 +98,7 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.rank = [[JSON valueForKey:@"rank"] intValue];
         self.total = [[JSON valueForKey:@"total"] intValue];
-        [self.delegate receivedRank];
+        [self.delegate receivedRankAndTotal];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"%@",[error localizedDescription]);
     }];

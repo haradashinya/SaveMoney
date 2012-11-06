@@ -88,6 +88,7 @@
 {
     moneyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
+    moneyLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:moneyLabel];
     
 
