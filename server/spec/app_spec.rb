@@ -14,6 +14,9 @@ describe "App" do
 
 
 	describe "create users" do
+		before(:all) do
+			User.destroy_all
+		end
 		describe "create via uuid" do
 			before "post /users" do
 				post "/users/",{:uuid  => UUID}
@@ -30,7 +33,6 @@ describe "App" do
 
 
 		before(:all) do
-			binding.pry
 			post "/users/#{current_user.uuid}/drinks/" ,{:type => "drip_coffee",:price => 3.0}
 			#create user10
 			post "/users/",{:uuid => 10}
@@ -64,6 +66,10 @@ describe "App" do
 			User.current_rank("11").should == 1
 		end
 
+
+		after(:all) do
+			User.destroy_all
+		end
 	end
 end
 
