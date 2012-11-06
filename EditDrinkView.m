@@ -20,7 +20,9 @@
         
     webView =  [[UIWebView alloc] initWithFrame:self.bounds];
     webView.scalesPageToFit = NO;
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.co.jp"]]];
+        
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:9393/index.html"]]];
+        
     [self addSubview:webView];
 
     }
