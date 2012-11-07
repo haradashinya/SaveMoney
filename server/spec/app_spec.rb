@@ -74,7 +74,7 @@ describe "App" do
 
 
 		after(:all) do
-			User.destroy_all
+			# User.destroy_all
 		end
 	end
 end

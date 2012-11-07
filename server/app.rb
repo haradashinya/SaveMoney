@@ -54,7 +54,8 @@ end
 
 get "/users/:uuid/drinks/" do
 	content_type :json
-	return {:name => "fooo"}
+	user = User.find_by({:uuid => params[:uuid]})
+	return user.drinks.to_json
 end
 
 

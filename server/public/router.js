@@ -6,11 +6,15 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 			},
 
 			editDrink:function(uuid){
-				var drinkCollectionView = new DrinkCollectionView();
-				drinkCollectionView.render();
-				console.log(DrinkCollection);
-				console.log("ff");
-				console.log(DrinkCollectionView);
+				var models = new DrinkCollection();
+				models.setUUID(uuid);
+				var drinkCollectionView = new DrinkCollectionView({collection: models});
+
+
+
+
+
+				drinkCollectionView.render(uuid);
 			}
 
 	});

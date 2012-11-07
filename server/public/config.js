@@ -5,6 +5,7 @@ require.config({
 			backbone: "lib/backbone-min",
 			drink_collection:"collections/drink_collection",
 			drink_collection_view:"views/drink_collection_view",
+			drink:"models/drink",
 			router: "router"
 		},
 		shim: {
@@ -23,6 +24,9 @@ require.config({
 			},
 			"drink_collection_view":{
 				exports: "DrinkCollectionView"
+			},
+			"drink":{
+				exports:"Drink"
 			}
 		}
 });

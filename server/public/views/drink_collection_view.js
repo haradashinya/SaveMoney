@@ -1,22 +1,21 @@
-define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html"],function($,_,Backbone,template){
+define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html","drink_collection"],
+	function($,_,Backbone,template,DrinkCollection){
 
 
-	var DrinkCollectionView = Backbone.View.extend({
-		el: "#content",
-		initialize:function(){
-			console.log(this.$el.html);
-			console.log(template);
-			_.bindAll(this,"render");
+		var DrinkCollectionView = Backbone.View.extend({
+			el: "#content",
+			collection: "",
+			initialize:function(){
+				_.bindAll(this,"render");
+			},
+			render:function(uuid){
+				var data = {
+					name: "hello world"
+				};
+				var compiledTemplate = _.template(template,data);
+				this.$el.html(compiledTemplate);
+			}
+		});
 
-		},
-		render:function(){
-			var data = {
-				name: "hello world"
-			};
-			var compiledTemplate = _.template(template,data);
-			this.$el.html(compiledTemplate);
-		}
+		return DrinkCollectionView;
 	});
-
-	return DrinkCollectionView;
-});
