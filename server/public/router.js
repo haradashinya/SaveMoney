@@ -5,8 +5,9 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 				"users/:uuid/drinks/edit": "editDrink"
 			},
 
-
 			editDrink:function(uuid){
+				var drinkCollectionView = new DrinkCollectionView();
+				drinkCollectionView.render();
 				console.log(DrinkCollection);
 				console.log("ff");
 				console.log(DrinkCollectionView);
