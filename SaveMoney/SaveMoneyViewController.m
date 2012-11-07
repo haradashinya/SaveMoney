@@ -101,7 +101,7 @@
     [editButton setTitle:@"Edit" forState:UIControlStateNormal];
     [editButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     editButton.layer.cornerRadius = 25;
-    [editButton addTarget:self action:@selector(goToCoffeeEditView:) forControlEvents:UIControlEventAllTouchEvents];
+    [editButton addTarget:self action:@selector(goToCoffeeEditView:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:editButton];
     
 }

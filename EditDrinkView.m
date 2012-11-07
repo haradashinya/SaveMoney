@@ -17,14 +17,17 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        NSString *uuid = [[User shared] uuid];
+        NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/edit",uuid];
         
-    webView =  [[UIWebView alloc] initWithFrame:self.bounds];
-    webView.scalesPageToFit = NO;
+        webView =  [[UIWebView alloc] initWithFrame:self.bounds];
+        webView.scalesPageToFit = NO;
         
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:9393/index.html"]]];
         
-    [self addSubview:webView];
-
+        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
+        
+        [self addSubview:webView];
+        
     }
     return self;
 }
