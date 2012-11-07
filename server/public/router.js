@@ -1,4 +1,5 @@
-define(["zepto","underscore","backbone"],function($,_,Backbone){
+define(["zepto","underscore","backbone","drink_collection","drink_collection_view"],
+	function($,_,Backbone,DrinkCollection,DrinkCollectionView){
 	var Router = Backbone.Router.extend({
 			routes: {
 				"users/:uuid/drinks/edit": "editDrink"
@@ -6,8 +7,9 @@ define(["zepto","underscore","backbone"],function($,_,Backbone){
 
 
 			editDrink:function(uuid){
-				alert(uuid);
-				alert("EditDrink");
+				console.log(DrinkCollection);
+				console.log("ff");
+				console.log(DrinkCollectionView);
 			}
 
 	});
