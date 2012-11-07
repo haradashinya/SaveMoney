@@ -19,12 +19,11 @@ class Helper
 end
 
 
-
-
 get "/" do
-	content_type :json
-	return {:name => "nobinobiru"}.to_json
+	File.read(File.join("public","index.html"))
 end
+
+
 
 
 post "/users/" do
