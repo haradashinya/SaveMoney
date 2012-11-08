@@ -7,8 +7,6 @@ require File.join(File.dirname(__FILE__),"models","user")
 require File.join(File.dirname(__FILE__),"models","drink")
 require "mongo"
 
-use Rack::MethodOverride
-
 UUID = ""
 
 Mongoid.configure do |config|
@@ -61,11 +59,16 @@ get "/users/:uuid/drinks/" do
 end
 
 
-get "/drinks/" do
-	content_type :json
-	p "ffffffff"
-	return {:name => "foo"}.to_json
+
+
+
+
+delete "/drinks/:id" do
+
+
+	return "removed"
 end
+
 
 post "/users/:uuid/drinks/" do
 	price = params[:price].to_f
@@ -74,10 +77,9 @@ post "/users/:uuid/drinks/" do
 	user.drinks.create({:type => type,:price => price})
 end
 
-delete "/drinks/" do
-	puts 'called delete'
 
-end
+
+
 
 
 

@@ -2,6 +2,7 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 	function($,_,Backbone,template){
 		var DrinkView = Backbone.View.extend({
 			tagName: "li",
+			url: "http://localhost:9393/drinks/",
 			initialize:function(){
 				_.bindAll(this,"removeDrink");
 			},
@@ -22,9 +23,9 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 				return this;
 			},
 			removeDrink:function(){
+				console.log('fffff');
 				this.$el.remove();
 				this.model.destroy();
-				this.model.trigger("removeDrink");
 			}
 		});
 

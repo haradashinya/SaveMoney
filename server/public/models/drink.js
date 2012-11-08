@@ -1,19 +1,19 @@
 define(["zepto","underscore","backbone"],function($,_,Backbone){
 	var Drink = Backbone.Model.extend({
-		url:function(){
-			return "/drinks/";
-		},
 		initialize:function(){
-			console.log("initialie");
-			this.on("removeDrink",function(){
-				alert("fff");
-			});
-			this.bind("destroy",function(){
-				alert("destroy");
-			});
+			_.bindAll(this,"removeDrink");
+			this.on("destroy",this.removeDrink);
 		},
 		removeDrink:function(){
-			alert("fffffff");
+			console.log("fire");
+			$.ajax({
+				type:"DELETE",
+				url:"http://localhost:9393/drinks/33",
+				success:function(data){
+					console.log(data);
+				}
+
+			})
 
 		}
 
