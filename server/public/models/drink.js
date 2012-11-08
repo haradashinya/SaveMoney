@@ -10,15 +10,10 @@ define(["zepto","underscore","backbone"],function($,_,Backbone){
 				type:"DELETE",
 				url:"http://localhost:9393/drinks/33",
 				success:function(data){
-					console.log(data);
+					console.log("removed drinks successfully");
 				}
-
 			})
-
-		}
-
-
-
+		},
 	});
 	return Drink;
 });
