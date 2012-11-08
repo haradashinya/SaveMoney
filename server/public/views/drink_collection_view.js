@@ -1,10 +1,10 @@
-define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html","drink_collection","drink"],
-	function($,_,Backbone,template,DrinkCollection,Drink){
+define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
+				"drink_collection","drink","views/drink_view"],
+	function($,_,Backbone,template,DrinkCollection,Drink,DrinkView){
 
 
 		var DrinkCollectionView = Backbone.View.extend({
 			el: "#content",
-			collection: "",
 			initialize:function(){
 				_.bindAll(this,"render","update");
 				this.collection.fetch({
@@ -15,10 +15,11 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html","dr
 			addView:function(collection,resp){
 				var self = this;
 				collection.models.forEach(function(item){
-					// make new DrinkView like this
-//					var drinkView = new DrinkView;
-					// self.$el.append(drinkView.render());
-				})
+					var drinkView = new DrinkView(item.toJSON());
+					console.log("successs");
+					this.$el.append(drinkView.render().$el);
+					console.log(this.$el);
+				},this)
 			},
 			render:function(uuid){
 				var data = {

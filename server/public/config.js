@@ -5,6 +5,7 @@ require.config({
 			backbone: "lib/backbone-min",
 			drink_collection:"collections/drink_collection",
 			drink_collection_view:"views/drink_collection_view",
+			drink_view:"views/drink_view",
 			drink:"models/drink",
 			router: "router"
 		},
@@ -27,6 +28,9 @@ require.config({
 			},
 			"drink":{
 				exports:"Drink"
+			},
+			"drink_view":{
+				exports: "DrinkView"
 			}
 		}
 });
