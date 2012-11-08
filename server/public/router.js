@@ -10,12 +10,8 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 				models.setUUID(uuid);
 				console.log("callled");
 				var drinkCollectionView = new DrinkCollectionView({collection: models});
+				$("#content").html(drinkCollectionView.render().$el);
 
-
-
-
-
-				drinkCollectionView.render(uuid);
 			}
 
 	});
