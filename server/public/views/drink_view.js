@@ -22,12 +22,9 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 				return this;
 			},
 			removeDrink:function(){
-				var m = this.model.toJSON();
-
-
-//				object.trigger("alert", "an event");
-
+				this.$el.remove();
 				this.model.destroy();
+				this.model.trigger("removeDrink");
 			}
 		});
 
