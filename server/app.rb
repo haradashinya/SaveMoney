@@ -7,6 +7,8 @@ require File.join(File.dirname(__FILE__),"models","user")
 require File.join(File.dirname(__FILE__),"models","drink")
 require "mongo"
 
+use Rack::MethodOverride
+
 UUID = ""
 
 Mongoid.configure do |config|
@@ -72,6 +74,10 @@ post "/users/:uuid/drinks/" do
 	user.drinks.create({:type => type,:price => price})
 end
 
+delete "/drinks/" do
+	puts 'called delete'
+
+end
 
 
 

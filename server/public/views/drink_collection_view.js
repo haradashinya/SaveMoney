@@ -18,8 +18,11 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 			addView:function(collection,resp){
 				var self = this;
 				collection.models.forEach(function(item){
-					var drinkView = new DrinkView({uuid: 33,
-						model: item.toJSON()});
+					console.log(item);
+					var drinkView = new DrinkView({
+						uuid: 33,
+						model: item
+					});
 					this.$el.append(drinkView.render().$el);
 				},this)
 				this.render();
