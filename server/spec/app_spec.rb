@@ -27,11 +27,39 @@ describe "App" do
 		end
 	end
 
+	describe "destroy drinks" do
+		before(:all) do
+			p "fffff"
+		end
+
+		it "should User.find_by({:uuid => 100}) has 20 drinks" do
+			user = User.create!({:uuid => 100})
+			3.times do 
+				user.drinks.create!
+			end
+			user.drinks.count.should == 3
+		end
+		it "should delete drinks correctrly" do
+			user = User.find_by({:uuid => 100})
+			uuid = 100
+			drink_id = user.drinks.first._id
+			delete "/drinks"
+			p user.drinks.count
+		end
+
+		after(:all) do
+			p "after all"
+			user = User.find_by({:uuid => 100})
+			p user.drinks.count
+		end
+
+	end
+
+
+
 
 
 	describe "Ranking" do
-
-
 		before(:all) do
 			post "/users/#{current_user.uuid}/drinks/" ,{:type => "drip_coffee",:price => 3.0}
 			#create user10
@@ -49,6 +77,8 @@ describe "App" do
 		it "should create drinks" do
 			current_user.drinks.first.type.should == "drip_coffee"
 		end
+
+
 		it "should calc by total_price" do
 			user = User.find_by({:uuid => '11'})
 			user.drinks.count.should == 20
@@ -72,7 +102,6 @@ describe "App" do
 			User.current_rank("10").should == 2
 			User.current_rank("11").should == 1
 		end
-
 
 		after(:all) do
 			# User.destroy_all

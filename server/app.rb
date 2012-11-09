@@ -16,8 +16,10 @@ end
 # save uuid
 class Helper
 		attr_accessor :uuid
+
 end
 
+helper = Helper.new
 
 get "/" do
 	File.read(File.join("public","index.html"))
@@ -27,7 +29,6 @@ end
 
 
 post "/users/" do
-	helper = Helper.new
 	helper.uuid = params[:uuid]
 	user = User.find_or_create_by(:uuid => helper.uuid)
 	return user
@@ -58,15 +59,17 @@ get "/users/:uuid/drinks/" do
 	return user.drinks.to_json
 end
 
-
-
-
-
-
 delete "/drinks/:id" do
-
-
+	u = User.find_by({:uuid => params[:id] || "11"})
+	drink = u.drinks.find_by({:_id => request["drink_id"]})
+	drink.destroy
 	return "removed"
+end
+
+delete "/drinks" do
+	p "called drinks delete"
+
+
 end
 
 
