@@ -37,21 +37,16 @@ describe "App" do
 			3.times do 
 				user.drinks.create!
 			end
-			user.drinks.count.should == 3
+			drink_id = user.drinks.first._id
+			delete "/users/100/drinks/#{drink_id}"
 		end
 		it "should delete drinks correctrly" do
 			user = User.find_by({:uuid => 100})
 			uuid = 100
 			drink_id = user.drinks.first._id
-			delete "/drinks"
-			p user.drinks.count
+			delete "/users/100/drinks/#{drink_id}"
 		end
 
-		after(:all) do
-			p "after all"
-			user = User.find_by({:uuid => 100})
-			p user.drinks.count
-		end
 
 	end
 

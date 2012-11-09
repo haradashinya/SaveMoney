@@ -7,7 +7,7 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 				_.bindAll(this,"removeDrink");
 			},
 			events: {
-				"click .remove": "removeDrink"
+				"click .remove-drink": "removeDrink"
 			},
 			render:function(){
 				var attributes = this.model.toJSON();

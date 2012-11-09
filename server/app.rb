@@ -41,11 +41,6 @@ get "/users/:uuid/drinks/total_price/" do
 	return {:total => user.total_price}.to_json
 end
 
-get "/:uuid/index.html/" do
-	puts "callelelelelelel index.html"
-	puts params[:uuid]
-end
-
 
 get "/users/:uuid/rank/" do
 	content_type :json
@@ -59,18 +54,14 @@ get "/users/:uuid/drinks/" do
 	return user.drinks.to_json
 end
 
-delete "/drinks/:id" do
-	u = User.find_by({:uuid => params[:id] || "11"})
-	drink = u.drinks.find_by({:_id => request["drink_id"]})
+delete "/users/:uuid/drinks/:drink_id" do
+	user = User.find_by({:uuid => params[:uuid]})
+	drink = user.drinks.find_by({:_id => params[:drink_id]})
 	drink.destroy
-	return "removed"
+	p user.drinks.count
 end
 
-delete "/drinks" do
-	p "called drinks delete"
 
-
-end
 
 
 post "/users/:uuid/drinks/" do

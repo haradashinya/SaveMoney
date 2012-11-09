@@ -10,13 +10,9 @@ define(["zepto","underscore","backbone"],function($,_,Backbone){
 		},
 		removeDrink:function(){
 			var model = this.toJSON();
-
 			$.ajax({
 				type:"DELETE",
-				url:"http://localhost:9393/drinks/11",
-				data:{
-					"drink_id": model._id
-				},
+				url:"http://localhost:9393/users/11/drinks/" + model._id,
 				success:function(data){
 					console.log("removed drinks successfully");
 				}
