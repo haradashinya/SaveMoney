@@ -29,25 +29,21 @@ describe "App" do
 
 	describe "destroy drinks" do
 		before(:all) do
-			p "fffff"
-		end
-
-		it "should User.find_by({:uuid => 100}) has 20 drinks" do
-			user = User.create!({:uuid => 100})
-			3.times do 
-				user.drinks.create!
-			end
+			user = User.create({:uuid => 100})
+			user.drinks.create!({:price => 1000})
 			drink_id = user.drinks.first._id
 			delete "/users/100/drinks/#{drink_id}"
 		end
+		
 		it "should delete drinks correctrly" do
-			user = User.find_by({:uuid => 100})
-			uuid = 100
-			drink_id = user.drinks.first._id
-			delete "/users/100/drinks/#{drink_id}"
+			user = User.find_by({uuid: 100})
+			user.drinks.count.should == 0
+
 		end
-
-
+		after(:all) do
+			User.find_by({uuid: 100}).destroy
+			User.where({uuid: 100}).count.should == 0
+		end
 	end
 
 

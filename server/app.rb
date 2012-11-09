@@ -55,10 +55,9 @@ get "/users/:uuid/drinks/" do
 end
 
 delete "/users/:uuid/drinks/:drink_id" do
-	user = User.find_by({:uuid => params[:uuid]})
+	user = User.find_by({:uuid => params[:uuid].to_i})
 	drink = user.drinks.find_by({:_id => params[:drink_id]})
 	drink.destroy
-	p user.drinks.count
 end
 
 
