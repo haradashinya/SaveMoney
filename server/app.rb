@@ -50,18 +50,16 @@ end
 
 get "/users/:uuid/drinks/" do
 	content_type :json
-	user = User.find_by({:uuid => params[:uuid]})
+	user = User.find_by({:uuid => params[:uuid].to_s})
 	return user.drinks.to_json
 end
 
 delete "/users/:uuid/drinks/:drink_id" do
-	user = User.find_by({:uuid => params[:uuid].to_i})
+	user = User.find_by({:uuid => params[:uuid].to_s})
 	drink = user.drinks.find_by({:_id => params[:drink_id]})
+	p "called destroy"
 	drink.destroy
 end
-
-
-
 
 post "/users/:uuid/drinks/" do
 	price = params[:price].to_f
