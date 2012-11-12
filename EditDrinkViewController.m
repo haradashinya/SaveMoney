@@ -29,13 +29,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    webView =  [[UIWebView alloc] initWithFrame:self.view.bounds];
-    webView.scalesPageToFit = NO;
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.co.jp"]]];
 
     [self.view addSubview:webView];
+    NSString *uuid = [[User shared] uuid];
+    NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/edit",uuid];
+    webView = [[UIWebView alloc] init];
+    webView.frame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height);
+    webView.layer.cornerRadius = 0;
+    webView.scalesPageToFit = NO;
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
+    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    closeButton.frame = CGRectMake(-10,10,self.view.frame.size.width + 20,50);
+    [closeButton setTitle:@"close" forState:UIControlStateNormal];
+    [closeButton addTarget:self action:@selector(tappedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
+    closeButton.layer.backgroundColor = [UIColor blackColor].CGColor;
+    [self.view addSubview:closeButton];
+    [self.view addSubview:webView];
+}
 
-	// Do any additional setup after loading the view.
+-(void)tappedCloseButton:(id)sender
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+    NSLog(@"ffff");
 }
 -(void)close
 {

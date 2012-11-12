@@ -105,13 +105,11 @@
     [self.view addSubview:editButton];
     
 }
+// present modalViewController(EditDrinkViewController)
 -(void)goToCoffeeEditView:(id)sender
 {
-    
-    UIView *editView = [[EditDrinkView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:editView];
-    
-    
+    EditDrinkViewController *evc = [[EditDrinkViewController alloc] init];
+    [self.navigationController presentViewController:evc animated:NO completion:nil];
 }
 
 -(void)addSaveButton

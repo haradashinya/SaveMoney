@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface EditDrinkViewController : UIViewController
+@interface EditDrinkViewController : UIViewController<UIWebViewDelegate>
 
 @end
