@@ -8,7 +8,7 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 		var DrinkCollectionView = Backbone.View.extend({
 			// look for templates/edit_drink.html
 			tagName: "ul",
-			className:"list inset",
+			className:"list",
 			initialize:function(){
 				_.bindAll(this,"render","update");
 				this.collection.fetch({

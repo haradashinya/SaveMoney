@@ -52,10 +52,12 @@
     [self dismissViewControllerAnimated:NO completion:nil];
     NSLog(@"ffff");
 }
--(void)close
-{
-}
 
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSLog(@"url is %@",[request description]);
+    return YES;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
