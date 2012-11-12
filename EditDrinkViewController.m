@@ -38,11 +38,14 @@
     webView.layer.cornerRadius = 0;
     webView.scalesPageToFit = NO;
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
-    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [closeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    UIImage *img = [UIImage imageNamed:@"CloseButton.png"];
+
+    [closeButton setBackgroundImage:img forState:UIControlStateNormal];
     closeButton.frame = CGRectMake(-10,10,self.view.frame.size.width + 20,50);
-    [closeButton setTitle:@"close" forState:UIControlStateNormal];
+//    [closeButton setTitle:@"close" forState:UIControlStateNormal];
     [closeButton addTarget:self action:@selector(tappedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
-    closeButton.layer.backgroundColor = [UIColor blackColor].CGColor;
     [self.view addSubview:closeButton];
     [self.view addSubview:webView];
 }

@@ -44,7 +44,7 @@
     [drink addObserver:self forKeyPath:@"totalPrice" options:NSKeyValueObservingOptionNew context:nil];
     [self renderEditButton];
     
-    [[Helper alloc] putBackgroundOn:self.view];
+//    [[Helper alloc] putBackgroundOn:self.view];
     
 }
 

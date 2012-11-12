@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditDrinkViewController.m" afterPath="$PROJECT_DIR$/EditDrinkViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/templates/drink_view.html" afterPath="$PROJECT_DIR$/server/public/templates/drink_view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -330,7 +327,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="22" width="1374" height="874" extended-state="0" />
+    <frame x="66" y="22" width="1374" height="874" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
