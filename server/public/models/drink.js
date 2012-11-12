@@ -6,7 +6,7 @@ define(["zepto","underscore","backbone"],function($,_,Backbone){
 		},
 		initialize:function(){
 			_.bindAll(this,"removeDrink");
-			this.on("destroy",this.removeDrink);
+			this.on("destroy",this.removeDrink,this);
 		},
 		removeDrink:function(){
 			var model = this.toJSON();
@@ -19,5 +19,8 @@ define(["zepto","underscore","backbone"],function($,_,Backbone){
 			})
 		}
 	});
+
+
+
 	return Drink;
 });
