@@ -79,7 +79,6 @@
     [coffeePickerView setNeedsDisplay];
     [coffeePickerView reloadAllComponents];
 
-    
     [self.view addSubview:coffeePickerView];
     
 }
@@ -95,12 +94,13 @@
 
 -(void)addSaveButton
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn.frame = CGRectMake(-10,360,340,50);
+    BButton *btn = [[BButton alloc] initWithFrame:CGRectMake(-10,360,340,50)];
+//    btn.frame = CGRectMake(-10,360,340,50);
+    btn.color = [UIColor orangeColor];
     [btn setTitle:@"Save!" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(pressedSaveBtn:) forControlEvents:UIControlEventTouchUpInside];
-    btn.layer.cornerRadius = 0.0f;
+//    btn.layer.cornerRadius = 0.0f;
     
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
