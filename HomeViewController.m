@@ -18,7 +18,8 @@
 {
     User *user;
     Drink *drink;
-
+    
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,7 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[Helper alloc] putBackgroundOn:self.view];
 
     [[Admob alloc] addAdmobOn:self];
     
@@ -41,7 +41,6 @@
     drink = [Drink shared];
     [user create];
     [drink performTotalPrice];
-    
 	// Do any additional setup after loading the view.
 }
 

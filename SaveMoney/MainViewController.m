@@ -29,19 +29,17 @@
     [self.navigationController setNavigationBarHidden:YES];
     [self.view addSubview:btn];
     
-    HomeViewController *hvc = [[HomeViewController alloc] init];
-    hvc.title = @"HOME";
+    
+    HistoryViewController *hvc = [[HistoryViewController alloc] init];
+    hvc.title = @"History";
     SaveMoneyViewController *svc = [[SaveMoneyViewController alloc] init];
     svc.title = @"Save";
-    
     RankViewController *rvc = [[RankViewController alloc] init];
     rvc.title = @"Ranking";
     
-    
     UITabBarController *tabBarController;
-    
     tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
-    tabBarController.viewControllers = @[hvc,svc,rvc];
+    tabBarController.viewControllers = @[svc,rvc,hvc];
     tabBarController.delegate =self;
 
     [self.navigationController pushViewController:tabBarController animated:YES];

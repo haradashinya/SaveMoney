@@ -13,6 +13,7 @@
 #import "RankViewController.h"
 #import "GADBannerView.h"
 #import "AFNetworking.h"
+#import "HistoryViewController.h"
 
 @interface MainViewController : UIViewController<UITabBarControllerDelegate,UITabBarDelegate,GADBannerViewDelegate>
 

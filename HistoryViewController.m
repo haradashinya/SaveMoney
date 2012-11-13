@@ -1,20 +1,21 @@
 //
-//  EditDrinkViewController.m
+//  HistoryViewController.m
 //  SaveMoney
 //
-//  Created by HARADA SHINYA on 11/6/12.
+//  Created by HARADA SHINYA on 11/13/12.
 //  Copyright (c) 2012 HARADA SHINYA. All rights reserved.
 //
 
-#import "EditDrinkViewController.h"
+#import "HistoryViewController.h"
 
-@interface EditDrinkViewController ()
+@interface HistoryViewController ()
 
 @end
 
-@implementation EditDrinkViewController
+@implementation HistoryViewController
 {
     UIWebView *webView;
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,8 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [self.view addSubview:webView];
+    
     NSString *uuid = [[User shared] uuid];
     NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/edit",uuid];
     webView = [[UIWebView alloc] init];
@@ -39,28 +39,15 @@
     webView.scalesPageToFit = NO;
     webView.delegate = self;
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
-    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [closeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     UIImage *img = [UIImage imageNamed:@"CloseButton.png"];
-
-    [closeButton setBackgroundImage:img forState:UIControlStateNormal];
-    closeButton.frame = CGRectMake(-10,10,self.view.frame.size.width + 20,50);
-    [closeButton addTarget:self action:@selector(tappedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:closeButton];
     [self.view addSubview:webView];
+	// Do any additional setup after loading the view.
 }
-
 -(void)tappedCloseButton:(id)sender
 {
-    [self dismissViewControllerAnimated:NO completion:nil];
-    NSLog(@"ffff");
+    
 }
 
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
-    NSString *url = [[request URL] absoluteString];
-    return YES;
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

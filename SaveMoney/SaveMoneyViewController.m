@@ -42,7 +42,6 @@
     [self addCofeeImg];
     [self addObserver:self forKeyPath:@"currentCoffee" options:NSKeyValueObservingOptionNew context:nil];
     [drink addObserver:self forKeyPath:@"totalPrice" options:NSKeyValueObservingOptionNew context:nil];
-    [self renderEditButton];
     
 //    [[Helper alloc] putBackgroundOn:self.view];
     
@@ -94,23 +93,6 @@
 
 }
 
--(void)renderEditButton
-{
-    UIButton *editButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    editButton.frame = CGRectMake(250,moneyLabel.frame.origin.y,100, 50);
-    [editButton setTitle:@"Edit" forState:UIControlStateNormal];
-    [editButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    editButton.layer.cornerRadius = 25;
-    [editButton addTarget:self action:@selector(goToCoffeeEditView:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:editButton];
-    
-}
-// present modalViewController(EditDrinkViewController)
--(void)goToCoffeeEditView:(id)sender
-{
-    EditDrinkViewController *evc = [[EditDrinkViewController alloc] init];
-    [self.navigationController presentViewController:evc animated:NO completion:nil];
-}
 
 -(void)addSaveButton
 {
