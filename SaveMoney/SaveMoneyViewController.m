@@ -95,12 +95,10 @@
 -(void)addSaveButton
 {
     BButton *btn = [[BButton alloc] initWithFrame:CGRectMake(-10,360,340,50)];
-//    btn.frame = CGRectMake(-10,360,340,50);
     btn.color = [UIColor orangeColor];
     [btn setTitle:@"Save!" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(pressedSaveBtn:) forControlEvents:UIControlEventTouchUpInside];
-//    btn.layer.cornerRadius = 0.0f;
     
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -177,11 +175,6 @@
     [label setTextAlignment:NSTextAlignmentCenter];
     label.opaque=NO;
     label.backgroundColor=[UIColor clearColor];
-    if (row % 2 == 0){
-        label.textColor = [UIColor blueColor];
-    }else{
-        label.textColor = [UIColor redColor];
-    }
     UIFont *font = [UIFont boldSystemFontOfSize:20];
     label.font = font;
     NSString *str = [[drink.types objectAtIndex:row] valueForKey:@"name"];
