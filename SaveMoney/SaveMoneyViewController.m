@@ -88,7 +88,22 @@
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
     moneyLabel.backgroundColor = [UIColor clearColor];
     moneyLabel.text = @"...";
+    
+    BButton *btn = [[BButton alloc] initWithFrame:CGRectMake(270,52,60,44)];
+    btn.color = [UIColor grayColor];
+    [btn setTitle:@"Rank" forState:UIControlStateNormal];
+    btn.layer.cornerRadius = 1000;
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(pressedRankButton:) forControlEvents:UIControlEventTouchUpInside];
+
+    
+    
+    
     [self.view addSubview:moneyLabel];
+}
+-(void)pressedRankButton:(id)sender
+{
+    
 }
 
 
