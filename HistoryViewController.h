@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "User.h"
+#import "Helper.h"
+#import "Admob.h"
 
 @interface HistoryViewController : UIViewController<UIWebViewDelegate>
 

@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/EditDrinkViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/EditDrinkViewController.m" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditDrinkViewController.m" afterPath="$PROJECT_DIR$/EditDrinkViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.m" afterPath="$PROJECT_DIR$/HistoryViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SaveMoney.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/Drink.m" afterPath="$PROJECT_DIR$/SaveMoney/Drink.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.h" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/collections/drink_collection.js" afterPath="$PROJECT_DIR$/server/public/collections/drink_collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/router.js" afterPath="$PROJECT_DIR$/server/public/router.js" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,19 +42,28 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="drink_collection.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="drink_collection.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/collections/drink_collection.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="4" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
+                <state line="5" column="71" selection-start="248" selection-end="248" vertical-scroll-proportion="0.11577424">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="drink_collection_view.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="drink_collection_view.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/public/views/drink_collection_view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="21" selection-start="401" selection-end="401" vertical-scroll-proportion="0.23154847">
+                <state line="23" column="19" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/server/public/router.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="11" column="8" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -116,15 +133,15 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/server/public/collections/drink_collection.js" />
         <option value="$PROJECT_DIR$/server/public/config.js" />
         <option value="$PROJECT_DIR$/server/public/templates/edit_drink.html" />
-        <option value="$PROJECT_DIR$/server/public/router.js" />
         <option value="$PROJECT_DIR$/server/public/views/drink_view.js" />
         <option value="$PROJECT_DIR$/server/public/models/drink.js" />
         <option value="$PROJECT_DIR$/server/public/index.html" />
         <option value="$PROJECT_DIR$/server/public/templates/drink_view.html" />
         <option value="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
+        <option value="$PROJECT_DIR$/server/public/router.js" />
+        <option value="$PROJECT_DIR$/server/public/collections/drink_collection.js" />
       </list>
     </option>
   </component>
@@ -327,7 +344,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="22" width="1374" height="874" extended-state="1" />
+    <frame x="66" y="22" width="1374" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -440,21 +457,9 @@
         <state line="12" column="17" selection-start="341" selection-end="341" vertical-scroll-proportion="0.29538462" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="7" selection-start="245" selection-end="245" vertical-scroll-proportion="0.11904762" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/collections/drink_collection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -494,9 +499,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/public/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="8" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/drink_collection_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="401" selection-end="401" vertical-scroll-proportion="0.23154847">
+        <state line="23" column="19" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/public/collections/drink_collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="71" selection-start="248" selection-end="248" vertical-scroll-proportion="0.11577424">
           <folding />
         </state>
       </provider>

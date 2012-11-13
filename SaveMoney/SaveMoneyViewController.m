@@ -33,6 +33,7 @@
 {
     drink = [Drink shared];
     drink.delegate = self;
+    
     [[Admob alloc] addAdmobOn:self];
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -42,7 +43,8 @@
     [self addMoneyLabel];
     [self addObserver:self forKeyPath:@"currentCoffee" options:NSKeyValueObservingOptionNew context:nil];
     [drink addObserver:self forKeyPath:@"totalPrice" options:(NSKeyValueObservingOptionNew| NSKeyValueObservingOptionOld) context:nil];
-//    [[Helper alloc] putBackgroundOn:self.view];
+    
+    [drink performTotalPrice];
 }
 
 -(void)addCurrentPriceLabel
@@ -86,7 +88,7 @@
     moneyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
     moneyLabel.backgroundColor = [UIColor clearColor];
-    moneyLabel.text = @"hello";
+    moneyLabel.text = @"...";
     [self.view addSubview:moneyLabel];
 }
 
@@ -139,8 +141,6 @@
         [self updateCurrentLabel];
     }else if ([keyPath isEqualToString:@"totalPrice"]){
         [self updateCurrentPriceLabel];
-        NSLog(@"totalPrice is %f",drink.totalPrice);
-        
     }
 }
 
@@ -164,12 +164,12 @@
 {
     [drink performCreateWith:[self.currentCoffee valueForKey:@"name"]];
     moneyLabel.text = @"updating.";
-    drink.totalPrice += [[self.currentCoffee valueForKey:@"price"] floatValue];
 }
 - (void)didReceiveMemoryWarning
 {
     [self removeObserver:self forKeyPath:@"currentCoffee"];
     [super didReceiveMemoryWarning];
+    [self removeObserver:self forKeyPath:@"totalPrice"];
 }
 -(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {

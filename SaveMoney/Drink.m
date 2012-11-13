@@ -75,6 +75,7 @@
         self.totalPrice = [[JSON valueForKey:@"total"] floatValue];
         [self.delegate updateCurrentPriceLabel];
         NSLog(@"self.totalPrice is %f",self.totalPrice);
+        NSLog(@"total price is calllellelleleleld");
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"%@",[error localizedDescription]);
         NSLog(@"supeerr errror");

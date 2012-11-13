@@ -12,7 +12,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import  "EditDrinkView.h"
 #import "Helper.h"
-#import "EditDrinkViewController.h"
 
 @interface SaveMoneyViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
 

@@ -39,7 +39,10 @@
     webView.scalesPageToFit = NO;
     webView.delegate = self;
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
-    UIImage *img = [UIImage imageNamed:@"CloseButton.png"];
+    
+    [[Admob alloc] addAdmobOn:self];
+    
+    
     [self.view addSubview:webView];
 	// Do any additional setup after loading the view.
 }
