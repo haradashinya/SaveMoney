@@ -33,6 +33,7 @@
 
 - (void)viewDidLoad
 {
+    
     drink = [Drink shared];
     drink.delegate = self;
     user = [User shared];
@@ -55,9 +56,11 @@
 {
     self.currentCoffee = [drink.types objectAtIndex:0];
     currentPriceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,300,320, 50)];
+    Underline *lineLabel = [[Underline alloc] initWithFrame:CGRectMake(60,330,200,10)];
     [currentPriceLabel setTextAlignment:NSTextAlignmentCenter];
     currentPriceLabel.text = [NSString stringWithFormat:@"Price: %.1f $",[drink priceForCoffee:[self.currentCoffee valueForKey:@"name"]]];
     currentPriceLabel.font = [UIFont boldSystemFontOfSize:20];
+    [self.view addSubview:lineLabel];
     currentPriceLabel.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:currentPriceLabel];
@@ -91,6 +94,7 @@
 {
     NSString *str = [NSString stringWithFormat:@"You're the %i th out of %i!",user.rank,user.total];
     [rankLabel setText:str];
+
 }
 -(void)addMoneyLabel
 {
@@ -100,7 +104,7 @@
     moneyLabel.text = @"...";
     
     BButton *btn = [[BButton alloc] initWithFrame:CGRectMake(0,52,60,44)];
-    btn.color = [UIColor grayColor];
+    btn.color = [UIColor orangeColor];
     [btn setTitle:@"Rank" forState:UIControlStateNormal];
     btn.layer.cornerRadius = 1000;
     [self.view addSubview:btn];
@@ -185,6 +189,7 @@
 {
     float price = [[self.currentCoffee valueForKey:@"price"] floatValue];
     currentPriceLabel.text = [NSString stringWithFormat:@"%.1f $",price];
+    
 }
 
 
@@ -218,7 +223,6 @@
     NSString *str = [[drink.types objectAtIndex:row] valueForKey:@"name"];
     [label setText:str];
     return label;
-
 }
 
 @end

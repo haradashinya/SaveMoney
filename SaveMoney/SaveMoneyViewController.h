@@ -15,6 +15,7 @@
 #import "BButton.h"
 #import "User.h"
 #import "CMPopTipView.h"
+#import "Underline.h"
 
 @interface SaveMoneyViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource,CMPopTipViewDelegate,RankDelegate>
 
