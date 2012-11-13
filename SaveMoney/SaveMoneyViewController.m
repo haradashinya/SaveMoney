@@ -89,8 +89,8 @@
 
 -(void)receivedRankAndTotal
 {
-    NSString *str = [NSString stringWithFormat:@"%i/%i",user.rank,user.total];
-    [self.popView initWithMessage:str];
+    NSString *str = [NSString stringWithFormat:@"You're the %i th out of %i!",user.rank,user.total];
+    [rankLabel setText:str];
 }
 -(void)addMoneyLabel
 {
@@ -112,16 +112,18 @@
 {
     
     
-    CMPopTipView *contentView = [[CMPopTipView alloc] initWithFrame:CGRectMake(0, 0,200,44)];
-    contentView.layer.cornerRadius = 20.0f;
+    CMPopTipView *contentView = [[CMPopTipView alloc] initWithFrame:CGRectMake(0, 0,240,44)];
     contentView.delegate = self;
-    UILabel *label  = [[UILabel alloc] initWithFrame:[contentView bounds]];
-    [label setTextAlignment:NSTextAlignmentCenter];
-    label.text = @"fetching...";
-    label.layer.opacity = 0.9;
-    [contentView addSubview:label];
+    rankLabel  = [[UILabel alloc] initWithFrame:[contentView bounds]];
+    [rankLabel setBackgroundColor:[UIColor darkGrayColor]];
+    [rankLabel setTextAlignment:NSTextAlignmentCenter];
+    rankLabel.layer.cornerRadius = 10.0f;
+    rankLabel.layer.masksToBounds = YES;
+    rankLabel.text = @"fetching...";
+    rankLabel.textColor = [UIColor whiteColor];
+    rankLabel.layer.opacity = 0.9;
+    [contentView addSubview:rankLabel];
     contentView.dismissTapAnywhere = YES;
-    
     BButton *button = (BButton *)sender;
     [contentView presentPointingAtView:button inView:self.view animated:YES];
     [user getRank];
