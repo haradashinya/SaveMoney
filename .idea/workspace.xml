@@ -4,9 +4,6 @@
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/EditDrinkViewController.h" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/EditDrinkViewController.m" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.h" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />

@@ -19,6 +19,7 @@
     UIPickerView *coffeePickerView;
     Drink *drink;
     UILabel *moneyLabel;
+    UILabel *rankLabel;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -98,36 +99,32 @@
     moneyLabel.backgroundColor = [UIColor clearColor];
     moneyLabel.text = @"...";
     
-    BButton *btn = [[BButton alloc] initWithFrame:CGRectMake(270,52,60,44)];
+    BButton *btn = [[BButton alloc] initWithFrame:CGRectMake(0,52,60,44)];
     btn.color = [UIColor grayColor];
     [btn setTitle:@"Rank" forState:UIControlStateNormal];
     btn.layer.cornerRadius = 1000;
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(pressedRankButton:) forControlEvents:UIControlEventTouchUpInside];
-
-    
-    
     
     [self.view addSubview:moneyLabel];
 }
 -(void)pressedRankButton:(id)sender
 {
-    if (self.popView == nil){
-        self.popView = [[CMPopTipView alloc] initWithMessage:@"My message"];
-        self.popView.delegate = self;
-        self.popView.backgroundColor = [UIColor darkGrayColor];
-        self.popView.textColor = [UIColor whiteColor];
-        BButton *button = (BButton *)sender;
-        [self.popView presentPointingAtView:button inView:self.view animated:YES];
-        
-        // request user get rank
-        [user getRank];
-        
-    }else{
-        [self.popView dismissAnimated:YES];
-        self.popView = nil;
-    }
     
+    
+    CMPopTipView *contentView = [[CMPopTipView alloc] initWithFrame:CGRectMake(0, 0,200,44)];
+    contentView.layer.cornerRadius = 20.0f;
+    contentView.delegate = self;
+    UILabel *label  = [[UILabel alloc] initWithFrame:[contentView bounds]];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    label.text = @"fetching...";
+    label.layer.opacity = 0.9;
+    [contentView addSubview:label];
+    contentView.dismissTapAnywhere = YES;
+    
+    BButton *button = (BButton *)sender;
+    [contentView presentPointingAtView:button inView:self.view animated:YES];
+    [user getRank];
 }
 
 
