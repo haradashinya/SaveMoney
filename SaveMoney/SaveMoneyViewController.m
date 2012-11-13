@@ -39,12 +39,10 @@
     [self addCoffeePickerView];
     [self addCurrentPriceLabel];
     [self addSaveButton];
-    [self addCofeeImg];
+    [self addMoneyLabel];
     [self addObserver:self forKeyPath:@"currentCoffee" options:NSKeyValueObservingOptionNew context:nil];
-    [drink addObserver:self forKeyPath:@"totalPrice" options:NSKeyValueObservingOptionNew context:nil];
-    
+    [drink addObserver:self forKeyPath:@"totalPrice" options:(NSKeyValueObservingOptionNew| NSKeyValueObservingOptionOld) context:nil];
 //    [[Helper alloc] putBackgroundOn:self.view];
-    
 }
 
 -(void)addCurrentPriceLabel
@@ -83,14 +81,13 @@
     [self.view addSubview:coffeePickerView];
     
 }
--(void)addCofeeImg
+-(void)addMoneyLabel
 {
     moneyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
     moneyLabel.backgroundColor = [UIColor clearColor];
+    moneyLabel.text = @"hello";
     [self.view addSubview:moneyLabel];
-    
-
 }
 
 
@@ -142,8 +139,11 @@
         [self updateCurrentLabel];
     }else if ([keyPath isEqualToString:@"totalPrice"]){
         [self updateCurrentPriceLabel];
+        NSLog(@"totalPrice is %f",drink.totalPrice);
+        
     }
 }
+
 
 -(void)updateCurrentLabel
 {
@@ -164,7 +164,7 @@
 {
     [drink performCreateWith:[self.currentCoffee valueForKey:@"name"]];
     moneyLabel.text = @"updating.";
-    //    drink.totalPrice += [[self.currentCoffee valueForKey:@"price"] floatValue];
+    drink.totalPrice += [[self.currentCoffee valueForKey:@"price"] floatValue];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -184,7 +184,6 @@
     }
     UIFont *font = [UIFont boldSystemFontOfSize:20];
     label.font = font;
-    
     NSString *str = [[drink.types objectAtIndex:row] valueForKey:@"name"];
     [label setText:str];
     return label;
