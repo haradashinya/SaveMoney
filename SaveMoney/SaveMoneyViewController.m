@@ -15,6 +15,7 @@
 @implementation SaveMoneyViewController
 {
     UILabel *currentPriceLabel;
+    User *user;
     UIPickerView *coffeePickerView;
     Drink *drink;
     UILabel *moneyLabel;
@@ -33,6 +34,8 @@
 {
     drink = [Drink shared];
     drink.delegate = self;
+    user = [User shared];
+    user.delegate = self;
     
     [[Admob alloc] addAdmobOn:self];
     [super viewDidLoad];
@@ -82,6 +85,12 @@
     [self.view addSubview:coffeePickerView];
     
 }
+
+-(void)receivedRankAndTotal
+{
+    NSString *str = [NSString stringWithFormat:@"%i/%i",user.rank,user.total];
+    [self.popView initWithMessage:str];
+}
 -(void)addMoneyLabel
 {
     moneyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
@@ -103,6 +112,21 @@
 }
 -(void)pressedRankButton:(id)sender
 {
+    if (self.popView == nil){
+        self.popView = [[CMPopTipView alloc] initWithMessage:@"My message"];
+        self.popView.delegate = self;
+        self.popView.backgroundColor = [UIColor darkGrayColor];
+        self.popView.textColor = [UIColor whiteColor];
+        BButton *button = (BButton *)sender;
+        [self.popView presentPointingAtView:button inView:self.view animated:YES];
+        
+        // request user get rank
+        [user getRank];
+        
+    }else{
+        [self.popView dismissAnimated:YES];
+        self.popView = nil;
+    }
     
 }
 

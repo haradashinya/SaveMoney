@@ -13,10 +13,14 @@
 #import  "EditDrinkView.h"
 #import "Helper.h"
 #import "BButton.h"
+#import "User.h"
+#import "CMPopTipView.h"
 
-@interface SaveMoneyViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
+@interface SaveMoneyViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource,CMPopTipViewDelegate,RankDelegate>
 
 @property (nonatomic,strong) NSMutableDictionary *currentCoffee;
+@property (nonatomic,strong) CMPopTipView *popView;
+
 
 
 @end
