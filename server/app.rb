@@ -60,12 +60,14 @@ delete "/users/:uuid/drinks/:drink_id" do
 	drink.destroy
 end
 
-post "/users/:uuid/drinks/:drink_id" do
-	puts "called post"
-end
 
 put "/users/:uuid/drinks/:drink_id" do
-	binding.pry
+	item  = JSON.parse(request.body.read)
+	user = User.find_by({:uuid => params[:uuid].to_s})
+	drink = user.drinks.find_by({:_id => params[:drink_id]})
+	# drink.update_attributes({:price => item["price"].to_i,:type => item["type"]})
+	drink.update_attributes({:price => item["price"].to_i,:type => "nobi"})
+	p drink
 end
 
 post "/users/:uuid/drinks/" do

@@ -5,6 +5,7 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 
 			initialize:function(){
 				_.bindAll(this,"removeDrink","updateDrink");
+				this.model.bind("change",changed,this);
 			},
 			events: {
 				"click li .remove-drink": "removeDrink",
@@ -28,6 +29,9 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 			},
 			updateDrink:function(){
 				this.model.trigger("update");
+			},
+			changed:function(){
+				console.log("changeddddddd");
 			}
 
 		});
