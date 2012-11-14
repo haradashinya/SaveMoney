@@ -10,12 +10,11 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 				"click .remove-drink": "removeDrink"
 			},
 			render:function(){
-				var attributes = this.model.toJSON();
 				var opts = {
-					type: attributes.type,
-					_id: attributes._id,
-					user_id: attributes.user_id,
-					price: attributes.price
+					type: this.model.get("type"),
+					_id: this.model.get("_id"),
+					user_id: this.model.get("user_id"),
+					price: this.model.get("price")
 				};
 
 				var compiledTemplate = _.template(template,opts);

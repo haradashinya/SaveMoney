@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/collections/drink_collection.js" afterPath="$PROJECT_DIR$/server/public/collections/drink_collection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/models/drink.js" afterPath="$PROJECT_DIR$/server/public/models/drink.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/router.js" afterPath="$PROJECT_DIR$/server/public/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,19 +25,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="drink_view.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="drink_view.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="drink_collection.js" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/server/public/collections/drink_collection.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="53" selection-start="202" selection-end="202" vertical-scroll-proportion="0.08976157">
+                <state line="17" column="6" selection-start="527" selection-end="527" vertical-scroll-proportion="0.38148668">
                   <folding />
                 </state>
               </provider>
@@ -92,13 +82,13 @@
       <list>
         <option value="$PROJECT_DIR$/server/public/config.js" />
         <option value="$PROJECT_DIR$/server/public/templates/edit_drink.html" />
-        <option value="$PROJECT_DIR$/server/public/views/drink_view.js" />
         <option value="$PROJECT_DIR$/server/public/index.html" />
         <option value="$PROJECT_DIR$/server/public/templates/drink_view.html" />
         <option value="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
         <option value="$PROJECT_DIR$/server/public/models/drink.js" />
         <option value="$PROJECT_DIR$/server/public/router.js" />
         <option value="$PROJECT_DIR$/server/public/collections/drink_collection.js" />
+        <option value="$PROJECT_DIR$/server/public/views/drink_view.js" />
       </list>
     </option>
   </component>
@@ -442,13 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/models/drink.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="21" selection-start="319" selection-end="319" vertical-scroll-proportion="0.25470334">
@@ -463,6 +446,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/public/collections/drink_collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="20" selection-start="151" selection-end="151" vertical-scroll-proportion="0.06732118">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/drink_collection_view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
@@ -470,9 +460,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/collections/drink_collection.js">
+    <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="53" selection-start="202" selection-end="202" vertical-scroll-proportion="0.08976157">
+        <state line="17" column="6" selection-start="527" selection-end="527" vertical-scroll-proportion="0.38148668">
           <folding />
         </state>
       </provider>
