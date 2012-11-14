@@ -17,7 +17,7 @@
 @interface HistoryViewController : UIViewController<UIWebViewDelegate>
 
 
--(void)refreshPage;
+-(void)didRefreshPage;
 @property (nonatomic,strong) UIWebView *webView;
 @property (nonatomic,strong) NSURL *url;
 @property (nonatomic,strong) id delegate;

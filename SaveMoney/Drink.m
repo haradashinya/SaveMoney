@@ -92,8 +92,8 @@
     // update total price
     [self performTotalPrice];
     NSLog(@"self.delegate is %@",self.hvcDelegate);
-    if ([self.hvcDelegate respondsToSelector:@selector(refreshPage)]){
-        [self.hvcDelegate refreshPage];
+    if ([self.hvcDelegate respondsToSelector:@selector(didRefreshPage)]){
+        [self.hvcDelegate didRefreshPage];
         NSLog(@"respond!");
     }else{
         NSLog(@"not response!");

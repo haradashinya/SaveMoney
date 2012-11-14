@@ -52,9 +52,10 @@ static id historyViewController;
     [self.view addSubview:self.webView];
 	// Do any additional setup after loading the view.
 }
--(void)refreshPage
+-(void)didRefreshPage
 {
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    
 }
 -(void)tappedCloseButton:(id)sender
 {
