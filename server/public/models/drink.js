@@ -1,8 +1,6 @@
 define(["zepto","underscore","backbone"],function($,_,Backbone){
 	var Drink = Backbone.Model.extend({
 		url:function(){
-
-
 		},
 		initialize:function(){
 			_.bindAll(this,"removeDrink");

@@ -8,30 +8,18 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 
 			editDrink:function(uuid){
 				var models = new DrinkCollection();
-				models.setUUID(uuid);
+				window.uuid = uuid;
 				var drinkCollectionView = new DrinkCollectionView({collection: models});
 				$("#content").html(drinkCollectionView.render().$el);
 
 			},
 			showBackground:function(){
 				alert("called");
-
 			}
-
-
-
 		});
-
-
-
 
 	var router = new Router();
 	Backbone.history.start();
-
-
-
-
-
 
 	return Router;
 
