@@ -1,6 +1,7 @@
 require "rubygems"
 require "pry"
 require "mongoid"
+require "sinatra/base"
 require "sinatra"
 require "json"
 require File.join(File.dirname(__FILE__),"models","user")
@@ -76,6 +77,8 @@ post "/users/:uuid/drinks/" do
 	user = User.find_or_create_by(:uuid => params[:uuid])
 	user.drinks.create({:type => type,:price => price})
 end
+
+
 
 
 

@@ -1,5 +1,6 @@
 class Drink
 	include Mongoid::Document
+	include Mongoid::Timestamps
 	belongs_to :user
 	before_destroy :send_destroy_message
 

@@ -1,5 +1,6 @@
 class User
 	include Mongoid::Document
+	include Mongoid::Timestamps
 
 	field :uuid
 	has_many :drinks, dependent: :delete

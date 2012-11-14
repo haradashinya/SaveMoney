@@ -20,7 +20,6 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 			},
 			showPopup:function(){
 				var tmpl = _.template(popupTemplate,{});
-//				$("body").html(popupTemplate);
 				$("body").html("hello world");
 			}
 		});
