@@ -27,7 +27,7 @@
           <file leaf-file-name="drink_view.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="7" selection-start="301" selection-end="301" vertical-scroll-proportion="0.17952314">
+                <state line="28" column="28" selection-start="820" selection-end="820" vertical-scroll-proportion="0.628331">
                   <folding />
                 </state>
               </provider>
@@ -58,7 +58,7 @@
           <file leaf-file-name="drink_view.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.069767445">
+                <state line="4" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.093023255">
                   <folding />
                 </state>
               </provider>
@@ -442,13 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.069767445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/drink_collection_view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="14" selection-start="808" selection-end="808" vertical-scroll-proportion="0.55571634">
@@ -477,9 +470,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.093023255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="301" selection-end="301" vertical-scroll-proportion="0.17952314">
+        <state line="28" column="28" selection-start="820" selection-end="820" vertical-scroll-proportion="0.628331">
           <folding />
         </state>
       </provider>
