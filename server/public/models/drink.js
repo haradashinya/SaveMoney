@@ -12,7 +12,7 @@ define(["zepto","underscore","backbone"],function($,_,Backbone){
 			var model = this.toJSON();
 			$.ajax({
 				type:"DELETE",
-				url:"http://localhost:9393/users/11/drinks/" + model._id,
+				url:"http://localhost:9393/users/" + window.uuid +  "/drinks/" + model._id,
 				success:function(data){
 					console.log("removed drinks successfully");
 				}

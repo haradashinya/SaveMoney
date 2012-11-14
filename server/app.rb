@@ -57,7 +57,6 @@ end
 delete "/users/:uuid/drinks/:drink_id" do
 	user = User.find_by({:uuid => params[:uuid].to_s})
 	drink = user.drinks.find_by({:_id => params[:drink_id]})
-	p "called destroy"
 	drink.destroy
 end
 

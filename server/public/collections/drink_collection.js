@@ -8,6 +8,7 @@ define(["zepto","underscore","backbone","drink"],
 			},
 			setUUID:function(uuid){
 				this.uuid = uuid;
+				window.uuid = uuid;
 			}
 
 		});
