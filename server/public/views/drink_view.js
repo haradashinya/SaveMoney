@@ -1,5 +1,5 @@
-define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
-	function($,_,Backbone,template){
+define(["zepto","underscore","backbone","lib/text!templates/drink_view.html","lib/text!templates/popup.html"],
+	function($,_,Backbone,template,popupTemplate){
 		var DrinkView = Backbone.View.extend({
 			tagName: "li",
 			initialize:function(){
@@ -12,6 +12,7 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 			},
 			render:function(){
 				var opts = {
+					uuid: window.uuid,
 					type: this.model.get("type"),
 					_id: this.model.get("_id"),
 					user_id: this.model.get("user_id"),
@@ -27,6 +28,10 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 				this.model.destroy();
 			},
 			updateDrink:function(){
+
+				console.log(template);
+
+
 				this.model.set({type: "nobi"});
 				this.model.trigger("update");
 			},

@@ -11,7 +11,15 @@
 #import "User.h"
 #import "Helper.h"
 #import "Admob.h"
+#import "Drink.h"
+
 
 @interface HistoryViewController : UIViewController<UIWebViewDelegate>
+
+
+-(void)refreshPage;
+@property (nonatomic,strong) UIWebView *webView;
+@property (nonatomic,strong) NSURL *url;
+@property (nonatomic,strong) id delegate;
 
 @end

@@ -20,6 +20,7 @@
     Drink *drink;
     UILabel *moneyLabel;
     UILabel *rankLabel;
+    HistoryViewController *hvc;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -141,7 +142,6 @@
     [btn setTitle:@"Save!" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(pressedSaveBtn:) forControlEvents:UIControlEventTouchUpInside];
-    
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return [drink.types count];
@@ -205,6 +205,7 @@
 {
     [drink performCreateWith:[self.currentCoffee valueForKey:@"name"]];
     moneyLabel.text = @"updating.";
+    
 }
 - (void)didReceiveMemoryWarning
 {

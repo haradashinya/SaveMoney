@@ -1,6 +1,6 @@
 define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
-				"drink_collection","drink","views/drink_view"],
-	function($,_,Backbone,template,DrinkCollection,Drink,DrinkView){
+				"drink_collection","drink","views/drink_view","lib/text!templates/popup.html"],
+	function($,_,Backbone,template,DrinkCollection,Drink,DrinkView,popupTemplate){
 
 		var options = {};
 		var compiledTemplate = _.template(template,options);

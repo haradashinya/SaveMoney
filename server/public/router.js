@@ -1,9 +1,11 @@
-define(["zepto","underscore","backbone","drink_collection","drink_collection_view"],
-	function($,_,Backbone,DrinkCollection,DrinkCollectionView){
+define(["zepto","underscore","backbone","drink_collection","drink_collection_view","lib/text!templates/popup.html"],
+	function($,_,Backbone,DrinkCollection,DrinkCollectionView,popupTemplate){
 		var Router = Backbone.Router.extend({
 			routes: {
 				"users/:uuid/drinks/edit": "editDrink",
-				"background": "showBackground"
+				"background": "showBackground",
+				"users/:uuid/drinks/:drink_id/popup": "showPopup",
+				"popup": "showPopup"
 			},
 
 			editDrink:function(uuid){
@@ -15,6 +17,11 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 			},
 			showBackground:function(){
 				alert("called");
+			},
+			showPopup:function(){
+				var tmpl = _.template(popupTemplate,{});
+//				$("body").html(popupTemplate);
+				$("body").html("hello world");
 			}
 		});
 

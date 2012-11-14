@@ -14,37 +14,47 @@
 
 @implementation HistoryViewController
 {
-    UIWebView *webView;
     
 }
 
+
+static id historyViewController;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (!historyViewController){
+        historyViewController = [super initWithNibName:(NSString *)nibBundleOrNil bundle:nibBundleOrNil];
+        self.delegate = self;
+        NSLog(@"called init");
     }
-    return self;
+    return historyViewController;
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    Drink *drink = [Drink shared];
     
     NSString *uuid = [[User shared] uuid];
     NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/edit",uuid];
-    webView = [[UIWebView alloc] init];
-    webView.frame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height);
-    webView.layer.cornerRadius = 0;
-    webView.scalesPageToFit = NO;
-    webView.delegate = self;
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
+    self.url = [NSURL URLWithString:urlStr];
+    
+    self.webView = [[UIWebView alloc] init];
+    self.webView.frame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height);
+    self.webView.layer.cornerRadius = 0;
+    self.webView.scalesPageToFit = NO;
+    self.webView.delegate = self;
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    drink.hvcDelegate = self;
     
     [[Admob alloc] addAdmobOn:self];
     
-    
-    [self.view addSubview:webView];
+    [self.view addSubview:self.webView];
 	// Do any additional setup after loading the view.
+}
+-(void)refreshPage
+{
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
 }
 -(void)tappedCloseButton:(id)sender
 {

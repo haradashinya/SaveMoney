@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/public/templates/popup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.h" afterPath="$PROJECT_DIR$/HistoryViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.m" afterPath="$PROJECT_DIR$/HistoryViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.h" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/router.js" afterPath="$PROJECT_DIR$/server/public/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/templates/drink_view.html" afterPath="$PROJECT_DIR$/server/public/templates/drink_view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
@@ -24,28 +34,28 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="drink_view.js" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
+          <file leaf-file-name="popup.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/server/public/templates/popup.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="28" selection-start="820" selection-end="820" vertical-scroll-proportion="0.628331">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="router.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/router.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="0" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
+                <state line="23" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="0.516129">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="drink.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/server/public/models/drink.js">
+          <file leaf-file-name="drink_view.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="26" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
+                <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -58,7 +68,7 @@
           <file leaf-file-name="drink_view.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.093023255">
+                <state line="5" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.11627907">
                   <folding />
                 </state>
               </provider>
@@ -91,16 +101,19 @@
         <option value="$PROJECT_DIR$/server/public/config.js" />
         <option value="$PROJECT_DIR$/server/public/templates/edit_drink.html" />
         <option value="$PROJECT_DIR$/server/public/index.html" />
-        <option value="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
-        <option value="$PROJECT_DIR$/server/public/templates/drink_view.html" />
-        <option value="$PROJECT_DIR$/server/public/router.js" />
         <option value="$PROJECT_DIR$/server/public/models/drink.js" />
         <option value="$PROJECT_DIR$/server/public/collections/drink_collection.js" />
+        <option value="$PROJECT_DIR$/server/public/templates/popup_template.html" />
         <option value="$PROJECT_DIR$/server/public/views/drink_view.js" />
+        <option value="$PROJECT_DIR$/server/public/templates/drink_view.html" />
+        <option value="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
+        <option value="$PROJECT_DIR$/server/public/templates/popup.html" />
+        <option value="$PROJECT_DIR$/server/public/router.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="278" />
     <option name="y" value="22" />
     <option name="width" value="1374" />
     <option name="height" value="874" />
@@ -238,6 +251,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveMoney" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveMoney" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -265,6 +300,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -312,13 +348,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1374" height="874" extended-state="0" />
+    <frame x="278" y="22" width="1374" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19531822" sideWeight="0.5007153" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19467062" sideWeight="0.472103" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16136195" sideWeight="0.472103" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19531822" sideWeight="0.5178827" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -386,20 +422,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/public/views/drink_collection_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/models/drink.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="36" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" />
@@ -425,26 +447,16 @@
         <state line="12" column="17" selection-start="341" selection-end="341" vertical-scroll-proportion="0.29538462" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Add-ons/GoogleAnalyticsiOS_2.0beta3/Documentation/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.7837838" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="379" selection-end="379" vertical-scroll-proportion="0.3123123" />
+        <state line="13" column="0" selection-start="379" selection-end="379" vertical-scroll-proportion="0.3123123">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/templates/edit_drink.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/views/drink_collection_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="14" selection-start="808" selection-end="808" vertical-scroll-proportion="0.55571634">
           <folding />
         </state>
       </provider>
@@ -456,30 +468,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Add-ons/GoogleAnalyticsiOS_2.0beta3/Documentation/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.9767442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/models/drink.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
+        <state line="4" column="5" selection-start="195" selection-end="195" vertical-scroll-proportion="0.08976157">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/router.js">
+    <entry file="file://$PROJECT_DIR$/server/public/views/drink_collection_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.093023255">
+        <state line="2" column="77" selection-start="238" selection-end="238" vertical-scroll-proportion="0.044880785">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="28" selection-start="820" selection-end="820" vertical-scroll-proportion="0.628331">
+        <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/public/templates/popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.11627907">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/public/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="0.516129">
           <folding />
         </state>
       </provider>

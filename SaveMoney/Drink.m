@@ -71,11 +71,8 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"JSON is %@",[JSON valueForKey:@"total"]);
         self.totalPrice = [[JSON valueForKey:@"total"] floatValue];
         [self.delegate updateCurrentPriceLabel];
-        NSLog(@"self.totalPrice is %f",self.totalPrice);
-        NSLog(@"total price is calllellelleleleld");
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"%@",[error localizedDescription]);
         NSLog(@"supeerr errror");
@@ -92,11 +89,21 @@
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    NSLog(@"response is %@",[response  description]);
     // update total price
     [self performTotalPrice];
+    NSLog(@"self.delegate is %@",self.hvcDelegate);
+    if ([self.hvcDelegate respondsToSelector:@selector(refreshPage)]){
+        [self.hvcDelegate refreshPage];
+        NSLog(@"respond!");
+    }else{
+        NSLog(@"not response!");
+    }
     
 }
+
+
+
+
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     
