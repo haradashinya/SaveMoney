@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/public/templates/popup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.h" afterPath="$PROJECT_DIR$/HistoryViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.m" afterPath="$PROJECT_DIR$/HistoryViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.h" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/Drink.m" afterPath="$PROJECT_DIR$/SaveMoney/Drink.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/router.js" afterPath="$PROJECT_DIR$/server/public/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/templates/drink_view.html" afterPath="$PROJECT_DIR$/server/public/templates/drink_view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,10 +36,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="router.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/router.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="0.516129">
+                <state line="22" column="39" selection-start="809" selection-end="809" vertical-scroll-proportion="0.49368864">
                   <folding />
                 </state>
               </provider>
@@ -65,10 +58,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="drink_view.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="drink_view.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.11627907">
+                <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -113,7 +106,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="278" />
+    <option name="x" value="63" />
     <option name="y" value="22" />
     <option name="width" value="1374" />
     <option name="height" value="874" />
@@ -348,7 +341,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="278" y="22" width="1374" height="874" extended-state="0" />
+    <frame x="63" y="22" width="1374" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -503,16 +496,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
+    <entry file="file://$PROJECT_DIR$/server/public/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.11627907">
+        <state line="22" column="39" selection-start="809" selection-end="809" vertical-scroll-proportion="0.49368864">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/router.js">
+    <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="0.516129">
+        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

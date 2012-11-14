@@ -55,7 +55,7 @@ static id historyViewController;
 -(void)didRefreshPage
 {
     [self.webView stringByEvaluatingJavaScriptFromString:@"location.reload()"];
-    
+
 }
 -(void)tappedCloseButton:(id)sender
 {

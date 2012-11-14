@@ -95,10 +95,7 @@
     }else{
         NSLog(@"not response!");
     }
-    
 }
-
-
 
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error

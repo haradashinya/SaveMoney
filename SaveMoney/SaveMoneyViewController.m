@@ -32,6 +32,14 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    if (!drink){
+        drink = [Drink shared];
+    }
+    [drink performTotalPrice];
+}
+
 - (void)viewDidLoad
 {
     
@@ -39,7 +47,6 @@
     drink.delegate = self;
     user = [User shared];
     user.delegate = self;
-    
     [[Admob alloc] addAdmobOn:self];
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -50,7 +57,6 @@
     [self addObserver:self forKeyPath:@"currentCoffee" options:NSKeyValueObservingOptionNew context:nil];
     [drink addObserver:self forKeyPath:@"totalPrice" options:(NSKeyValueObservingOptionNew| NSKeyValueObservingOptionOld) context:nil];
     
-    [drink performTotalPrice];
 }
 
 -(void)addCurrentPriceLabel
