@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.m" afterPath="$PROJECT_DIR$/HistoryViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/Drink.m" afterPath="$PROJECT_DIR$/SaveMoney/Drink.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/templates/drink_view.html" afterPath="$PROJECT_DIR$/server/public/templates/drink_view.html" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +37,7 @@
           <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/router.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="39" selection-start="809" selection-end="809" vertical-scroll-proportion="0.49368864">
+                <state line="20" column="26" selection-start="727" selection-end="727" vertical-scroll-proportion="0.44880787">
                   <folding />
                 </state>
               </provider>
@@ -61,7 +59,7 @@
           <file leaf-file-name="drink_view.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+                <state line="9" column="0" selection-start="159" selection-end="159" vertical-scroll-proportion="0.20930232">
                   <folding />
                 </state>
               </provider>
@@ -98,10 +96,10 @@
         <option value="$PROJECT_DIR$/server/public/collections/drink_collection.js" />
         <option value="$PROJECT_DIR$/server/public/templates/popup_template.html" />
         <option value="$PROJECT_DIR$/server/public/views/drink_view.js" />
-        <option value="$PROJECT_DIR$/server/public/templates/drink_view.html" />
         <option value="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
         <option value="$PROJECT_DIR$/server/public/templates/popup.html" />
         <option value="$PROJECT_DIR$/server/public/router.js" />
+        <option value="$PROJECT_DIR$/server/public/templates/drink_view.html" />
       </list>
     </option>
   </component>
@@ -498,14 +496,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="39" selection-start="809" selection-end="809" vertical-scroll-proportion="0.49368864">
+        <state line="20" column="26" selection-start="727" selection-end="727" vertical-scroll-proportion="0.44880787">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/templates/drink_view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+        <state line="9" column="0" selection-start="159" selection-end="159" vertical-scroll-proportion="0.20930232">
           <folding />
         </state>
       </provider>
