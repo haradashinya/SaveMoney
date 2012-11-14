@@ -46,10 +46,7 @@
     NSString *uuid = [[User alloc] uuid];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/users/%@/drinks/",BASE_URL,uuid]];
     
-    NSLog(@"url is %@",[url description]);
-    
     NSString *paramStr = [NSString stringWithFormat:@"price=%.2f&type=%@",[self priceForCoffee:name],name];
-    
     
     NSData *params = [paramStr dataUsingEncoding:NSUTF8StringEncoding];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];

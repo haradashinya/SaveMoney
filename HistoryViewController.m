@@ -54,7 +54,7 @@ static id historyViewController;
 }
 -(void)didRefreshPage
 {
-    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"location.reload()"];
     
 }
 -(void)tappedCloseButton:(id)sender
