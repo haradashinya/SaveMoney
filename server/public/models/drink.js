@@ -1,10 +1,12 @@
 define(["zepto","underscore","backbone"],function($,_,Backbone){
 	var Drink = Backbone.Model.extend({
 		url:function(){
+				return "http://localhost:9393/users/" + window.uuid + "/drinks/11";
 		},
 		initialize:function(){
 			_.bindAll(this,"removeDrink");
 			this.on("destroy",this.removeDrink,this);
+			this.on("update",this.updateDrink,this);
 		},
 		removeDrink:function(){
 			var model = this.toJSON();
@@ -13,6 +15,18 @@ define(["zepto","underscore","backbone"],function($,_,Backbone){
 				url:"http://localhost:9393/users/" + window.uuid +  "/drinks/" + model._id,
 				success:function(data){
 					console.log("removed drinks successfully");
+				}
+			})
+		},
+		updateDrink:function(){
+			var model = this.toJSON();
+			$.ajax({
+				type: "PUT",
+				url: "http://localhost:9393/users/" + window.uuid + "/drinks/" + model._id,
+				data: model,
+				success:function(data){
+					console.log("success update");
+
 				}
 			})
 		}

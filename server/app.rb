@@ -60,6 +60,14 @@ delete "/users/:uuid/drinks/:drink_id" do
 	drink.destroy
 end
 
+post "/users/:uuid/drinks/:drink_id" do
+	puts "called post"
+end
+
+put "/users/:uuid/drinks/:drink_id" do
+	binding.pry
+end
+
 post "/users/:uuid/drinks/" do
 	price = params[:price].to_f
 	type = params[:type].downcase.split(" ").join("_")
