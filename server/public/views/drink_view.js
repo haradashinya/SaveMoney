@@ -5,7 +5,7 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 
 			initialize:function(){
 				_.bindAll(this,"removeDrink","updateDrink");
-				this.model.bind("change",changed,this);
+				this.model.bind("change",this.changed,this);
 			},
 			events: {
 				"click li .remove-drink": "removeDrink",
@@ -28,10 +28,11 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html"],
 				this.model.destroy();
 			},
 			updateDrink:function(){
+				this.model.set({type: "nobi"});
 				this.model.trigger("update");
 			},
 			changed:function(){
-				console.log("changeddddddd");
+				this.render();
 			}
 
 		});
