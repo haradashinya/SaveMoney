@@ -91,7 +91,6 @@
     NSLog(@"self.delegate is %@",self.hvcDelegate);
     if ([self.hvcDelegate respondsToSelector:@selector(didRefreshPage)]){
         [self.hvcDelegate didRefreshPage];
-        NSLog(@"respond!");
     }else{
         NSLog(@"not response!");
     }
@@ -100,8 +99,9 @@
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    NSLog(@"error %@",[error localizedDescription]);
     
-    [[Helper alloc] showNetWorkErrorAlertView];
+//    [[Helper alloc] showNetWorkErrorAlertView];
 }
 
 

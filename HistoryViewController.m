@@ -57,6 +57,14 @@ static id historyViewController;
     [self.webView stringByEvaluatingJavaScriptFromString:@"location.reload()"];
 
 }
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"erorororoororoor");
+}
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSLog(@"finished load");
+}
 -(void)tappedCloseButton:(id)sender
 {
     

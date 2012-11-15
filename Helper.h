@@ -12,5 +12,6 @@
 @interface Helper : NSObject
 -(void)putBackgroundOn:(UIView *)view;
 -(void)showNetWorkErrorAlertView;
+-(void)showNoDrinkError;
 
 @end

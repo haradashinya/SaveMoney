@@ -39,7 +39,6 @@ end
 get "/users/:uuid/drinks/total_price/" do
 	content_type :json
 	user = User.find_or_create_by(:uuid => params[:uuid])
-
 	return {:total => user.total_price}.to_json
 end
 
@@ -55,8 +54,7 @@ get "/users/:uuid/drinks/" do
 	user = User.find_by({:uuid => params[:uuid].to_s})
 	# if user doesn't find then return msg
 	if user.drinks.count == 0
-		p user.drinks.count
-		return {:msg => "There's no drinks"}.to_json
+		error 404
 	else
 		return user.drinks.to_json
 	end

@@ -27,8 +27,16 @@
     CGAffineTransform myTransform = CGAffineTransformMakeTranslation(0.0, 70.0);
     [myAlertView setTransform:myTransform];
     [myAlertView show];
-
+}
+-(void)showNoDrinkError
+{
+    
+    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"There's no Drinks." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    CGAffineTransform myTransform = CGAffineTransformMakeTranslation(0.0, 70.0);
+    [myAlertView setTransform:myTransform];
+    [myAlertView show];
     
 }
+
 
 @end

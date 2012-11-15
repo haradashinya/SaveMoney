@@ -25,17 +25,13 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html","li
 				return this;
 			},
 			formatDate:function(date){
-				return date.split("T")[0]
+				return date.split("T")[0];
 			},
 			removeDrink:function(){
 				this.$el.remove();
 				this.model.destroy();
 			},
 			updateDrink:function(){
-
-				console.log(template);
-
-
 				this.model.set({type: "nobi"});
 				this.model.trigger("update");
 			},

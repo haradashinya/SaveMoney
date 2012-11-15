@@ -40,7 +40,6 @@
 
 -(void)performRequest {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/users/",BASE_URL]];
-    
     NSString *paramStr = [NSString stringWithFormat:@"uuid=%@",[self uuid]];
     NSData *params = [paramStr dataUsingEncoding:NSUTF8StringEncoding];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -78,10 +77,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"%@",JSON);
-        NSLog(@"name is %@",[JSON valueForKeyPath:@"name"]);
-        NSLog(@"%@",response);
-        NSLog(@"success");
+        NSLog(@"JSON is %@",JSON);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"%@",[error localizedDescription]);
     }];
