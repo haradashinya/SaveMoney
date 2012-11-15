@@ -38,7 +38,8 @@ end
 
 get "/users/:uuid/drinks/total_price/" do
 	content_type :json
-	user = User.find_by(:uuid => params[:uuid])
+	user = User.find_or_create_by(:uuid => params[:uuid])
+
 	return {:total => user.total_price}.to_json
 end
 
@@ -52,7 +53,15 @@ end
 get "/users/:uuid/drinks/" do
 	content_type :json
 	user = User.find_by({:uuid => params[:uuid].to_s})
-	return user.drinks.to_json
+	# if user doesn't find then return msg
+	if user.drinks.count == 0
+		p user.drinks.count
+		return {:msg => "There's no drinks"}.to_json
+	else
+		return user.drinks.to_json
+	end
+
+
 end
 
 delete "/users/:uuid/drinks/:drink_id" do
@@ -66,9 +75,7 @@ put "/users/:uuid/drinks/:drink_id" do
 	item  = JSON.parse(request.body.read)
 	user = User.find_by({:uuid => params[:uuid].to_s})
 	drink = user.drinks.find_by({:_id => params[:drink_id]})
-	# drink.update_attributes({:price => item["price"].to_i,:type => item["type"]})
 	drink.update_attributes({:price => item["price"].to_i,:type => "nobi"})
-	p drink
 end
 
 post "/users/:uuid/drinks/" do
