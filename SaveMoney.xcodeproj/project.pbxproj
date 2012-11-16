@@ -28,6 +28,7 @@
 		06A802641651E19E00BCAEBD /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A802631651E19E00BCAEBD /* CMPopTipView.m */; };
 		06A80268165229F200BCAEBD /* Underline.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A80267165229F200BCAEBD /* Underline.m */; };
 		06BF3539163D4FBA00F34C75 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BF3538163D4FBA00F34C75 /* User.m */; };
+		06C5879816562EA10091DA8D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C5879716562EA10091DA8D /* DetailViewController.m */; };
 		06C5D526163BC48300E3776A /* _cafelate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06C5D524163BC48300E3776A /* _cafelate@2x.png */; };
 		06C5D527163BC48300E3776A /* _cafelate.png in Resources */ = {isa = PBXBuildFile; fileRef = 06C5D525163BC48300E3776A /* _cafelate.png */; };
 		06C674E5163B16A600CB50D9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C674E4163B16A600CB50D9 /* HomeViewController.m */; };
@@ -103,6 +104,8 @@
 		06A80267165229F200BCAEBD /* Underline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Underline.m; sourceTree = "<group>"; };
 		06BF3537163D4FBA00F34C75 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		06BF3538163D4FBA00F34C75 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		06C5879616562EA10091DA8D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		06C5879716562EA10091DA8D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		06C5D524163BC48300E3776A /* _cafelate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "_cafelate@2x.png"; sourceTree = "<group>"; };
 		06C5D525163BC48300E3776A /* _cafelate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _cafelate.png; sourceTree = "<group>"; };
 		06C674E3163B16A600CB50D9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 		06F65D1C16398438007749EB = {
 			isa = PBXGroup;
 			children = (
+				06C5879616562EA10091DA8D /* DetailViewController.h */,
+				06C5879716562EA10091DA8D /* DetailViewController.m */,
 				06A802621651E19E00BCAEBD /* CMPopTipView.h */,
 				06A802631651E19E00BCAEBD /* CMPopTipView.m */,
 				06A8025B1651DA7600BCAEBD /* BButton.h */,
@@ -480,6 +485,7 @@
 				06A8025D1651DA7700BCAEBD /* BButton.m in Sources */,
 				06A802641651E19E00BCAEBD /* CMPopTipView.m in Sources */,
 				06A80268165229F200BCAEBD /* Underline.m in Sources */,
+				06C5879816562EA10091DA8D /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

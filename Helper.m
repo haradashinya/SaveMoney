@@ -18,7 +18,7 @@
     [view sendSubviewToBack:background];
     view.layer.zPosition = -100;
 
-}
+    }
 
 
 -(void)showNetWorkErrorAlertView

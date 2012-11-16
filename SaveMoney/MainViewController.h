@@ -14,6 +14,7 @@
 #import "GADBannerView.h"
 #import "AFNetworking.h"
 #import "HistoryViewController.h"
+#import "DetailViewController.h"
 
 @interface MainViewController : UIViewController<UITabBarControllerDelegate,UITabBarDelegate,GADBannerViewDelegate>
 

@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 
+
 @interface MainViewController ()
 
 @end
@@ -31,13 +32,15 @@
     
     
     HistoryViewController *hvc = [[HistoryViewController alloc] init];
-    hvc.title = @"History";
+    hvc.title = @"Edit";
     SaveMoneyViewController *svc = [[SaveMoneyViewController alloc] init];
     svc.title = @"Save";
+    DetailViewController *dvc = [[DetailViewController alloc] init];
+    dvc.title = @"Detail";
     
     UITabBarController *tabBarController;
     tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
-    tabBarController.viewControllers = @[svc,hvc];
+    tabBarController.viewControllers = @[svc,hvc,dvc];
     tabBarController.delegate =self;
 
     [self.navigationController pushViewController:tabBarController animated:YES];

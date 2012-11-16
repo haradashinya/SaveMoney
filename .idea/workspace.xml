@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Helper.h" afterPath="$PROJECT_DIR$/Helper.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Helper.m" afterPath="$PROJECT_DIR$/Helper.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.m" afterPath="$PROJECT_DIR$/HistoryViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/Drink.m" afterPath="$PROJECT_DIR$/SaveMoney/Drink.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User.m" afterPath="$PROJECT_DIR$/User.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.rb" afterPath="$PROJECT_DIR$/server/app.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
