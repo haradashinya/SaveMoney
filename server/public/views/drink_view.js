@@ -13,7 +13,7 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html","li
 			render:function(){
 				var opts = {
 					uuid: window.uuid,
-					type: this.model.get("type"),
+					type: this.formatTitle(this.model.get("type")),
 					_id: this.model.get("_id"),
 					user_id: this.model.get("user_id"),
 					price: this.model.get("price"),
@@ -26,6 +26,23 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html","li
 			},
 			formatDate:function(date){
 				return date.split("T")[0];
+			},
+			// ugly implement...
+			formatTitle:function(str){
+				var splittedWords = str.split("_")
+
+				var firstWord = splittedWords[0];
+				var firstInit = firstWord[0].toUpperCase();
+				var firstRest = firstWord.slice(1,firstWord.length);
+				var first = firstInit + firstRest;
+
+				var secondWord = splittedWords[1];
+				var secondInit = secondWord[0].toUpperCase();
+				var secondRest = secondWord.slice(1,secondWord.length);
+				var second = secondInit + secondRest;
+				var res = first + " " + second;
+
+				return res;
 			},
 			removeDrink:function(){
 				this.$el.remove();
