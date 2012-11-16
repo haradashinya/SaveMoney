@@ -42,7 +42,6 @@
 
 - (void)viewDidLoad
 {
-    
     drink = [Drink shared];
     drink.delegate = self;
     user = [User shared];
@@ -71,13 +70,11 @@
     currentPriceLabel.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:currentPriceLabel];
-    
-    
 }
 -(void)addCoffeePickerView
 {
     
-    coffeePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,100,320,200)];
+    coffeePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,100,320,205)];
     coffeePickerView.delegate = nil;
 
     coffeePickerView.delegate = self;

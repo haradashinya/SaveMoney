@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Admob.h"
+#import "DSBarChart.h"
 
 
 @interface DetailViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIView *ChartView;
 
 @end

@@ -28,6 +28,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                          [NSNumber numberWithInt:3], @"0",
+                          [NSNumber numberWithInt:40], @"1",
+                          [NSNumber numberWithInt:20], @"2",
+                          [NSNumber numberWithInt:56], @"3",
+                          [NSNumber numberWithInt:70], @"4",
+                          [NSNumber numberWithInt:34], @"5",
+                          [NSNumber numberWithInt:43], @"6",
+                          nil];
+    
+    DSBarChart *chart = [[DSBarChart alloc] initWithFrame:self.view.bounds color:[UIColor redColor] andDictionary:dict];
+    chart.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    chart.bounds = self.view.bounds;
+    chart.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:chart];
+    
+    
+    
+    
+    
 	// Do any additional setup after loading the view.
 }
 
