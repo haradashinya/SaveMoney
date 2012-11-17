@@ -4,6 +4,7 @@
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/DetailViewController.h" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/DetailViewController.m" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
@@ -47,7 +48,7 @@
           <file leaf-file-name="drink_view.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="48" column="0" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.55861074">
+                <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -78,7 +79,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="0.3255814">
+                <state line="22" column="6" selection-start="505" selection-end="505" vertical-scroll-proportion="0.5116279">
                   <folding />
                 </state>
               </provider>
@@ -416,14 +417,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="0.3255814">
+        <state line="22" column="6" selection-start="505" selection-end="505" vertical-scroll-proportion="0.5116279">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.55861074">
+        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
