@@ -203,7 +203,7 @@
 -(void)updateCurrentLabel
 {
     float price = [[self.currentCoffee valueForKey:@"price"] floatValue];
-    currentPriceLabel.text = [NSString stringWithFormat:@"%.1f $",price];
+    currentPriceLabel.text = [NSString stringWithFormat:@"Price: %.1f $",price];
     
 }
 
