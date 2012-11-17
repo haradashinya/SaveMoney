@@ -42,14 +42,11 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html","li
 				}
 
 				var firstWord = splittedWords[0];
-				var firstInit = firstWord[0].toUpperCase();
-				var firstRest = firstWord.slice(1,firstWord.length);
-				var first = firstInit + firstRest;
+				var first = capitalize(firstWord);
 
 				var secondWord = splittedWords[1];
-				var secondInit = secondWord[0].toUpperCase();
-				var secondRest = secondWord.slice(1,secondWord.length);
-				var second = secondInit + secondRest;
+				var second = capitalize(secondWord);
+
 				var res = first + " " + second;
 
 				return res;
