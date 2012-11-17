@@ -31,6 +31,16 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html","li
 			formatTitle:function(str){
 				var splittedWords = str.split("_")
 
+				var capitalize = function(word){
+					var first = word[0];
+					var rest = word.slice(1,word.length);
+					return first.toUpperCase() + rest;
+				};
+
+				if (splittedWords.length === 1){
+					return capitalize(splittedWords[0]);
+				}
+
 				var firstWord = splittedWords[0];
 				var firstInit = firstWord[0].toUpperCase();
 				var firstRest = firstWord.slice(1,firstWord.length);

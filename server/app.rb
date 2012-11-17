@@ -52,6 +52,7 @@ end
 get "/users/:uuid/drinks/" do
 	content_type :json
 	user = User.find_by({:uuid => params[:uuid].to_s})
+	puts params[:uuid]
 	if user.drinks.count == 0
 		error 404
 	else

@@ -6,6 +6,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/DetailViewController.m" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.rb" afterPath="$PROJECT_DIR$/server/app.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,10 +48,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="drink_view.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="drink_view.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="41" column="18" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.37127373">
+                <state line="45" column="30" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.48914617">
                   <folding />
                 </state>
               </provider>
@@ -76,10 +79,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/public/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="0.30853996">
+                <state line="14" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="0.3255814">
                   <folding />
                 </state>
               </provider>
@@ -181,7 +184,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -192,7 +195,19 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveMoney" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -200,9 +215,9 @@
     <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -403,16 +418,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
+    <entry file="file://$PROJECT_DIR$/server/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="18" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.37127373">
+        <state line="14" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="0.3255814">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/index.html">
+    <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="0.30853996">
+        <state line="45" column="30" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.48914617">
           <folding />
         </state>
       </provider>

@@ -62,8 +62,6 @@
 {
     self.currentCoffee = [drink.types objectAtIndex:0];
     currentPriceLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0,300,320, 50)];
-    currentPriceLabel.gradientStartColor = [UIColor blackColor];
-    currentPriceLabel.gradientEndColor = [UIColor darkGrayColor];
     
     
     Underline *lineLabel = [[Underline alloc] initWithFrame:CGRectMake(60,330,200,10)];
@@ -108,10 +106,8 @@
 {
     moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
+    moneyLabel.font = [UIFont boldSystemFontOfSize:18.0];
     moneyLabel.backgroundColor = [UIColor clearColor];
-    moneyLabel.shadowOffset = CGSizeMake(1.0, 2.0);
-    moneyLabel.shadowColor = [UIColor colorWithWhite:1.0f alpha:0.8f];
-    moneyLabel.shadowBlur = 0.5;
     
     moneyLabel.text = @"...";
     
