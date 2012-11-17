@@ -17,6 +17,7 @@
 #import "CMPopTipView.h"
 #import "Underline.h"
 #import "HistoryViewController.h"
+#import "FXLabel.h"
 
 @interface SaveMoneyViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource,CMPopTipViewDelegate,RankDelegate>
 

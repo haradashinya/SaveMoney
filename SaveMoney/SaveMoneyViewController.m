@@ -14,12 +14,12 @@
 
 @implementation SaveMoneyViewController
 {
-    UILabel *currentPriceLabel;
+    FXLabel *currentPriceLabel;
     User *user;
     UIPickerView *coffeePickerView;
     Drink *drink;
-    UILabel *moneyLabel;
-    UILabel *rankLabel;
+    FXLabel *moneyLabel;
+    FXLabel *rankLabel;
     HistoryViewController *hvc;
 }
 
@@ -61,7 +61,11 @@
 -(void)addCurrentPriceLabel
 {
     self.currentCoffee = [drink.types objectAtIndex:0];
-    currentPriceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,300,320, 50)];
+    currentPriceLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0,300,320, 50)];
+    currentPriceLabel.gradientStartColor = [UIColor blackColor];
+    currentPriceLabel.gradientEndColor = [UIColor darkGrayColor];
+    
+    
     Underline *lineLabel = [[Underline alloc] initWithFrame:CGRectMake(60,330,200,10)];
     [currentPriceLabel setTextAlignment:NSTextAlignmentCenter];
     currentPriceLabel.text = [NSString stringWithFormat:@"Price: %.1f $",[drink priceForCoffee:[self.currentCoffee valueForKey:@"name"]]];
@@ -102,9 +106,13 @@
 }
 -(void)addMoneyLabel
 {
-    moneyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
+    moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
     moneyLabel.backgroundColor = [UIColor clearColor];
+    moneyLabel.shadowOffset = CGSizeMake(1.0, 2.0);
+    moneyLabel.shadowColor = [UIColor colorWithWhite:1.0f alpha:0.8f];
+    moneyLabel.shadowBlur = 0.5;
+    
     moneyLabel.text = @"...";
     
     BButton *btn = [[BButton alloc] initWithFrame:CGRectMake(0,52,60,44)];
@@ -122,9 +130,13 @@
     
     CMPopTipView *contentView = [[CMPopTipView alloc] initWithFrame:CGRectMake(0, 0,240,44)];
     contentView.delegate = self;
-    rankLabel  = [[UILabel alloc] initWithFrame:[contentView bounds]];
+    rankLabel  = [[FXLabel alloc] initWithFrame:[contentView bounds]];
     [rankLabel setBackgroundColor:[UIColor darkGrayColor]];
     [rankLabel setTextAlignment:NSTextAlignmentCenter];
+    
+    UIFont *font = [UIFont boldSystemFontOfSize:16];
+    rankLabel.font = font;
+    
     rankLabel.layer.cornerRadius = 10.0f;
     rankLabel.layer.masksToBounds = YES;
     rankLabel.text = @"fetching...";
@@ -201,7 +213,6 @@
 -(void)updateCurrentPriceLabel
 {
     moneyLabel.text = [NSString stringWithFormat:@"You've saved %.1f $",drink.totalPrice];
-    moneyLabel.backgroundColor = [UIColor clearColor];
 }
 
 -(void)pressedSaveBtn:(id)sender
