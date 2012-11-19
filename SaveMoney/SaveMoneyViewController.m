@@ -84,8 +84,11 @@
 -(void)addCoffeePickerView
 {
     
-    coffeePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,100,320,205)];
-    coffeePickerView.delegate = nil;
+    if ([Helper isIphone5]){
+        coffeePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,100 * TO_IPhone5,320,205 * TO_IPhone5)];
+    }else{
+        coffeePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,100,320,205)];
+    }
 
     coffeePickerView.delegate = self;
     
@@ -112,14 +115,26 @@
 }
 -(void)addMoneyLabel
 {
-    moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
+    if ([Helper isIphone5]){
+        moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 50 *TO_IPhone5, 320, 50 *TO_IPhone5)];
+        moneyLabel.font = [UIFont boldSystemFontOfSize:18.0];
+    }else{
+        moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
+        moneyLabel.font = [UIFont boldSystemFontOfSize:20.0];
+    }
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
-    moneyLabel.font = [UIFont boldSystemFontOfSize:18.0];
     moneyLabel.backgroundColor = [UIColor clearColor];
     
     moneyLabel.text = @"...";
     
-    BButton *btn = [[BButton alloc] initWithFrame:CGRectMake(0,52,60,44)];
+    BButton *btn;
+    
+    if ([Helper isIphone5]){
+        btn = [[BButton alloc] initWithFrame:CGRectMake(0, 52 * TO_IPhone5, 60, 44 * TO_IPhone5)];
+    }else{
+        btn = [[BButton alloc] initWithFrame:CGRectMake(0,52,60,44)];
+    }
+    
     btn.color = [UIColor orangeColor];
     [btn setTitle:@"Rank" forState:UIControlStateNormal];
     btn.layer.cornerRadius = 1000;
