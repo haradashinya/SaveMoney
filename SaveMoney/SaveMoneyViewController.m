@@ -62,14 +62,17 @@
 -(void)addCurrentPriceLabel
 {
     self.currentCoffee = [drink.types objectAtIndex:0];
+    Underline *lineLabel;
     if ([Helper isIphone5]){
         currentPriceLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 300 * TO_IPhone5, 320, 50 * TO_IPhone5)];
+        lineLabel = [[Underline alloc] initWithFrame:CGRectMake(60,330 * TO_IPhone5,200,10 * 1.1)];
+        NSLog(@"ffff");
     }else{
         currentPriceLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0,300,320, 50)];
+        lineLabel = [[Underline alloc] initWithFrame:CGRectMake(60,330,200,10)];
+        NSLog(@"helelleleell");
     }
     
-    
-    Underline *lineLabel = [[Underline alloc] initWithFrame:CGRectMake(60,330,200,10)];
     [currentPriceLabel setTextAlignment:NSTextAlignmentCenter];
     currentPriceLabel.text = [NSString stringWithFormat:@"Price: %.1f $",[drink priceForCoffee:[self.currentCoffee valueForKey:@"name"]]];
     currentPriceLabel.font = [UIFont boldSystemFontOfSize:20];
@@ -163,7 +166,7 @@
     float screenHeight = [UIScreen mainScreen].bounds.size.height;
     BButton *btn = [[BButton alloc] init];
     if([Helper isIphone5]){
-        btn.frame = CGRectMake(-10,screenHeight * 0.75,340,50 * (screenHeight / 480));
+        btn.frame = CGRectMake(-10,screenHeight * 0.75,340,50 * 1.4);
     }else{
         btn.frame = CGRectMake(-10,screenHeight * 0.75, 340,50);
     }
