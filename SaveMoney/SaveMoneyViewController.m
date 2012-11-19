@@ -62,7 +62,11 @@
 -(void)addCurrentPriceLabel
 {
     self.currentCoffee = [drink.types objectAtIndex:0];
-    currentPriceLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0,300,320, 50)];
+    if ([Helper isIphone5]){
+        currentPriceLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 300 * TO_IPhone5, 320, 50 * TO_IPhone5)];
+    }else{
+        currentPriceLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0,300,320, 50)];
+    }
     
     
     Underline *lineLabel = [[Underline alloc] initWithFrame:CGRectMake(60,330,200,10)];
