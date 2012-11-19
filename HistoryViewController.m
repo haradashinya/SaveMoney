@@ -40,7 +40,12 @@ static id historyViewController;
     self.url = [NSURL URLWithString:urlStr];
     
     self.webView = [[UIWebView alloc] init];
-    self.webView.frame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height);
+    CGFloat tabBarHeight = self.tabBarController.tabBar.frame.size.height + 50;
+    
+    CGRect webFrame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height - tabBarHeight);
+    
+    self.webView.frame = webFrame;
+    
     self.webView.layer.cornerRadius = 0;
     self.webView.scalesPageToFit = NO;
     self.webView.delegate = self;
@@ -49,9 +54,14 @@ static id historyViewController;
     
     [[Admob alloc] addAdmobOn:self];
     
+
+
     [self.view addSubview:self.webView];
 	// Do any additional setup after loading the view.
 }
+
+
+
 -(void)didRefreshPage
 {
     [self.webView stringByEvaluatingJavaScriptFromString:@"location.reload()"];
