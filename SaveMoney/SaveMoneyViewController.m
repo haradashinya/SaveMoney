@@ -7,6 +7,7 @@
 //
 
 #import "SaveMoneyViewController.h"
+#define TO_IPhone5 1.183
 
 @interface SaveMoneyViewController ()
 
@@ -115,8 +116,14 @@
     btn.color = [UIColor orangeColor];
     [btn setTitle:@"Rank" forState:UIControlStateNormal];
     btn.layer.cornerRadius = 1000;
+    
+    
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(pressedRankButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+
+    
+    
     
     [self.view addSubview:moneyLabel];
 }
@@ -148,7 +155,14 @@
 
 -(void)addSaveButton
 {
-    BButton *btn = [[BButton alloc] initWithFrame:CGRectMake(-10,360,340,50)];
+    NSLog(@"self.view.frame is %@",NSStringFromCGRect(self.view.frame));
+    float screenHeight = [UIScreen mainScreen].bounds.size.height;
+    BButton *btn = [[BButton alloc] init];
+    if([Helper isIphone5]){
+        btn.frame = CGRectMake(-10,screenHeight * 0.75,340,50 * (screenHeight / 480));
+    }else{
+        btn.frame = CGRectMake(-10,screenHeight * 0.75, 340,50);
+    }
     btn.color = [UIColor orangeColor];
     [btn setTitle:@"Save!" forState:UIControlStateNormal];
     [self.view addSubview:btn];

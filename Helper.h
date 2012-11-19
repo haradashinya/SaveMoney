@@ -13,5 +13,6 @@
 -(void)putBackgroundOn:(UIView *)view;
 -(void)showNetWorkErrorAlertView;
 -(void)showNoDrinkError;
++(Boolean) isIphone5;
 
 @end

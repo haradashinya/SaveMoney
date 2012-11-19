@@ -38,5 +38,15 @@
     
 }
 
++(Boolean )isIphone5
+{
+    float height = [[UIScreen mainScreen] bounds].size.height ;
+    if (height < 500.0){
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
 
 @end
