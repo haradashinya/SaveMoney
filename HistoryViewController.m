@@ -38,6 +38,7 @@ static id historyViewController;
     BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(0, 52, 340, 54)];
     navButton.color = [UIColor orangeColor];
     navButton.isAccessibilityElement = NO;
+    navButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
     [navButton setTitle:@"History" forState:UIControlStateNormal];
     [navButton setUserInteractionEnabled:NO];
     [self.view addSubview:navButton];

@@ -138,6 +138,7 @@
     
     btn.color = [UIColor orangeColor];
     [btn setTintColor:[UIColor yellowColor]];
+    btn.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
     [btn setTitle:@"Rank" forState:UIControlStateNormal];
     btn.layer.cornerRadius = 1000;
     
@@ -189,6 +190,7 @@
     }
     btn.color = [UIColor orangeColor];
     [btn setTintColor:[UIColor yellowColor]];
+    btn.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
     [btn setTitle:@"Save!" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(pressedSaveBtn:) forControlEvents:UIControlEventTouchUpInside];

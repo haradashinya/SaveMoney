@@ -4,6 +4,7 @@ require "mongoid"
 require "sinatra/base"
 require "sinatra"
 require "json"
+require "retryable"
 require File.join(File.dirname(__FILE__),"models","user")
 require File.join(File.dirname(__FILE__),"models","drink")
 require "mongo"
@@ -51,15 +52,15 @@ end
 
 get "/users/:uuid/drinks/" do
 	content_type :json
-	user = User.find_by({:uuid => params[:uuid].to_s})
-	puts params[:uuid]
-	if user.drinks.count == 0
-		error 404
-	else
-		return user.drinks.reverse.to_json
+	retryable(:tries => 3 , :on => [Errno::ECONNRESET,TimeoutError]) do
+		user = User.find_by({:uuid => params[:uuid].to_s})
+		puts params[:uuid]
+		if user.drinks.count == 0
+			error 404
+		else
+			return user.drinks.reverse.to_json
+		end
 	end
-
-
 end
 
 delete "/users/:uuid/drinks/:drink_id" do
@@ -77,10 +78,12 @@ put "/users/:uuid/drinks/:drink_id" do
 end
 
 post "/users/:uuid/drinks/" do
-	price = params[:price].to_f
-	type = params[:type].downcase.split(" ").join("_")
-	user = User.find_or_create_by(:uuid => params[:uuid])
-	user.drinks.create({:type => type,:price => price})
+	retryable(:tries => 3, :on => [Errno::ECONNRESET,TimeoutError]) do
+		price = params[:price].to_f
+		type = params[:type].downcase.split(" ").join("_")
+		user = User.find_or_create_by(:uuid => params[:uuid])
+		user.drinks.create({:type => type,:price => price})
+	end
 end
 
 

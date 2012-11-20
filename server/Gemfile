@@ -10,3 +10,4 @@ gem "mongo"
 gem "rspec"
 gem "rack-test"
 gem 'bson_ext'
+gem 'retryable'
