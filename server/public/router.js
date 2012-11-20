@@ -1,33 +1,20 @@
-define(["zepto","underscore","backbone","drink_collection","drink_collection_view","lib/text!templates/popup.html","header_view"],
-	function($,_,Backbone,DrinkCollection,DrinkCollectionView,popupTemplate,HeaderView){
+define(["zepto","underscore","backbone","drink_collection","drink_collection_view","lib/text!templates/popup.html","header_view","summary_view"],
+	function($,_,Backbone,DrinkCollection,DrinkCollectionView,popupTemplate,HeaderView,SummaryView){
+		var drinks = new DrinkCollection();
 		var Router = Backbone.Router.extend({
 			routes: {
 				"users/:uuid/drinks/edit": "editDrink",
-				"background": "showBackground",
-				"users/:uuid/drinks/:drink_id/popup": "showPopup",
-				"popup": "showPopup"
+				"users/:uuid/drinks/summary":"showSummary"
 			},
 
 			editDrink:function(uuid){
-				var models = new DrinkCollection();
 				window.uuid = uuid;
-
-				// render #header view
-				// var headerView = new HeaderView();
-				// $("#content").find("#header").html(headerView.render().$el);
-				// $("#content").find("#header").html(headerView.render().$el);
-
-
-				// render #main view
-				var drinkCollectionView = new DrinkCollectionView({collection: models});
-				$("#content").find("#main").html(drinkCollectionView.render().$el);
-
+				var drinkCollectionView = new DrinkCollectionView({collection: drinks});
+				$("#content").html(drinkCollectionView.$el);
 			},
-			showBackground:function(){
-			},
-			showPopup:function(){
-				var tmpl = _.template(popupTemplate,{});
-				$("body").html("hello world");
+			showSummary:function(){
+				var summaryView = new SummaryView({collection: drinks});
+				$("#content").html(summaryView.el);
 			}
 		});
 
