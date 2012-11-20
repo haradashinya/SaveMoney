@@ -9,15 +9,15 @@ define(["zepto","underscore","backbone","drink"],
 			calculatePriceByType:function(){
 				var drinks = this.drinksByFilteredThisMonth();
 				var typeMap = {};
+				// if type is undefined , then inclement count
 				drinks.forEach(function(drink){
 					if (typeMap[drink.type] !== undefined){
-						console.log("defined");
+						typeMap[drink.type] += 1;
 					}else{
-						console.log("undefined");
+						typeMap[drink.type] = 0;
 					}
-
-
 				},this);
+				return typeMap;
 			},
 			drinksByFilteredThisMonth:function(){
 				var current = this.currentInfo();
