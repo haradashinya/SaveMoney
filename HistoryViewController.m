@@ -34,7 +34,18 @@ static id historyViewController;
 {
     
     [super viewDidLoad];
-    summaryButton = [[BButton alloc] initWithFrame:CGRectMake(0, 52, 320, 52)];
+    
+    BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(0, 52, 320, 54)];
+    navButton.color = [UIColor orangeColor];
+    navButton.isAccessibilityElement = NO;
+    [navButton setTitle:@"History" forState:UIControlStateNormal];
+    [navButton setUserInteractionEnabled:NO];
+    [self.view addSubview:navButton];
+    
+    
+    summaryButton = [[BButton alloc] initWithFrame:CGRectMake(235,52,100, 50)];
+    summaryButton.layer.zPosition = 30.0f;
+    [summaryButton.titleLabel setFont:[UIFont boldSystemFontOfSize:14]];
     summaryButton.color = [UIColor orangeColor];
     [summaryButton setTintColor:[UIColor yellowColor]];
     [summaryButton setTitle:@"Summary" forState:UIControlStateNormal];
