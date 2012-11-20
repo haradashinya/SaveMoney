@@ -13,9 +13,9 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 				window.uuid = uuid;
 
 				// render #header view
-				var headerView = new HeaderView();
+				// var headerView = new HeaderView();
 				// $("#content").find("#header").html(headerView.render().$el);
-				$("#content").find("#header").html(headerView.render().$el);
+				// $("#content").find("#header").html(headerView.render().$el);
 
 
 				// render #main view

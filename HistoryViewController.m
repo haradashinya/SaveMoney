@@ -32,7 +32,14 @@ static id historyViewController;
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    summaryButton = [[BButton alloc] initWithFrame:CGRectMake(0, 52, 320, 52)];
+    summaryButton.color = [UIColor orangeColor];
+    [summaryButton setTintColor:[UIColor yellowColor]];
+    [summaryButton setTitle:@"Summary" forState:UIControlStateNormal];
+    [self.view addSubview:summaryButton];
+    
     [self addSummaryButton];
     Drink *drink = [Drink shared];
     
@@ -43,7 +50,7 @@ static id historyViewController;
     self.webView = [[UIWebView alloc] init];
     CGFloat tabBarHeight = self.tabBarController.tabBar.frame.size.height + 50;
     
-    CGRect webFrame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height - tabBarHeight);
+    CGRect webFrame = CGRectMake(0, 50 + 52, self.view.frame.size.width, self.view.frame.size.height - tabBarHeight - 52);
     
     self.webView.frame = webFrame;
     
@@ -62,7 +69,6 @@ static id historyViewController;
 }
 -(void)addSummaryButton
 {
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction:)];
 
     
 }

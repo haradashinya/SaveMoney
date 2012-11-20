@@ -137,6 +137,7 @@
     }
     
     btn.color = [UIColor orangeColor];
+    [btn setTintColor:[UIColor yellowColor]];
     [btn setTitle:@"Rank" forState:UIControlStateNormal];
     btn.layer.cornerRadius = 1000;
     
@@ -187,6 +188,7 @@
         btn.frame = CGRectMake(-10,screenHeight * 0.75, 340,50);
     }
     btn.color = [UIColor orangeColor];
+    [btn setTintColor:[UIColor yellowColor]];
     [btn setTitle:@"Save!" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(pressedSaveBtn:) forControlEvents:UIControlEventTouchUpInside];
