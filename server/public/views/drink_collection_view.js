@@ -15,6 +15,7 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 					success:$.proxy(this.addView,this),
 					error:$.proxy(this.showError,this)
 				});
+				this.render();
 
 			},
 			addView:function(collection,resp){
