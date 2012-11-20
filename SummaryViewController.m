@@ -13,6 +13,9 @@
 @end
 
 @implementation SummaryViewController
+{
+    UIWebView *webView;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,8 +31,31 @@
     [super viewDidLoad];
     [[Admob alloc] addAdmobOn:self];
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self addCloseButton];
+    
 	// Do any additional setup after loading the view.
 }
+
+-(void)addCloseButton
+{
+    BButton *closeButton = [[BButton alloc] initWithFrame:CGRectMake(-10,50,340, 50)];
+    [closeButton setTitle:@"Tap to Close" forState:UIControlStateNormal];
+    closeButton.color = [UIColor orangeColor];
+    closeButton.tintColor = [UIColor yellowColor];
+    [self.view addSubview:closeButton];
+    
+    [closeButton addTarget:self action:@selector(tapppedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+}
+-(void)tapppedCloseButton:(id)sender
+{
+    
+    [self dismissViewControllerAnimated:NO completion:nil];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
