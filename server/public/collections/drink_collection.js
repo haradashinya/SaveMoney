@@ -6,21 +6,19 @@ define(["zepto","underscore","backbone","drink"],
 			},
 			initialize:function(uuid){
 			},
-			calculatePriceByType:function(){
-				var drinks = this.drinksByFilteredThisMonth();
-			},
 			calclateCountByType:function(){
+				var typeMap = {};
 				var drinks = this.drinksByFilteredThisMonth();
-				this.typeMap = {};
 				// if type is undefined , then inclement count
 				drinks.forEach(function(drink){
-					if (this.typeMap[drink.type] !== undefined){
-						this.typeMap[drink.type] += 1;
+					if (typeMap[drink.type] !== undefined){
+						typeMap[drink.type] += 1;
 					}else{
-						this.typeMap[drink.type] = 0;
+						typeMap[drink.type] = 0;
 					}
 				},this);
-				return this.typeMap;
+				console.log(typeMap);
+				return typeMap;
 			},
 			drinksByFilteredThisMonth:function(){
 				var current = this.currentInfo();

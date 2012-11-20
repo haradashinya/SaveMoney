@@ -3,7 +3,7 @@ define(["zepto","underscore","backbone"],function($,_,Backbone){
 			
 			filteredDrinks:'',
 			initialize:function(){
-				this.collection.calculatePriceByType();
+				this.collection.calclateCountByType();
 
 			}
 	});
