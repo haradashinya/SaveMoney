@@ -3,7 +3,7 @@ define(["zepto","underscore","backbone"],function($,_,Backbone){
 			initialize:function(){
 			},
 			render:function(){
-				// this.$el.html("hello world");
+				this.$el.html("<header class='bar-title'>this is a title</header>");
 				return this;
 			}
 	});

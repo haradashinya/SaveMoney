@@ -44,6 +44,7 @@
 - (void)viewDidLoad
 {
     drink = [Drink shared];
+    self.navigationController.navigationBarHidden = YES;
     drink.delegate = self;
     user = [User shared];
     user.delegate = self;

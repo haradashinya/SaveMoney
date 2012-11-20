@@ -23,7 +23,7 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 					var drink = new Drink(item.toJSON());
 					var drinkView = new DrinkView({model: drink});
 					this.$el.append(drinkView.render().$el);
-				},this)
+				},this);
 				this.render();
 			},
 			render:function(){
@@ -32,7 +32,7 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 			showError:function(){
 				this.$el.html("<h1>There's no drinks</h1>");
 				this.$el.css("text-align",'center');
-//				this.$el.css("background","blue");
+				this.$el.css("margin-top","10px");
 			},
 			update:function(){
 				console.log("update");

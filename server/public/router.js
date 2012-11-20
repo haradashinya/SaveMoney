@@ -1,5 +1,5 @@
-define(["zepto","underscore","backbone","drink_collection","drink_collection_view","lib/text!templates/popup.html"],
-	function($,_,Backbone,DrinkCollection,DrinkCollectionView,popupTemplate){
+define(["zepto","underscore","backbone","drink_collection","drink_collection_view","lib/text!templates/popup.html","header_view"],
+	function($,_,Backbone,DrinkCollection,DrinkCollectionView,popupTemplate,HeaderView){
 		var Router = Backbone.Router.extend({
 			routes: {
 				"users/:uuid/drinks/edit": "editDrink",
@@ -11,12 +11,19 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 			editDrink:function(uuid){
 				var models = new DrinkCollection();
 				window.uuid = uuid;
+
+				// render #header view
+				var headerView = new HeaderView();
+				// $("#content").find("#header").html(headerView.render().$el);
+				$("#content").find("#header").html(headerView.render().$el);
+
+
+				// render #main view
 				var drinkCollectionView = new DrinkCollectionView({collection: models});
-				$("#content").html(drinkCollectionView.render().$el);
+				$("#content").find("#main").html(drinkCollectionView.render().$el);
 
 			},
 			showBackground:function(){
-				alert("called");
 			},
 			showPopup:function(){
 				var tmpl = _.template(popupTemplate,{});

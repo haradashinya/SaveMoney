@@ -20,7 +20,6 @@
 {
     
     GADBannerView *bannerView_;
-    
     bannerView_ = [[GADBannerView alloc]
                    initWithFrame:CGRectMake(0,
                                             0.0,
@@ -31,7 +30,7 @@
     
     GADRequest *request = [GADRequest request];
     request.testing = YES;
-    bannerView_.rootViewController = viewController;
+    [bannerView_ setRootViewController:viewController];
     
     [bannerView_ loadRequest:request];
     

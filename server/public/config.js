@@ -7,6 +7,7 @@ require.config({
 			drink_collection_view:"views/drink_collection_view",
 			drink_view:"views/drink_view",
 			drink:"models/drink",
+			header_view:"views/header_view",
 			router: "router"
 		},
 		shim: {
@@ -31,6 +32,9 @@ require.config({
 			},
 			"drink_view":{
 				exports: "DrinkView"
+			},
+			"header_view":{
+				exports: "HeaderView"
 			}
 		}
 });

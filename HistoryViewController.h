@@ -12,6 +12,7 @@
 #import "Helper.h"
 #import "Admob.h"
 #import "Drink.h"
+#import "BButton.h"
 
 
 @interface HistoryViewController : UIViewController<UIWebViewDelegate>

@@ -14,6 +14,7 @@
 
 @implementation HistoryViewController
 {
+    BButton *summaryButton;
     
 }
 
@@ -24,7 +25,6 @@ static id historyViewController;
     if (!historyViewController){
         historyViewController = [super initWithNibName:(NSString *)nibBundleOrNil bundle:nibBundleOrNil];
         self.delegate = self;
-        NSLog(@"called init");
     }
     return historyViewController;
     
@@ -33,6 +33,7 @@ static id historyViewController;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self addSummaryButton];
     Drink *drink = [Drink shared];
     
     NSString *uuid = [[User shared] uuid];
@@ -58,6 +59,16 @@ static id historyViewController;
 
     [self.view addSubview:self.webView];
 	// Do any additional setup after loading the view.
+}
+-(void)addSummaryButton
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction:)];
+
+    
+}
+-(void)saveAction:(id)sender
+{
+    NSLog(@"caleeld touch up");
 }
 
 
