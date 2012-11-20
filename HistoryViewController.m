@@ -38,6 +38,7 @@ static id historyViewController;
     summaryButton.color = [UIColor orangeColor];
     [summaryButton setTintColor:[UIColor yellowColor]];
     [summaryButton setTitle:@"Summary" forState:UIControlStateNormal];
+    [summaryButton addTarget:self action:@selector(tappedSummaryButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:summaryButton];
     
     [self addSummaryButton];
@@ -66,6 +67,11 @@ static id historyViewController;
 
     [self.view addSubview:self.webView];
 	// Do any additional setup after loading the view.
+}
+-(void)tappedSummaryButton:(id)sender
+{
+    SummaryViewController *svc = [[SummaryViewController alloc] init];
+    [self presentViewController:svc animated:NO completion:nil];
 }
 -(void)addSummaryButton
 {

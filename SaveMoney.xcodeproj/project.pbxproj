@@ -29,6 +29,7 @@
 		06A80268165229F200BCAEBD /* Underline.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A80267165229F200BCAEBD /* Underline.m */; };
 		06B116F016578C8900731B5E /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B116EF16578C8900731B5E /* FXLabel.m */; };
 		06BF3539163D4FBA00F34C75 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BF3538163D4FBA00F34C75 /* User.m */; };
+		06C51568165B19C900E55E77 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C51567165B19C900E55E77 /* SummaryViewController.m */; };
 		06C5879816562EA10091DA8D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C5879716562EA10091DA8D /* DetailViewController.m */; };
 		06C5879F165630700091DA8D /* DSBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C5879E165630700091DA8D /* DSBarChart.m */; };
 		06C5D526163BC48300E3776A /* _cafelate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06C5D524163BC48300E3776A /* _cafelate@2x.png */; };
@@ -108,6 +109,8 @@
 		06B116EF16578C8900731B5E /* FXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXLabel.m; sourceTree = "<group>"; };
 		06BF3537163D4FBA00F34C75 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		06BF3538163D4FBA00F34C75 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		06C51566165B19C900E55E77 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
+		06C51567165B19C900E55E77 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
 		06C5879616562EA10091DA8D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		06C5879716562EA10091DA8D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		06C5879D165630700091DA8D /* DSBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBarChart.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 		06F65D1C16398438007749EB = {
 			isa = PBXGroup;
 			children = (
+				06C51566165B19C900E55E77 /* SummaryViewController.h */,
+				06C51567165B19C900E55E77 /* SummaryViewController.m */,
 				06C5879616562EA10091DA8D /* DetailViewController.h */,
 				06C5879716562EA10091DA8D /* DetailViewController.m */,
 				06A802621651E19E00BCAEBD /* CMPopTipView.h */,
@@ -498,6 +503,7 @@
 				06C5879816562EA10091DA8D /* DetailViewController.m in Sources */,
 				06C5879F165630700091DA8D /* DSBarChart.m in Sources */,
 				06B116F016578C8900731B5E /* FXLabel.m in Sources */,
+				06C51568165B19C900E55E77 /* SummaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
