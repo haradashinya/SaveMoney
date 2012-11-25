@@ -4,23 +4,20 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 			drinks:[],
 			initialize:function(){
 				this.drinks = this.collection.calclateCountByType();
-				this.render();
+				this.renderInit();
 				this.renderHeader();
 				this.renderList();
 			},
 			types: ["drip_coffee","cafe_late"],
-			render:function(){
-				var typeMap = this.collection.calclateCountByType();
-				var res = [];
-				Object.keys(typeMap).forEach(function(item){
-					res.push({type: item,count:typeMap[item]});
-				},this);
+		  // create base template
+			renderInit:function(){
+
 				var tmp = _.template(template);
 				this.$el.html(tmp);
 				return this;
 			},
+		// show h1
 			renderHeader:function(){
-
 				var opts = {
 					year: this.collection.currentInfo().year,
 					month: this.collection.currentInfo().month
@@ -28,10 +25,25 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 				var hTmpl = "<h1><%= year %> : <%= month %></h1>";
 				this.$el.find("#summary-header").html(_.template(hTmpl,opts));
 			},
+		// show each typeMap {drinkType: count}
 			renderList:function(){
-				this.$el.find("#summary-list").html("this is a summary list");
+				var dom = "";
+				this.typeMaps().forEach(function(item){
+					dom += "<li class='summary-li'>" + item.type + item.count  +  "</li>";
+				},this);
+
+				this.$el.find("#summary-list").html(dom);
 				return this;
-			}
+			},
+		typeMaps:function(){
+			var typeMap = this.collection.calclateCountByType();
+			var res = [];
+			Object.keys(typeMap).forEach(function(item){
+				res.push({type: item,count:typeMap[item]});
+			},this);
+
+			return res;
+		}
 
 	});
 
