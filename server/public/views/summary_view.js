@@ -1,12 +1,9 @@
 define(["zepto","underscore","backbone","lib/text!templates/summary.html"],function($,_,Backbone,template){
 	var SummaryView = Backbone.View.extend({
-			filteredDrinks:'',
-			drinks:[],
 			initialize:function(){
-				this.drinks = this.collection.calclateCountByType();
 				this.renderInit();
 				this.renderHeader();
-				this.renderList();
+				this.fetchDrinks();
 			},
 			types: ["drip_coffee","cafe_late"],
 		  // create base template
@@ -29,24 +26,36 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 				this.$el.find("#summary-header").html(_.template(hTmpl,opts));
 			},
 		// show each typeMap {drinkType: count}
-			renderList:function(){
+			renderList:function(data){
+				console.log(data);
 				var dom = "";
-				this.typeMaps().forEach(function(item){
+				data.forEach(function(item){
 					dom += "<li class='summary-li'>" + item.type + item.count  +  "</li>";
 				},this);
 
 				this.$el.find("#summary-list").html(dom);
 				return this;
 			},
-		typeMaps:function(){
+		fetchDrinks:function(){
+			var self = this;
 			var typeMap = this.collection.calclateCountByType();
 			var res = [];
-			Object.keys(typeMap).forEach(function(item){
-				res.push({type: item,count:typeMap[item]});
-			},this);
 
+			var injectItem = function(typeMap){
+				Object.keys(typeMap).forEach(function(item){
+					res.push({type: item,count:typeMap[item]});
+				},this);
+			};
+			this.collection.fetch({
+				success:function(data){
+					var typeMap = self.collection.calclateCountByType();
+					injectItem(typeMap);
+					self.renderList(res);
+				}
+			});
 			return res;
 		}
+
 
 	});
 
