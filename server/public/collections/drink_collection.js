@@ -17,7 +17,6 @@ define(["zepto","underscore","backbone","drink"],
 						typeMap[drink.type] = 0;
 					}
 				},this);
-				console.log(typeMap);
 				return typeMap;
 			},
 			drinksByFilteredThisMonth:function(){

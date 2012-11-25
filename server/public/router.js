@@ -12,10 +12,10 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 				var drinkCollectionView = new DrinkCollectionView({collection: drinks});
 				$("#content").html(drinkCollectionView.$el);
 			},
-			showSummary:function(){
+			showSummary:function(uuid){
+				window.uuid = uuid;
 				var summaryView = new SummaryView({collection: drinks});
-				$("#content").html("This is a summary page");
-//				$("#content").html(summaryView.el);
+				$("#content").html(summaryView.el);
 			}
 		});
 
