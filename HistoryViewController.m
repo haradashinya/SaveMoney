@@ -51,7 +51,6 @@ static id historyViewController;
     [self.view addSubview:summaryButton];
     
     Drink *drink = [Drink shared];
-    [drink performCreateWith:@"'''"];
     
     NSString *uuid = [[User shared] uuid];
     NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/edit",uuid];
