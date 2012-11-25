@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Admob.h"
 #import "BButton.h"
+#import "User.h"
 #import "BBLabel.h"
 
 @interface SummaryViewController : UIViewController<UIWebViewDelegate>

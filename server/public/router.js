@@ -14,7 +14,8 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 			},
 			showSummary:function(){
 				var summaryView = new SummaryView({collection: drinks});
-				$("#content").html(summaryView.el);
+				$("#content").html("This is a summary page");
+//				$("#content").html(summaryView.el);
 			}
 		});
 
