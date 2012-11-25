@@ -11,18 +11,24 @@ require "mongo"
 
 UUID = ""
 
-Mongoid.configure do |config|
-  config.connect_to("db_test")
-end
+
 
 # save uuid
 class Helper
 		attr_accessor :uuid
 end
 
+
 helper = Helper.new
 
+class App < Sinatra::Base
+
+Mongoid.configure do |config|
+  config.connect_to("db_test")
+end
+
 get "/" do
+	p "callellelele"
 	File.read(File.join("public","index.html"))
 end
 
@@ -93,4 +99,7 @@ end
 
 
 
+
+
+end
 
