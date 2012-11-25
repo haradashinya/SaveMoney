@@ -43,6 +43,7 @@
 -(void)addSummaryView
 {
     
+    [Helper clearCache];
     NSString *uuid = [[User shared] uuid];
     NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/summary",uuid];
     

@@ -14,7 +14,7 @@ define(["zepto","underscore","backbone","drink"],
 					if (typeMap[drink.type] !== undefined){
 						typeMap[drink.type] += 1;
 					}else{
-						typeMap[drink.type] = 0;
+						typeMap[drink.type] = 1;
 					}
 				},this);
 				return typeMap;

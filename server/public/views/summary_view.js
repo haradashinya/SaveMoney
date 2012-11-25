@@ -27,10 +27,9 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 			},
 		// show each typeMap {drinkType: count}
 			renderList:function(data){
-				console.log(data);
 				var dom = "";
 				data.forEach(function(item){
-					dom += "<li class='summary-li'>" + item.type + item.count  +  "</li>";
+					dom += "<li class='summary-li'>" + item.type + item.count   + "</li>";
 				},this);
 
 				this.$el.find("#summary-list").html(dom);

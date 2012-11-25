@@ -11,6 +11,7 @@
 #import "BButton.h"
 #import "User.h"
 #import "BBLabel.h"
+#import "Helper.h"
 
 @interface SummaryViewController : UIViewController<UIWebViewDelegate>
 

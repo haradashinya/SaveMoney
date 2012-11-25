@@ -14,5 +14,6 @@
 -(void)showNetWorkErrorAlertView;
 -(void)showNoDrinkError;
 +(Boolean) isIphone5;
++(void)clearCache;
 
 @end

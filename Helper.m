@@ -48,5 +48,9 @@
     }
 }
 
++(void)clearCache
+{
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+}
 
 @end
