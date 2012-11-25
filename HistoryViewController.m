@@ -32,9 +32,7 @@ static id historyViewController;
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
-    
     BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(0, 52, 340, 54)];
     navButton.color = [UIColor orangeColor];
     navButton.isAccessibilityElement = NO;
@@ -42,7 +40,6 @@ static id historyViewController;
     [navButton setTitle:@"History" forState:UIControlStateNormal];
     [navButton setUserInteractionEnabled:NO];
     [self.view addSubview:navButton];
-    
     
     summaryButton = [[BButton alloc] initWithFrame:CGRectMake(235,55,83,45)];
     summaryButton.layer.zPosition = 30.0f;
@@ -53,14 +50,17 @@ static id historyViewController;
     [summaryButton addTarget:self action:@selector(tappedSummaryButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:summaryButton];
     
-    [self addSummaryButton];
     Drink *drink = [Drink shared];
+    [drink performCreateWith:@"'''"];
     
     NSString *uuid = [[User shared] uuid];
     NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/edit",uuid];
+    NSMutableURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
+
     self.url = [NSURL URLWithString:urlStr];
     
     self.webView = [[UIWebView alloc] init];
+    [self.webView loadRequest:request];
     CGFloat tabBarHeight = self.tabBarController.tabBar.frame.size.height + 50;
     
     CGRect webFrame = CGRectMake(0, 50 + 52, self.view.frame.size.width, self.view.frame.size.height - tabBarHeight - 52);
@@ -84,11 +84,6 @@ static id historyViewController;
 {
     SummaryViewController *svc = [[SummaryViewController alloc] init];
     [self presentViewController:svc animated:NO completion:nil];
-}
--(void)addSummaryButton
-{
-
-    
 }
 -(void)saveAction:(id)sender
 {

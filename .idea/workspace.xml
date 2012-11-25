@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/summary_view.js" afterPath="$PROJECT_DIR$/server/public/views/summary_view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditDrinkView.h" afterPath="$PROJECT_DIR$/EditDrinkView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditDrinkView.m" afterPath="$PROJECT_DIR$/EditDrinkView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.m" afterPath="$PROJECT_DIR$/HistoryViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/Drink.m" afterPath="$PROJECT_DIR$/SaveMoney/Drink.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SummaryViewController.m" afterPath="$PROJECT_DIR$/SummaryViewController.m" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,10 +30,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="summary_view.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="summary_view.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/public/views/summary_view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="7" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+                <state line="28" column="36" selection-start="916" selection-end="916" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="router.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/server/public/router.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="14" column="32" selection-start="647" selection-end="647" vertical-scroll-proportion="0.50119907">
                   <folding />
                 </state>
               </provider>
@@ -89,10 +104,10 @@
         <option value="$PROJECT_DIR$/server/public/views/drink_view.js" />
         <option value="$PROJECT_DIR$/server/public/layout.css" />
         <option value="$PROJECT_DIR$/server/public/templates/edit_drink.html" />
-        <option value="$PROJECT_DIR$/server/public/router.js" />
         <option value="$PROJECT_DIR$/server/public/templates/summary.html" />
         <option value="$PROJECT_DIR$/server/public/index.html" />
         <option value="$PROJECT_DIR$/server/public/views/summary_view.js" />
+        <option value="$PROJECT_DIR$/server/public/router.js" />
       </list>
     </option>
   </component>
@@ -365,11 +380,6 @@
         <state line="4" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.14883721" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="0.57793766" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/collections/drink_collection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="0.038369305" />
@@ -401,7 +411,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/summary_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+        <state line="28" column="36" selection-start="916" selection-end="916" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/public/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="32" selection-start="647" selection-end="647" vertical-scroll-proportion="0.50119907">
           <folding />
         </state>
       </provider>

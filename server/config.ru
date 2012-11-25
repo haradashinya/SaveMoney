@@ -1,3 +1,6 @@
 require "./app"
 
 
+run App
+
+

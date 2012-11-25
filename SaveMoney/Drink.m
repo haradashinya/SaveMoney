@@ -72,7 +72,6 @@
         [self.delegate updateCurrentPriceLabel];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"%@",[error localizedDescription]);
-        NSLog(@"supeerr errror");
         [[Helper alloc] showNetWorkErrorAlertView];
     }];
     

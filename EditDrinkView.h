@@ -11,5 +11,6 @@
 
 @interface EditDrinkView : UIView
 -(UIWebView *)webView;
+@property (nonatomic,strong) UIWebView *webView;
 
 @end

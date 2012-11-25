@@ -81,5 +81,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSLog(@"finished load");
+}
 
 @end

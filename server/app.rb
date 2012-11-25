@@ -18,7 +18,6 @@ end
 # save uuid
 class Helper
 		attr_accessor :uuid
-
 end
 
 helper = Helper.new
