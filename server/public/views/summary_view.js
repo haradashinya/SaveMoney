@@ -27,17 +27,23 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 			},
 		// show each typeMap {drinkType: count}
 			renderList:function(data){
+				//add for debug
 				var dom = "";
+				if (data.length === 0){
+					dom += "<li>hello world</li>";
+				}else{
 				data.forEach(function(item){
 					dom += "<li class='summary-li'>" + item.type + item.count   + "</li>";
 				},this);
+				}
+
 
 				this.$el.find("#summary-list").html(dom);
 				return this;
 			},
 		fetchDrinks:function(){
 			var self = this;
-			var typeMap = this.collection.calclateCountByType();
+			var typeMap = this.collection.incCountByType();
 			var res = [];
 
 			var injectItem = function(typeMap){
@@ -47,7 +53,7 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 			};
 			this.collection.fetch({
 				success:function(data){
-					var typeMap = self.collection.calclateCountByType();
+					var typeMap = self.collection.incCountByType();
 					injectItem(typeMap);
 					self.renderList(res);
 				}

@@ -6,7 +6,7 @@ define(["zepto","underscore","backbone","drink"],
 			},
 			initialize:function(uuid){
 			},
-			calclateCountByType:function(){
+			incCountByType:function(){
 				var typeMap = {};
 				var drinks = this.drinksByFilteredThisMonth();
 				// if type is undefined , then inclement count
