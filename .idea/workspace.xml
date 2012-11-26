@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/.sass-cache/8ed69f904663e003d6faf25fc35c37587125aa6a/summary.scssc" afterPath="$PROJECT_DIR$/server/public/.sass-cache/8ed69f904663e003d6faf25fc35c37587125aa6a/summary.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/css/summary.css" afterPath="$PROJECT_DIR$/server/public/css/summary.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/scss/summary.scss" afterPath="$PROJECT_DIR$/server/public/scss/summary.scss" />
     </list>
@@ -36,7 +37,7 @@
       <file leaf-file-name="summary.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
+            <state line="23" column="0" selection-start="448" selection-end="448" vertical-scroll-proportion="0.5068871">
               <folding />
             </state>
           </provider>
@@ -474,7 +475,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
+        <state line="23" column="0" selection-start="448" selection-end="448" vertical-scroll-proportion="0.5068871">
           <folding />
         </state>
       </provider>

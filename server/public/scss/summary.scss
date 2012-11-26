@@ -5,6 +5,12 @@ $defaultFontStyle: Serif;
   background-image: -webkit-linear-gradient($from, $to);
 }
 
+@mixin circle{
+  background: rgba(255,200,200,0.8);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+};
 
 
 .summary-title {
@@ -14,7 +20,7 @@ $defaultFontStyle: Serif;
 
 .summary-li {
   @include gradient($blueColor,darken($blueColor,10%));
-  margin: 30px 40px 0 40px;
+  margin: 30px 20px 0 20px;
   color: white;
   list-style-type: none;
   font-family: $defaultFontStyle;
@@ -27,5 +33,6 @@ $defaultFontStyle: Serif;
   text-align: left;
   padding: 5px 10px 5px 10px;
 };
+
 
 
