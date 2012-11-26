@@ -1,15 +1,19 @@
 .summary-title {
-  text-align: center; }
+  text-align: center;
+  font-size: 50px; }
 
 .summary-li {
+  background-color: rgba(200, 100, 0, 0.9);
+  background-image: -webkit-linear-gradient(rgba(200, 100, 0, 0.9), rgba(149, 75, 0, 0.9));
   margin: 30px 40px 0 40px;
+  color: white;
   list-style-type: none;
-  font-family: bold;
+  font-family: Serif;
   font-weight: bold;
   border-style: solid;
   border-width: 5px;
-  border-color: red;
+  border-color: rgba(139, 69, 0, 0.9);
   border-radius: 10px 10px;
   font-size: 30px;
   text-align: left;
-  padding-left: 10px; }
+  padding: 5px 10px 5px 10px; }

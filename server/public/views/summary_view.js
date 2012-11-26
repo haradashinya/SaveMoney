@@ -33,7 +33,7 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 					dom += "<li>hello world</li>";
 				}else{
 				data.forEach(function(item){
-					dom += "<li class='summary-li'>" + item.type + item.count   + "</li>";
+					dom += "<li class='summary-li'>" + item.type + ":"+   item.count   + "</li>";
 				},this);
 				}
 

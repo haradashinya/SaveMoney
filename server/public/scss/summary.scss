@@ -1,18 +1,31 @@
-.summary-title {text-align:center;
+$orangeColor: rgba(200,100,0,0.9);
+$defaultFontStyle: Serif;
+@mixin gradient($from, $to) {
+  background-color: $from;
+  background-image: -webkit-linear-gradient($from, $to);
+}
+
+
+
+.summary-title {
+  text-align:center;
+  font-size: 50px;
 };
 
 .summary-li {
+  @include gradient($orangeColor,darken($orangeColor,10%));
   margin: 30px 40px 0 40px;
+  color: white;
   list-style-type: none;
-  font-family: bold;
+  font-family: $defaultFontStyle;
   font-weight: bold;
   border-style: solid;
   border-width: 5px;
-  border-color: red;
+  border-color: darken($orangeColor,12%);
   border-radius: 10px 10px;
   font-size: 30px;
   text-align: left;
-  padding-left: 10px;
+  padding: 5px 10px 5px 10px;
 };
 
 
