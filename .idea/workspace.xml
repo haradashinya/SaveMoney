@@ -37,7 +37,7 @@
       <file leaf-file-name="summary.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="448" selection-end="448" vertical-scroll-proportion="0.5068871">
+            <state line="18" column="18" selection-start="364" selection-end="364" vertical-scroll-proportion="0.3966942">
               <folding />
             </state>
           </provider>
@@ -475,7 +475,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="448" selection-end="448" vertical-scroll-proportion="0.5068871">
+        <state line="18" column="18" selection-start="364" selection-end="364" vertical-scroll-proportion="0.3966942">
           <folding />
         </state>
       </provider>
