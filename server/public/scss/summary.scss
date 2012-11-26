@@ -1,4 +1,4 @@
-$orangeColor: rgba(200,100,0,0.9);
+$blueColor: rgba(30,100,200,0.8);
 $defaultFontStyle: Serif;
 @mixin gradient($from, $to) {
   background-color: $from;
@@ -13,7 +13,7 @@ $defaultFontStyle: Serif;
 };
 
 .summary-li {
-  @include gradient($orangeColor,darken($orangeColor,10%));
+  @include gradient($blueColor,darken($blueColor,10%));
   margin: 30px 40px 0 40px;
   color: white;
   list-style-type: none;
@@ -21,7 +21,7 @@ $defaultFontStyle: Serif;
   font-weight: bold;
   border-style: solid;
   border-width: 5px;
-  border-color: darken($orangeColor,12%);
+  border-color: darken($blueColor,12%);
   border-radius: 10px 10px;
   font-size: 30px;
   text-align: left;
