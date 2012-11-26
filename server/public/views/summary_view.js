@@ -20,7 +20,7 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 					month: this.collection.currentInfo().month,
 					className: "summary-title"
 				};
-				var hTmpl = "<h1 class='<%= className %>'><%= year %> : <%= month %></h1>";
+				var hTmpl = "<h1 class='<%= className %>'><%= year %> / <%= month %></h1>";
 				// for debug
 				if (!hTmpl) hTmpl = "<h1 class='<%= className %>'>2012 : 11</h1>";
 				this.$el.find("#summary-header").html(_.template(hTmpl,opts));

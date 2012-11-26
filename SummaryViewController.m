@@ -72,6 +72,7 @@
 -(void)tapppedCloseButton:(id)sender
 {
     
+    [Helper clearCache];
     [self dismissViewControllerAnimated:NO completion:nil];
     
 }
