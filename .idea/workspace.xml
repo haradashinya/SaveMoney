@@ -6,7 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/css/summary.css" afterPath="$PROJECT_DIR$/server/public/css/summary.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/scss/summary.scss" afterPath="$PROJECT_DIR$/server/public/scss/summary.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/summary_view.js" afterPath="$PROJECT_DIR$/server/public/views/summary_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="summary.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="22" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.57363254">
+            <state line="5" column="6" selection-start="187" selection-end="187" vertical-scroll-proportion="0.11220197">
               <folding />
             </state>
           </provider>
@@ -485,7 +484,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="22" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.57363254">
+        <state line="5" column="6" selection-start="187" selection-end="187" vertical-scroll-proportion="0.11220197">
           <folding />
         </state>
       </provider>

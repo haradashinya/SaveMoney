@@ -34,11 +34,26 @@
   font-size: 30px;
   text-align: left;
   padding: 25px 10px 5px 25px; }
+  .summary-li .drink-count0 {
+    background-color: rgba(200, 34, 43, 0.87);
+    background-image: -webkit-linear-gradient(rgba(200, 34, 43, 0.87), rgba(183, 31, 39, 0.87));
+    z-index: 1;
+    border-radius: 200px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    width: 24px;
+    z-index: 1;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    right: 20px;
+    margin-top: -35px; }
   .summary-li .drink-count1 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(30, 100, 200, 0.7);
+    background-image: -webkit-linear-gradient(rgba(30, 100, 200, 0.7), rgba(27, 91, 182, 0.7));
     z-index: 1;
     border-radius: 200px;
     display: block;
@@ -54,10 +69,8 @@
     right: 20px;
     margin-top: -35px; }
   .summary-li .drink-count2 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(200, 34, 43, 0.87);
+    background-image: -webkit-linear-gradient(rgba(200, 34, 43, 0.87), rgba(183, 31, 39, 0.87));
     z-index: 1;
     border-radius: 200px;
     display: block;
@@ -73,10 +86,8 @@
     right: 20px;
     margin-top: -35px; }
   .summary-li .drink-count3 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(30, 100, 200, 0.7);
+    background-image: -webkit-linear-gradient(rgba(30, 100, 200, 0.7), rgba(27, 91, 182, 0.7));
     z-index: 1;
     border-radius: 200px;
     display: block;
@@ -92,10 +103,8 @@
     right: 20px;
     margin-top: -35px; }
   .summary-li .drink-count4 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(200, 34, 43, 0.87);
+    background-image: -webkit-linear-gradient(rgba(200, 34, 43, 0.87), rgba(183, 31, 39, 0.87));
     z-index: 1;
     border-radius: 200px;
     display: block;
@@ -111,10 +120,8 @@
     right: 20px;
     margin-top: -35px; }
   .summary-li .drink-count5 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(30, 100, 200, 0.7);
+    background-image: -webkit-linear-gradient(rgba(30, 100, 200, 0.7), rgba(27, 91, 182, 0.7));
     z-index: 1;
     border-radius: 200px;
     display: block;
@@ -130,10 +137,8 @@
     right: 20px;
     margin-top: -35px; }
   .summary-li .drink-count6 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(200, 34, 43, 0.87);
+    background-image: -webkit-linear-gradient(rgba(200, 34, 43, 0.87), rgba(183, 31, 39, 0.87));
     z-index: 1;
     border-radius: 200px;
     display: block;
@@ -149,10 +154,8 @@
     right: 20px;
     margin-top: -35px; }
   .summary-li .drink-count7 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(30, 100, 200, 0.7);
+    background-image: -webkit-linear-gradient(rgba(30, 100, 200, 0.7), rgba(27, 91, 182, 0.7));
     z-index: 1;
     border-radius: 200px;
     display: block;
@@ -168,10 +171,8 @@
     right: 20px;
     margin-top: -35px; }
   .summary-li .drink-count8 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(200, 34, 43, 0.87);
+    background-image: -webkit-linear-gradient(rgba(200, 34, 43, 0.87), rgba(183, 31, 39, 0.87));
     z-index: 1;
     border-radius: 200px;
     display: block;
@@ -187,10 +188,8 @@
     right: 20px;
     margin-top: -35px; }
   .summary-li .drink-count9 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(30, 100, 200, 0.7);
+    background-image: -webkit-linear-gradient(rgba(30, 100, 200, 0.7), rgba(27, 91, 182, 0.7));
     z-index: 1;
     border-radius: 200px;
     display: block;
@@ -206,10 +205,8 @@
     right: 20px;
     margin-top: -35px; }
   .summary-li .drink-count10 {
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #004d00);
-    background-color: green;
-    background-image: -webkit-linear-gradient(green, #006c00);
+    background-color: rgba(200, 34, 43, 0.87);
+    background-image: -webkit-linear-gradient(rgba(200, 34, 43, 0.87), rgba(183, 31, 39, 0.87));
     z-index: 1;
     border-radius: 200px;
     display: block;

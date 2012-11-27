@@ -1,6 +1,7 @@
 $blueColor: rgba(30,100,200,0.7);
 $defaultFontStyle: sans-serif;
 $tableBackgroundColor: rgba(237, 237, 237, 0.80);
+$redColor: rgba(200, 34, 43, 0.87);
 @mixin gradient($from, $to) {
   background-color: $from;
   background-image: -webkit-linear-gradient($from, $to);
@@ -17,8 +18,8 @@ to {transform: rotate(360deg);}
 }
 
 
-@mixin circle($w: 25px,$h: 25px){
-  @include gradient(green,darken(green,4%));
+@mixin circle($w: 25px,$h: 25px,$color:red){
+  @include gradient($color,darken($color,4%));
   z-index: 1;
   border-radius:200px;
   display:block;
@@ -71,18 +72,23 @@ to {transform: rotate(360deg);}
   text-align: left;
   padding: 25px 10px 5px 25px;
 
-  @for $i from 1 through 10 {
+    @for $i from 0 through 10 {
     .drink-count#{$i} {
-      @include gradient(green,darken(green,10%));
-      @include circle(30px,24px);
+      @if $i % 2 == 0 {
+        @include circle(30px,24px, $redColor);
+      }@else {
+        @include circle(30px,24px,$blueColor);
+      }
       position: absolute;
       font-size: 18px;
       font-weight: bold;
       right: 20px;
       margin-top: -35px;
+    }
   }
-}
+
 };
+
 
 
 
