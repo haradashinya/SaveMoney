@@ -47,7 +47,7 @@
     NSString *uuid = [[User shared] uuid];
     NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/summary",uuid];
     
-    webView =  [[UIWebView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 100, self.view.frame.size.width, self.view.frame.size.height - 100)];
+    webView =  [[UIWebView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 100, self.view.frame.size.width, self.view.frame.size.height - 98)];
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
     [webView setBackgroundColor:[UIColor clearColor]];
     webView.scalesPageToFit = NO;

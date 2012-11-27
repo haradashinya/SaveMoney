@@ -7,15 +7,7 @@ $redColor: rgba(200, 34, 43, 0.87);
   background-image: -webkit-linear-gradient($from, $to);
 }
 
-@mixin round {
-  border-radius: 4px;
-}
 
-@keyframe spin {
-from { transform: rotate(0deg);}
-to {transform: rotate(360deg);}
-
-}
 
 
 @mixin circle($w: 25px,$h: 25px,$color:red){
