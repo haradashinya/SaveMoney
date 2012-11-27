@@ -11,17 +11,21 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html","li
 				"click .update-drink": "updateDrink"
 			},
 			render:function(){
+				var className = "drink-li-"+this.model.get("type").split("_")[0];
 				var opts = {
 					uuid: window.uuid,
 					type: this.formatTitle(this.model.get("type")),
 					_id: this.model.get("_id"),
 					user_id: this.model.get("user_id"),
 					price: this.model.get("price"),
-					date: this.formatDate(this.model.get("created_at"))
+					date: this.formatDate(this.model.get("created_at")),
+					className: className
 				};
 
 				var compiledTemplate = _.template(template,opts);
 				this.$el.html(compiledTemplate);
+				this.$el.addClass(className);
+
 				return this;
 			},
 			formatDate:function(date){

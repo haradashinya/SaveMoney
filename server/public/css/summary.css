@@ -214,3 +214,39 @@
     font-weight: bold;
     right: 20px;
     margin-top: -35px; }
+
+.drink-li-cafe {
+  background-color: #d9792f;
+  background-image: -webkit-linear-gradient(#d9792f, #ce6f26);
+  background-color: #d9792f;
+  color: white;
+  font-size: 18px;
+  font-weight: bold; }
+
+.drink-li-drip {
+  background-color: #331b09;
+  background-image: -webkit-linear-gradient(#331b09, #211206);
+  color: white;
+  font-size: 18px;
+  font-weight: bold; }
+
+.drink-li-cocoa {
+  background-color: #5e3311;
+  background-image: -webkit-linear-gradient(#5e3311, #4d290e);
+  color: white;
+  font-size: 18px;
+  font-weight: bold; }
+
+.drink-li-tea {
+  background-color: #df8f51;
+  background-image: -webkit-linear-gradient(#df8f51, #dc8440);
+  color: white;
+  font-size: 18px;
+  font-weight: bold; }
+
+.drink-li-green {
+  background-color: #006c00;
+  background-image: -webkit-linear-gradient(#006c00, #005700);
+  color: white;
+  font-size: 18px;
+  font-weight: bold; }
