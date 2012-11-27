@@ -1,20 +1,24 @@
+#summary-header {
+  margin-bottom: 10px; }
+
 .summary-title {
   text-align: center;
-  font-size: 50px;
-  border-bottom: 3px dotted #ff0000; }
+  font-size: 50px; }
 
 .summary-li {
-  background-color: rgba(30, 100, 200, 0.8);
-  background-image: -webkit-linear-gradient(rgba(30, 100, 200, 0.8), rgba(23, 78, 156, 0.8));
-  margin: 30px 20px 0 20px;
-  color: white;
+  background-color: rgba(237, 237, 237, 0.8);
+  background-image: -webkit-linear-gradient(rgba(237, 237, 237, 0.8), rgba(235, 235, 235, 0.8));
+  margin: 0px 0.5px 0.5px 0px;
+  color: black;
+  height: 50px;
   list-style-type: none;
   font-family: Serif;
   font-weight: bold;
   border-style: solid;
-  border-width: 5px;
-  border-color: rgba(22, 73, 147, 0.8);
-  border-radius: 10px 10px;
+  border-width: 1.0px;
+  border-color: rgba(161, 161, 161, 0.8);
+  border-radius: 4px;
   font-size: 30px;
   text-align: left;
-  padding: 5px 10px 5px 10px; }
+  padding: 25px 10px 5px 25px;
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.8); }

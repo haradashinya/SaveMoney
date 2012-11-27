@@ -1,8 +1,13 @@
-$blueColor: rgba(30,100,200,0.8);
+$blueColor: rgba(30,100,200,0.7);
 $defaultFontStyle: Serif;
+$tableBackgroundColor: rgba(237, 237, 237, 0.80);
 @mixin gradient($from, $to) {
   background-color: $from;
   background-image: -webkit-linear-gradient($from, $to);
+}
+
+@mixin round {
+  border-radius: 4px;
 }
 
 @mixin circle{
@@ -13,26 +18,33 @@ $defaultFontStyle: Serif;
 };
 
 
+#summary-header {
+  margin-bottom: 10px;
+}
+
+
 .summary-title {
   text-align:center;
   font-size: 50px;
-  border-bottom: 3px dotted #ff0000;
 };
 
+
 .summary-li {
-  @include gradient($blueColor,darken($blueColor,10%));
-  margin: 30px 20px 0 20px;
-  color: white;
+  @include gradient($tableBackgroundColor,darken($tableBackgroundColor,0.9));
+  margin: 0px 0.5px 0.5px 0px;
+  color: black;
+  height: 50px;
   list-style-type: none;
   font-family: $defaultFontStyle;
   font-weight: bold;
   border-style: solid;
-  border-width: 5px;
-  border-color: darken($blueColor,12%);
-  border-radius: 10px 10px;
+  border-width: 1.0px;
+  border-color: darken($tableBackgroundColor,30%);
+  @include round;
   font-size: 30px;
   text-align: left;
-  padding: 5px 10px 5px 10px;
+  padding: 25px 10px 5px 25px;
+  box-shadow: 10px 10px 20px lighten($tableBackgroundColor,100%);
 };
 
 
