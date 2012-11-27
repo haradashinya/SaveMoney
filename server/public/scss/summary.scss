@@ -1,5 +1,5 @@
 $blueColor: rgba(30,100,200,0.7);
-$defaultFontStyle: Serif;
+$defaultFontStyle: sans-serif;
 $tableBackgroundColor: rgba(237, 237, 237, 0.80);
 @mixin gradient($from, $to) {
   background-color: $from;
@@ -10,12 +10,37 @@ $tableBackgroundColor: rgba(237, 237, 237, 0.80);
   border-radius: 4px;
 }
 
-@mixin circle{
-  background: rgba(255,200,200,0.8);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+@keyframe spin {
+from { transform: rotate(0deg);}
+to {transform: rotate(360deg);}
+
+}
+
+
+@mixin circle($w: 25px,$h: 25px){
+  @include gradient(green,darken(green,4%));
+  z-index: 1;
+  border-radius:200px;
+  display:block;
+  height:$w;
+  line-height:$w;
+  position:absolute;
+  text-align:center;
+  width:$h;
+  z-index:1
+
 };
+
+
+
+
+.error {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 4px;
+  background: red;
+  color: white;
+}
 
 
 #summary-header {
@@ -29,6 +54,7 @@ $tableBackgroundColor: rgba(237, 237, 237, 0.80);
 };
 
 
+
 .summary-li {
   @include gradient($tableBackgroundColor,darken($tableBackgroundColor,0.9));
   margin: 0px 0.5px 0.5px 0px;
@@ -40,12 +66,21 @@ $tableBackgroundColor: rgba(237, 237, 237, 0.80);
   border-style: solid;
   border-width: 1.0px;
   border-color: darken($tableBackgroundColor,30%);
-  @include round;
   font-size: 30px;
   text-align: left;
   padding: 25px 10px 5px 25px;
-  box-shadow: 10px 10px 20px lighten($tableBackgroundColor,100%);
+  .drink-count {
+    @include gradient(green,darken(green,10%));
+    @include circle(30px,24px);
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    right: 30px;
+    margin-top: -35px;
+  }
 };
+
+
 
 
 
