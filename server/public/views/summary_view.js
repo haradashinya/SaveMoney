@@ -25,6 +25,30 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 				if (!hTmpl) hTmpl = "<h1 class='<%= className %>'>2012 : 11</h1>";
 				this.$el.find("#summary-header").html(_.template(hTmpl,opts));
 			},
+		/**
+		 *
+		 * @param word
+		 * @return {capitalized word}
+		 */
+			formatType:function(word){
+				var sum = "";
+				var capitalize = function(w){
+					var res = "";
+					for(var i = 0 ; i < w.length;i++){
+						if (i === 0){
+							res += w[i].toUpperCase();
+						}else{
+							res += w[i];
+						}
+					}
+					return res + " ";
+				};
+				var words = word.split("_");
+				words.forEach(function(w){
+					sum += capitalize(w);
+				},this);
+				return sum;
+			},
 		// show each typeMap {drinkType: count}
 			renderList:function(data){
 				//add for debug
@@ -41,7 +65,7 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 					cnt += 1;
 					var className = "drink-count"+cnt;
 					var tmp = _.template("<li class='summary-li'><%= type %><div class=<%= className %> ><%= count %></div></div>",{
-						type: item.type,
+						type: this.formatType(item.type),
 						count: item.count,
 						className: className
 					});
@@ -50,10 +74,10 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 				},this);
 				}
 
-
 				this.$el.find("#summary-list").html(dom);
 				return this;
 			},
+
 		fetchDrinks:function(){
 			var self = this;
 			var typeMap = this.collection.incCountByType();

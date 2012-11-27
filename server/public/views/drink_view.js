@@ -31,8 +31,7 @@ define(["zepto","underscore","backbone","lib/text!templates/drink_view.html","li
 			},
 			// ugly implement...
 			formatTitle:function(str){
-				var splittedWords = str.split("_")
-
+				var splittedWords = str.split("_");
 				var capitalize = function(word){
 					var first = word[0];
 					var rest = word.slice(1,word.length);
