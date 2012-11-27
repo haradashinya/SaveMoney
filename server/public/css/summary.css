@@ -221,6 +221,16 @@
   color: white;
   font-size: 18px;
   font-weight: bold; }
+  .drink-li-cafe:before {
+    z-index: -1;
+    position: absolute;
+    background: transparent;
+    width: 200%;
+    height: 30%;
+    content: '';
+    left: -100px;
+    bottom: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); }
 
 .drink-li-drip {
   background-color: #331b09;
@@ -228,6 +238,16 @@
   color: white;
   font-size: 18px;
   font-weight: bold; }
+  .drink-li-drip:before {
+    z-index: -1;
+    position: absolute;
+    background: transparent;
+    width: 200%;
+    height: 30%;
+    content: '';
+    left: -100px;
+    bottom: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); }
 
 .drink-li-cocoa {
   background-color: #5e3311;
@@ -235,6 +255,16 @@
   color: white;
   font-size: 18px;
   font-weight: bold; }
+  .drink-li-cocoa:before {
+    z-index: -1;
+    position: absolute;
+    background: transparent;
+    width: 200%;
+    height: 30%;
+    content: '';
+    left: -100px;
+    bottom: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); }
 
 .drink-li-tea {
   background-color: #df8f51;
@@ -242,6 +272,16 @@
   color: white;
   font-size: 18px;
   font-weight: bold; }
+  .drink-li-tea:before {
+    z-index: -1;
+    position: absolute;
+    background: transparent;
+    width: 200%;
+    height: 30%;
+    content: '';
+    left: -100px;
+    bottom: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); }
 
 .drink-li-green {
   background-color: #006c00;
@@ -249,3 +289,13 @@
   color: white;
   font-size: 18px;
   font-weight: bold; }
+  .drink-li-green:before {
+    z-index: -1;
+    position: absolute;
+    background: transparent;
+    width: 200%;
+    height: 30%;
+    content: '';
+    left: -100px;
+    bottom: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); }

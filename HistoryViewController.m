@@ -62,7 +62,7 @@ static id historyViewController;
     [self.webView loadRequest:request];
     CGFloat tabBarHeight = self.tabBarController.tabBar.frame.size.height + 50;
     
-    CGRect webFrame = CGRectMake(0,50 + 52, self.view.frame.size.width, self.view.frame.size.height - tabBarHeight - 52);
+    CGRect webFrame = CGRectMake(0,50 + 52, self.view.frame.size.width, self.view.frame.size.height - tabBarHeight - 41);
     
     self.webView.frame = webFrame;
     
