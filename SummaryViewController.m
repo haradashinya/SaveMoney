@@ -51,6 +51,7 @@
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
     [webView setBackgroundColor:[UIColor clearColor]];
     webView.scalesPageToFit = NO;
+
     [self.view addSubview:webView];
     
 }

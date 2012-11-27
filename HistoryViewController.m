@@ -62,14 +62,17 @@ static id historyViewController;
     [self.webView loadRequest:request];
     CGFloat tabBarHeight = self.tabBarController.tabBar.frame.size.height + 50;
     
-    CGRect webFrame = CGRectMake(0,50 + 52, self.view.frame.size.width, self.view.frame.size.height - tabBarHeight - 41);
+    CGRect webFrame = CGRectMake(0,50 + 52,self.view.frame.size.width, self.view.frame.size.height - tabBarHeight - 41);
     
     self.webView.frame = webFrame;
     
     self.webView.layer.cornerRadius = 0;
     self.webView.scalesPageToFit = NO;
     self.webView.delegate = self;
+    [self.webView.scrollView setContentSize: CGSizeMake(320, self.webView.scrollView.contentSize.height)];
+
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    [self.webView setClipsToBounds:YES];
     drink.hvcDelegate = self;
     
     [[Admob alloc] addAdmobOn:self];

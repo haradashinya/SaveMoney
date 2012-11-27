@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/.sass-cache/8ed69f904663e003d6faf25fc35c37587125aa6a/summary.scssc" afterPath="$PROJECT_DIR$/server/public/.sass-cache/8ed69f904663e003d6faf25fc35c37587125aa6a/summary.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/css/summary.css" afterPath="$PROJECT_DIR$/server/public/css/summary.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.m" afterPath="$PROJECT_DIR$/HistoryViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SummaryViewController.m" afterPath="$PROJECT_DIR$/SummaryViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/index.html" afterPath="$PROJECT_DIR$/server/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/scss/summary.scss" afterPath="$PROJECT_DIR$/server/public/scss/summary.scss" />
     </list>
     <ignored path="SaveMoney.iws" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="599" selection-end="599" vertical-scroll-proportion="-8.96">
+            <state line="19" column="9" selection-start="632" selection-end="632" vertical-scroll-proportion="-12.16">
               <folding />
             </state>
           </provider>
@@ -84,10 +86,10 @@
         <option value="$PROJECT_DIR$/server/public/templates/edit_drink.html" />
         <option value="$PROJECT_DIR$/server/public/router.js" />
         <option value="$PROJECT_DIR$/server/public/collections/drink_collection.js" />
-        <option value="$PROJECT_DIR$/server/public/index.html" />
         <option value="$PROJECT_DIR$/server/public/templates/summary.html" />
         <option value="$PROJECT_DIR$/server/public/views/summary_view.js" />
         <option value="$PROJECT_DIR$/server/public/views/drink_view.js" />
+        <option value="$PROJECT_DIR$/server/public/index.html" />
         <option value="$PROJECT_DIR$/server/public/scss/summary.scss" />
       </list>
     </option>
@@ -465,13 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="599" selection-end="599" vertical-scroll-proportion="-8.96">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/public/templates/summary.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="23" selection-start="82" selection-end="82" vertical-scroll-proportion="-1.28">
@@ -482,6 +477,13 @@
     <entry file="file://$PROJECT_DIR$/server/public/views/drink_view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="19" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="9" selection-start="632" selection-end="632" vertical-scroll-proportion="-12.16">
           <folding />
         </state>
       </provider>
