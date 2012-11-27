@@ -55,6 +55,7 @@ to {transform: rotate(360deg);}
 
 
 
+
 .summary-li {
   @include gradient($tableBackgroundColor,darken($tableBackgroundColor,0.9));
   margin: 0px 0.5px 0.5px 0px;
@@ -69,15 +70,18 @@ to {transform: rotate(360deg);}
   font-size: 30px;
   text-align: left;
   padding: 25px 10px 5px 25px;
-  .drink-count {
-    @include gradient(green,darken(green,10%));
-    @include circle(30px,24px);
-    position: absolute;
-    font-size: 18px;
-    font-weight: bold;
-    right: 20px;
-    margin-top: -35px;
+
+  @for $i from 1 through 10 {
+    .drink-count#{$i} {
+      @include gradient(green,darken(green,10%));
+      @include circle(30px,24px);
+      position: absolute;
+      font-size: 18px;
+      font-weight: bold;
+      right: 20px;
+      margin-top: -35px;
   }
+}
 };
 
 

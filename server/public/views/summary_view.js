@@ -29,11 +29,20 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 			renderList:function(data){
 				//add for debug
 				var dom = "";
+				var cnt = 0;
 				if (data.length === 0){
 					dom += "<li>hello world</li>";
 				}else{
 				data.forEach(function(item){
-					dom += "<li class='summary-li'>" + item.type + "<div class='drink-count'>" + item.count + "</div>";
+					cnt += 1;
+					var className = "drink-count"+cnt;
+					var tmp = _.template("<li class='summary-li'><%= type %><div class=<%= className %> ><%= count %></div></div>",{
+						type: item.type,
+						count: item.count,
+						className: className
+					});
+
+					dom += tmp;
 				},this);
 				}
 
