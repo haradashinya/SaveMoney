@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/.sass-cache/8ed69f904663e003d6faf25fc35c37587125aa6a/summary.scssc" afterPath="$PROJECT_DIR$/server/public/.sass-cache/8ed69f904663e003d6faf25fc35c37587125aa6a/summary.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/css/summary.css" afterPath="$PROJECT_DIR$/server/public/css/summary.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/scss/summary.scss" afterPath="$PROJECT_DIR$/server/public/scss/summary.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +34,7 @@
       <file leaf-file-name="summary.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="0" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.78541374">
+            <state line="94" column="0" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.44880787">
               <folding />
             </state>
           </provider>
@@ -490,7 +485,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="0" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.78541374">
+        <state line="94" column="0" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.44880787">
           <folding />
         </state>
       </provider>

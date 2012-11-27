@@ -92,23 +92,18 @@ $cafeColor: rgba(217,121,47,1.0);
   .drink-li-#{$type} {
     @if $type == cafe {
       @include gradient($cafeColor,darken($cafeColor,4%));
-      background-color: $cafeColor;
-      color: white;
     }@else if $type == drip {
       @include gradient(darken($cafeColor,40%),darken($cafeColor,44%));
-      color: white;
     }@else if $type == green {
       @include gradient(darken(green,4%),darken(green,8%));
-      color: white;
     }@else if $type == cocoa {
       @include gradient(darken($cafeColor,30%),darken($cafeColor,34%));
-      color: white;
     }@else if $type == tea {
       $c: lighten($cafeColor,8%);
       @include gradient($c,darken($c,4%));
-      color:white;
 
     }
+    color:white;
     font-size: 18px;
     font-weight: bold;
   }
