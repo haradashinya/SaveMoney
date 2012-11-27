@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d57d4c8-411a-4434-b713-6e775dc36f1b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/scss/summary.scss" afterPath="$PROJECT_DIR$/server/public/scss/summary.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/summary_view.js" afterPath="$PROJECT_DIR$/server/public/views/summary_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,19 +32,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="summary.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="summary.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="0.22440393">
+            <state line="9" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="summary_view.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="summary_view.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/public/views/summary_view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="13" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
+            <state line="36" column="31" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.516129">
               <folding />
             </state>
           </provider>
@@ -84,8 +85,8 @@
         <option value="$PROJECT_DIR$/server/public/collections/drink_collection.js" />
         <option value="$PROJECT_DIR$/server/public/index.html" />
         <option value="$PROJECT_DIR$/server/public/templates/summary.html" />
-        <option value="$PROJECT_DIR$/server/public/views/summary_view.js" />
         <option value="$PROJECT_DIR$/server/public/scss/summary.scss" />
+        <option value="$PROJECT_DIR$/server/public/views/summary_view.js" />
       </list>
     </option>
   </component>
@@ -472,16 +473,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/views/summary_view.js">
+    <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
+        <state line="9" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/public/scss/summary.scss">
+    <entry file="file://$PROJECT_DIR$/server/public/views/summary_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="0.22440393">
+        <state line="36" column="31" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.516129">
           <folding />
         </state>
       </provider>

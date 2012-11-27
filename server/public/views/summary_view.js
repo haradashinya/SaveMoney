@@ -33,7 +33,11 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 				if (data.length === 0){
 					dom += "<li>hello world</li>";
 				}else{
-				data.forEach(function(item){
+				var sortedData = _.sortBy(data,function(item){
+					return item.count * -1;
+				});
+
+				sortedData.forEach(function(item){
 					cnt += 1;
 					var className = "drink-count"+cnt;
 					var tmp = _.template("<li class='summary-li'><%= type %><div class=<%= className %> ><%= count %></div></div>",{
