@@ -53,7 +53,7 @@ static id historyViewController;
     [summaryButton.titleLabel setFont:[UIFont boldSystemFontOfSize:14]];
     summaryButton.color = [UIColor orangeColor];
     [summaryButton setTintColor:[UIColor yellowColor]];
-    [summaryButton setTitle:@"Summary" forState:UIControlStateNormal];
+    [summaryButton setTitle:[Helper currentTime] forState:UIControlStateNormal];
     [summaryButton addTarget:self action:@selector(tappedSummaryButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:summaryButton];
     

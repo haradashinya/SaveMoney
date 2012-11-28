@@ -15,5 +15,6 @@
 -(void)showNoDrinkError;
 +(Boolean) isIphone5;
 +(void)clearCache;
++(NSString *)currentTime;
 
 @end

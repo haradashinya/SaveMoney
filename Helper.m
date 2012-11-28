@@ -47,6 +47,14 @@
         return YES;
     }
 }
++(NSString *)currentTime
+{
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy/MM"];
+    return [formatter stringFromDate:date];
+    
+}
 
 +(void)clearCache
 {
