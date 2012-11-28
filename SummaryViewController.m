@@ -133,7 +133,7 @@
     [webView stringByEvaluatingJavaScriptFromString:@"location.href='all'"];
     
 }
--(void)tapppedCloseButton:(id)sender
+-(void)tappedCloseButton:(id)sender
 {
     
     [Helper clearCache];
