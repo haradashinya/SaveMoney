@@ -116,13 +116,9 @@
 }
 -(void)addMoneyLabel
 {
-    if ([Helper isIphone5]){
-        moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 50 *TO_IPhone5, 320, 50 *TO_IPhone5)];
-        moneyLabel.font = [UIFont boldSystemFontOfSize:18.0];
-    }else{
-        moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
-        moneyLabel.font = [UIFont boldSystemFontOfSize:20.0];
-    }
+    moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(10,50, 320, 50)];
+    
+    moneyLabel.font = [UIFont boldSystemFontOfSize:24.0];
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
     moneyLabel.backgroundColor = [UIColor clearColor];
     
@@ -130,11 +126,8 @@
     
     BButton *btn;
     
-    if ([Helper isIphone5]){
-        btn = [[BButton alloc] initWithFrame:CGRectMake(0, 52 * TO_IPhone5, 60, 44 * TO_IPhone5)];
-    }else{
-        btn = [[BButton alloc] initWithFrame:CGRectMake(0,52,60,44)];
-    }
+    btn = [[BButton alloc] initWithFrame:CGRectMake(5,52,60,44)];
+    btn.layer.cornerRadius = 22;
     
     btn.color = [UIColor orangeColor];
     [btn setTintColor:[UIColor yellowColor]];
@@ -248,7 +241,7 @@
 // when received total money receive
 -(void)updateCurrentPriceLabel
 {
-    moneyLabel.text = [NSString stringWithFormat:@"You've saved %.1f $",drink.totalPrice];
+    moneyLabel.text = [NSString stringWithFormat:@"Total:   %.1f $",drink.totalPrice];
 }
 
 -(void)pressedSaveBtn:(id)sender

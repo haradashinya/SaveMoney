@@ -21,6 +21,8 @@
 
 
 -(void)didRefreshPage;
+-(void)showIndicator;
+-(void)hideIndicator;
 @property (nonatomic,strong) UIWebView *webView;
 @property (nonatomic,strong) NSURL *url;
 @property (nonatomic,strong) id delegate;

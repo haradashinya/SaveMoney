@@ -139,13 +139,24 @@ static id historyViewController;
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [indicator setHidden:YES];
-    [indicator removeFromSuperview];
     
 }
 -(void)tappedCloseButton:(id)sender
 {
     
 }
+-(void)showIndicator
+{
+    [indicator setHidden:NO];
+    
+}
+-(void)hideIndicator
+{
+    [indicator setHidden:YES];
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
