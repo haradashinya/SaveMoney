@@ -97,8 +97,11 @@ static id historyViewController;
 {
     
     if (isFirst == YES){
-        indicator=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray ];
-        indicator.frame = CGRectMake(135, (self.view.frame.size.height/2.0f - 25), 50, 50);
+        indicator=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        indicator.frame = CGRectMake(self.view.frame.size.width/2 - 50, (self.view.frame.size.height/2.0f - 50), 100,100);
+        indicator.backgroundColor  = [UIColor blackColor];
+        indicator.layer.cornerRadius = 5;
+        indicator.layer.opacity = 0.8;
         [indicator startAnimating];
         [indicator setHidden:NO];
         [self.webView addSubview:indicator];
@@ -125,7 +128,8 @@ static id historyViewController;
 -(void)didRefreshPage
 {
     [Helper clearCache];
-    [self.webView stringByEvaluatingJavaScriptFromString:@"location.reload();"];
+//    [self.webView stringByEvaluatingJavaScriptFromString:@"location.reload();"];
+    [self.webView reload];
 //    [self.webView stringByEvaluatingJavaScriptFromString:@"window.refresh();"];
 }
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
