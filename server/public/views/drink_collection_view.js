@@ -10,7 +10,7 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 			tagName: "ul",
 			className:"list",
 			initialize:function(){
-				_.bindAll(this,"render","update");
+				_.bindAll(this,"render","update","refresh");
 				this.collection.fetch({
 					success:$.proxy(this.addView,this),
 					error:$.proxy(this.showError,this)
@@ -18,7 +18,7 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 				this.render();
 
 			},
-			addView:function(collection,resp){
+			addView:function(collection){
 				var self = this;
 				collection.models.forEach(function(item){
 					var drink = new Drink(item.toJSON());
@@ -37,6 +37,10 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 			},
 			update:function(){
 				console.log("update");
+			},
+			refresh:function(){
+				alert("refreshed");
+
 			}
 		});
 

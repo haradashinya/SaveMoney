@@ -180,7 +180,6 @@
 
 -(void)addSaveButton
 {
-    NSLog(@"self.view.frame is %@",NSStringFromCGRect(self.view.frame));
     float screenHeight = [UIScreen mainScreen].bounds.size.height;
     BButton *btn = [[BButton alloc] init];
     if([Helper isIphone5]){

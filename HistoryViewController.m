@@ -15,6 +15,8 @@
 @implementation HistoryViewController
 {
     BButton *summaryButton;
+    UIActivityIndicatorView *indicator;
+    Boolean isFirst;
     
 }
 
@@ -24,6 +26,8 @@ static id historyViewController;
 {
     if (!historyViewController){
         historyViewController = [super initWithNibName:(NSString *)nibBundleOrNil bundle:nibBundleOrNil];
+        
+        isFirst = YES;
         self.delegate = self;
     }
     return historyViewController;
@@ -33,6 +37,9 @@ static id historyViewController;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+
     BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(0, 52, 340, 54)];
     navButton.color = [UIColor orangeColor];
     navButton.isAccessibilityElement = NO;
@@ -59,28 +66,49 @@ static id historyViewController;
     self.url = [NSURL URLWithString:urlStr];
     
     self.webView = [[UIWebView alloc] init];
+    
+    
+
     [self.webView loadRequest:request];
     CGFloat tabBarHeight = self.tabBarController.tabBar.frame.size.height + 50;
     
     CGRect webFrame = CGRectMake(0,50 + 52,self.view.frame.size.width, self.view.frame.size.height - tabBarHeight - 41);
     
     self.webView.frame = webFrame;
+    self.webView.delegate = self;
     
     self.webView.layer.cornerRadius = 0;
     self.webView.scalesPageToFit = NO;
-    self.webView.delegate = self;
-    [self.webView.scrollView setContentSize: CGSizeMake(320, self.webView.scrollView.contentSize.height)];
+    self.webView.backgroundColor = [UIColor clearColor];
 
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
     [self.webView setClipsToBounds:YES];
+    [self.view addSubview:self.webView];
     drink.hvcDelegate = self;
     
     [[Admob alloc] addAdmobOn:self];
     
 
 
-    [self.view addSubview:self.webView];
+//    [self.view addSubview:self.webView];
 	// Do any additional setup after loading the view.
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    
+    if (isFirst == YES){
+        indicator=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray ];
+        indicator.frame = CGRectMake(135, (self.view.frame.size.height/2.0f - 25), 50, 50);
+        [indicator startAnimating];
+        [indicator setHidden:NO];
+        [self.webView addSubview:indicator];
+        isFirst = NO;
+        NSLog(@"ffffffffffff");
+    }else {
+        [indicator setHidden:YES];
+        
+    }
+    
 }
 -(void)tappedSummaryButton:(id)sender
 {
@@ -96,16 +124,23 @@ static id historyViewController;
 
 -(void)didRefreshPage
 {
-    [self.webView stringByEvaluatingJavaScriptFromString:@"location.reload()"];
-
+    [Helper clearCache];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"location.reload();"];
+//    [self.webView stringByEvaluatingJavaScriptFromString:@"window.refresh();"];
 }
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    NSLog(@"erorororoororoor");
+    NSLog(@"error code is %i",[error code]);
+    if ([error code] != -999){
+        [indicator setHidden:YES];
+    }
+    
 }
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSLog(@"finished load");
+    [indicator setHidden:YES];
+    [indicator removeFromSuperview];
+    
 }
 -(void)tappedCloseButton:(id)sender
 {
