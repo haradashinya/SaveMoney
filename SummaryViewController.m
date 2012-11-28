@@ -110,13 +110,21 @@
     [self.view addSubview:navButton];
     
     
-    BButton *closeButton = [[BButton alloc] initWithFrame:CGRectMake(235,55,83, 42)];
+    BButton *closeButton = [[BButton alloc] initWithFrame:CGRectMake(242,55,73, 42)];
     [closeButton setTitle:@"Close" forState:UIControlStateNormal];
     closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0];
     closeButton.color = [UIColor orangeColor];
     closeButton.tintColor = [UIColor yellowColor];
     [self.view addSubview:closeButton];
     [closeButton addTarget:self action:@selector(tapppedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    BButton *allButton = [[BButton alloc] initWithFrame:CGRectMake(5,55,70, 42)];
+    [allButton setTitle:@"All" forState:UIControlStateNormal];
+    allButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0];
+    allButton.color = [UIColor orangeColor];
+    allButton.tintColor = [UIColor yellowColor];
+    [self.view addSubview:allButton];
+    [allButton addTarget:self action:@selector(tapppedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
 }
 -(void)tapppedCloseButton:(id)sender
 {
