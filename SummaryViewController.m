@@ -116,7 +116,7 @@
     closeButton.color = [UIColor orangeColor];
     closeButton.tintColor = [UIColor yellowColor];
     [self.view addSubview:closeButton];
-    [closeButton addTarget:self action:@selector(tapppedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
+    [closeButton addTarget:self action:@selector(tappedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
     
     BButton *allButton = [[BButton alloc] initWithFrame:CGRectMake(5,55,70, 42)];
     [allButton setTitle:@"All" forState:UIControlStateNormal];
@@ -124,7 +124,14 @@
     allButton.color = [UIColor orangeColor];
     allButton.tintColor = [UIColor yellowColor];
     [self.view addSubview:allButton];
-    [allButton addTarget:self action:@selector(tapppedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
+    [allButton addTarget:self action:@selector(tappedAllButton:) forControlEvents:UIControlEventTouchUpInside];
+}
+-(void)tappedAllButton:(id)sender
+{
+    NSLog(@"tappeed alll");
+    NSString *js = [NSString stringWithFormat:@"location.href = '#'"];
+    [webView stringByEvaluatingJavaScriptFromString:@"location.href='all'"];
+    
 }
 -(void)tapppedCloseButton:(id)sender
 {
