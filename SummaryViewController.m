@@ -98,13 +98,6 @@
     return YES;
 }
 
--(NSString *)currentTime
-{
-    NSDate *date = [NSDate date];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy/MM"];
-    return [formatter stringFromDate:date];
-}
 
 -(void)addCloseButton
 {
@@ -112,7 +105,7 @@
     navButton.color = [UIColor orangeColor];
     navButton.isAccessibilityElement = NO;
     navButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
-    [navButton setTitle:[self currentTime] forState:UIControlStateNormal];
+    [navButton setTitle:[Helper currentTime] forState:UIControlStateNormal];
     [navButton setUserInteractionEnabled:NO];
     [self.view addSubview:navButton];
     
@@ -123,11 +116,7 @@
     closeButton.color = [UIColor orangeColor];
     closeButton.tintColor = [UIColor yellowColor];
     [self.view addSubview:closeButton];
-    
     [closeButton addTarget:self action:@selector(tapppedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    
 }
 -(void)tapppedCloseButton:(id)sender
 {
