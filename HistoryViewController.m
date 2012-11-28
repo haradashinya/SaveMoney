@@ -152,13 +152,11 @@ static id historyViewController;
 -(void)showIndicator
 {
     [indicator setHidden:NO];
-    indicator.layer.opacity =1;
     
 }
 -(void)hideIndicator
 {
     [indicator setHidden:YES];
-    indicator.layer.opacity =0;
     
 }
 
