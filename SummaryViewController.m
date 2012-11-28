@@ -14,13 +14,17 @@
 
 @implementation SummaryViewController
 {
+    
+    Boolean isFirst;
     UIWebView *webView;
+    UIActivityIndicatorView *indicator;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        isFirst = YES;
         // Custom initialization
     }
     return self;
@@ -36,6 +40,7 @@
     
     
     
+    
 
     
 	// Do any additional setup after loading the view.
@@ -47,14 +52,51 @@
     NSString *uuid = [[User shared] uuid];
     NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/summary",uuid];
     
+    
     webView =  [[UIWebView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 100, self.view.frame.size.width, self.view.frame.size.height - 98)];
+    webView.delegate = self;
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
     [webView setBackgroundColor:[UIColor clearColor]];
     webView.scalesPageToFit = NO;
-
+    
+    if (isFirst == YES){
+        indicator=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        indicator.frame = CGRectMake(self.view.frame.size.width/2 - 50, (self.view.frame.size.height/2.0f - 50), 100,100);
+        indicator.backgroundColor  = [UIColor blackColor];
+        indicator.layer.cornerRadius = 5;
+        indicator.layer.opacity = 0.8;
+        [indicator startAnimating];
+        [webView addSubview:indicator];
+        isFirst = NO;
+    }else {
+        [indicator setHidden:YES];
+        
+    }
     [self.view addSubview:webView];
     
 }
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    
+    NSString *url = [[request URL] absoluteString];
+    NSArray *action = [url componentsSeparatedByString: @":"][1];
+    if ([action isEqual:@"//showIndicator"]){
+        if ([indicator isHidden]){
+            [indicator setHidden:NO];
+            
+        }
+        return NO;
+    }else if ([action isEqual:@"//hideIndicator"]){
+        if (![indicator isHidden]){
+            [indicator setHidden:YES];
+            
+        }
+        
+        return NO;
+    }
+    return YES;
+}
+
 
 -(void)addCloseButton
 {

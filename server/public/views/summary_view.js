@@ -51,6 +51,7 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 			},
 		// show each typeMap {drinkType: count}
 			renderList:function(data){
+				document.location = "app://showIndicator";
 				//add for debug
 				var dom = "";
 				var cnt = 0;
@@ -74,6 +75,7 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 				},this);
 				}
 
+				document.location = "app://hideIndicator";
 				this.$el.find("#summary-list").html(dom);
 				return this;
 			},
