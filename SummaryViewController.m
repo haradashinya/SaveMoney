@@ -41,6 +41,7 @@
     
     
     
+    
 
     
 	// Do any additional setup after loading the view.
@@ -100,9 +101,18 @@
 
 -(void)addCloseButton
 {
-    BButton *closeButton = [[BButton alloc] initWithFrame:CGRectMake(-10,50,340, 50)];
-    [closeButton setTitle:@"Tap to Close" forState:UIControlStateNormal];
-    closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0];
+    BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(0, 52, 340, 54)];
+    navButton.color = [UIColor orangeColor];
+    navButton.isAccessibilityElement = NO;
+    navButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+    [navButton setTitle:@"2012/11" forState:UIControlStateNormal];
+    [navButton setUserInteractionEnabled:NO];
+    [self.view addSubview:navButton];
+    
+    
+    BButton *closeButton = [[BButton alloc] initWithFrame:CGRectMake(235,55,83, 42)];
+    [closeButton setTitle:@"Close" forState:UIControlStateNormal];
+    closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0];
     closeButton.color = [UIColor orangeColor];
     closeButton.tintColor = [UIColor yellowColor];
     [self.view addSubview:closeButton];
