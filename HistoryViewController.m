@@ -106,11 +106,11 @@ static id historyViewController;
         [indicator setHidden:NO];
         [self.webView addSubview:indicator];
         isFirst = NO;
-        NSLog(@"ffffffffffff");
     }else {
         [indicator setHidden:YES];
         
     }
+    
     
 }
 -(void)tappedSummaryButton:(id)sender
@@ -152,14 +152,39 @@ static id historyViewController;
 -(void)showIndicator
 {
     [indicator setHidden:NO];
+    indicator.layer.opacity =1;
     
 }
 -(void)hideIndicator
 {
     [indicator setHidden:YES];
+    indicator.layer.opacity =0;
     
 }
 
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSString *url = [[request URL] absoluteString];
+    NSArray *action = [url componentsSeparatedByString: @":"][1];
+    if ([action isEqual:@"//showIndicator"]){
+        if ([indicator isHidden]){
+            [indicator setHidden:NO];
+            
+        }
+        return NO;
+    }else if ([action isEqual:@"//hideIndicator"]){
+        if (![indicator isHidden]){
+            [indicator setHidden:YES];
+            
+        }
+        
+        return NO;
+    }
+    
+    
+    
+    return YES;
+}
 
 
 - (void)didReceiveMemoryWarning

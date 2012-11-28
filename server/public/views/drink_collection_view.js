@@ -11,6 +11,7 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 			className:"list",
 			initialize:function(){
 				_.bindAll(this,"render","update","refresh");
+				document.location = "app://showIndicator";
 				this.collection.fetch({
 					success:$.proxy(this.addView,this),
 					error:$.proxy(this.showError,this)
@@ -26,6 +27,7 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 					this.$el.append(drinkView.render().$el);
 				},this);
 				this.render();
+				document.location = "app://hideIndicator";
 			},
 			render:function(){
 				return this;

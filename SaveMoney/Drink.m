@@ -70,7 +70,6 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.totalPrice = [[JSON valueForKey:@"total"] floatValue];
         [self.delegate updateCurrentPriceLabel];
-        [self.hvcDelegate showIndicator];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"%@",[error localizedDescription]);
         [[Helper alloc] showNetWorkErrorAlertView];
@@ -91,7 +90,6 @@
     NSLog(@"self.delegate is %@",self.hvcDelegate);
     if ([self.hvcDelegate respondsToSelector:@selector(didRefreshPage)]){
         [self.hvcDelegate didRefreshPage];
-        [self.hvcDelegate hideIndicator];
     }else{
         NSLog(@"not response!");
     }

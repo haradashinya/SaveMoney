@@ -5,8 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SaveMoney.xcworkspace/xcuserdata/haradashinya.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HistoryViewController.m" afterPath="$PROJECT_DIR$/HistoryViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" afterPath="$PROJECT_DIR$/SaveMoney/SaveMoneyViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/router.js" afterPath="$PROJECT_DIR$/server/public/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveMoney/Drink.m" afterPath="$PROJECT_DIR$/SaveMoney/Drink.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" afterPath="$PROJECT_DIR$/server/public/views/drink_collection_view.js" />
     </list>
     <ignored path="SaveMoney.iws" />
@@ -39,7 +38,7 @@
       <file leaf-file-name="drink_collection_view.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/public/views/drink_collection_view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="6" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.89761573">
+            <state line="13" column="49" selection-start="570" selection-end="570" vertical-scroll-proportion="0.20196353">
               <folding />
             </state>
           </provider>
@@ -483,7 +482,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/drink_collection_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="6" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.89761573">
+        <state line="13" column="49" selection-start="570" selection-end="570" vertical-scroll-proportion="0.20196353">
           <folding />
         </state>
       </provider>
