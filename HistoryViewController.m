@@ -17,6 +17,7 @@
     BButton *summaryButton;
     UIActivityIndicatorView *indicator;
     Boolean isFirst;
+    CGRect summaryFrame;
     
 }
 
@@ -37,25 +38,25 @@ static id historyViewController;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
 
-    BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(0, 52, 340, 54)];
+    BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(0,0, 340, 54)];
     navButton.color = [UIColor orangeColor];
     navButton.isAccessibilityElement = NO;
     navButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
     [navButton setTitle:@"History" forState:UIControlStateNormal];
     [navButton setUserInteractionEnabled:NO];
     [self.view addSubview:navButton];
+    navButton.layer.zPosition = -10;
     
-    summaryButton = [[BButton alloc] initWithFrame:CGRectMake(235,55,83,45)];
-    summaryButton.layer.zPosition = 30.0f;
+    summaryButton = [[BButton alloc] initWithFrame:CGRectMake(235,3,83,45)];
+    summaryFrame = summaryButton.frame;
     [summaryButton.titleLabel setFont:[UIFont boldSystemFontOfSize:14]];
+    summaryButton.layer.zPosition = -10;
     summaryButton.color = [UIColor orangeColor];
     [summaryButton setTintColor:[UIColor yellowColor]];
     [summaryButton setTitle:[Helper currentTime] forState:UIControlStateNormal];
-    [summaryButton addTarget:self action:@selector(tappedSummaryButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:summaryButton];
+    
     
     Drink *drink = [Drink shared];
     
@@ -72,7 +73,7 @@ static id historyViewController;
     [self.webView loadRequest:request];
     CGFloat tabBarHeight = self.tabBarController.tabBar.frame.size.height + 50;
     
-    CGRect webFrame = CGRectMake(0,50 + 52,self.view.frame.size.width, self.view.frame.size.height - tabBarHeight - 41);
+    CGRect webFrame = CGRectMake(0,50,self.view.frame.size.width, self.view.frame.size.height - tabBarHeight - 41 + 52);
     
     self.webView.frame = webFrame;
     self.webView.delegate = self;
@@ -113,8 +114,9 @@ static id historyViewController;
     
     
 }
--(void)tappedSummaryButton:(id)sender
+-(void)tappedSummaryButton
 {
+    NSLog(@"fflfflfll");
     SummaryViewController *svc = [[SummaryViewController alloc] init];
     [self presentViewController:svc animated:NO completion:nil];
 }
@@ -128,9 +130,7 @@ static id historyViewController;
 -(void)didRefreshPage
 {
     [Helper clearCache];
-//    [self.webView stringByEvaluatingJavaScriptFromString:@"location.reload();"];
     [self.webView reload];
-//    [self.webView stringByEvaluatingJavaScriptFromString:@"window.refresh();"];
 }
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
@@ -182,6 +182,14 @@ static id historyViewController;
     
     
     return YES;
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint point = [touch locationInView:self.view];
+    if (CGRectContainsPoint(summaryFrame, point)){
+        [self tappedSummaryButton];
+    }
 }
 
 
