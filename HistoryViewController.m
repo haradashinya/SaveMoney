@@ -54,7 +54,8 @@ static id historyViewController;
     summaryButton.layer.zPosition = -10;
     summaryButton.color = [UIColor orangeColor];
     [summaryButton setTintColor:[UIColor yellowColor]];
-    [summaryButton setTitle:[Helper currentTime] forState:UIControlStateNormal];
+    [summaryButton setTitle:@"Summary" forState:UIControlStateNormal];
+    [summaryButton addTarget:self action:@selector(tappedSummaryButton) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:summaryButton];
     
     
@@ -67,7 +68,6 @@ static id historyViewController;
     self.url = [NSURL URLWithString:urlStr];
     
     self.webView = [[UIWebView alloc] init];
-    
     
 
     [self.webView loadRequest:request];
@@ -87,12 +87,6 @@ static id historyViewController;
     [self.view addSubview:self.webView];
     drink.hvcDelegate = self;
     
-    [[Admob alloc] addAdmobOn:self];
-    
-
-
-//    [self.view addSubview:self.webView];
-	// Do any additional setup after loading the view.
 }
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -185,6 +179,7 @@ static id historyViewController;
 }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    NSLog(@"ffjfj");
     UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInView:self.view];
     if (CGRectContainsPoint(summaryFrame, point)){

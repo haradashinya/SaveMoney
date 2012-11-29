@@ -47,22 +47,14 @@ $redColor: rgba(200, 34, 43, 0.87);
 }
 
 
-#summary-header {
-  margin-bottom: 10px;
-}
 
-
-.summary-title {
-  text-align:center;
-  font-size: 50px;
-};
 
 
 
 
 .summary-li {
   @include gradient($tableBackgroundColor,darken($tableBackgroundColor,0.9));
-  margin: 0px 0.5px 0.5px 0px;
+  margin: 0px 0px 0.5px 0px;
   color: black;
   height: 50px;
   list-style-type: none;

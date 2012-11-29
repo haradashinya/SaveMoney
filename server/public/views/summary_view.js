@@ -2,28 +2,14 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 	var SummaryView = Backbone.View.extend({
 			initialize:function(){
 				this.renderInit();
-				this.renderHeader();
 				this.fetchDrinks();
 			},
 			types: ["drip_coffee","cafe_late"],
 		  // create base template
 			renderInit:function(){
-
 				var tmp = _.template(template);
 				this.$el.html(tmp);
 				return this;
-			},
-		// show h1
-			renderHeader:function(){
-				var opts = {
-					year: this.collection.currentInfo().year,
-					month: this.collection.currentInfo().month,
-					className: "summary-title"
-				};
-				var hTmpl = "<h1 class='<%= className %>'><%= year %> / <%= month %></h1>";
-				// for debug
-				if (!hTmpl) hTmpl = "<h1 class='<%= className %>'>2012 : 11</h1>";
-				this.$el.find("#summary-header").html(_.template(hTmpl,opts));
 			},
 		/**
 		 *
@@ -79,12 +65,15 @@ define(["zepto","underscore","backbone","lib/text!templates/summary.html"],funct
 				this.$el.find("#summary-list").html(dom);
 				return this;
 			},
+		renderAll:function(data){
+
+			return this;
+		},
 
 		fetchDrinks:function(){
 			var self = this;
 			var typeMap = this.collection.incCountByType();
 			var res = [];
-
 			var injectItem = function(typeMap){
 				Object.keys(typeMap).forEach(function(item){
 					res.push({type: item,count:typeMap[item]});

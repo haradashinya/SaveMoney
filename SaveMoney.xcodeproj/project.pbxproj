@@ -27,6 +27,7 @@
 		06A8025D1651DA7700BCAEBD /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8025C1651DA7700BCAEBD /* BButton.m */; };
 		06A802641651E19E00BCAEBD /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A802631651E19E00BCAEBD /* CMPopTipView.m */; };
 		06A80268165229F200BCAEBD /* Underline.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A80267165229F200BCAEBD /* Underline.m */; };
+		06AF0EA2166800F100482470 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AF0EA1166800F100482470 /* Constants.m */; };
 		06B116F016578C8900731B5E /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B116EF16578C8900731B5E /* FXLabel.m */; };
 		06BF3539163D4FBA00F34C75 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BF3538163D4FBA00F34C75 /* User.m */; };
 		06C51568165B19C900E55E77 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C51567165B19C900E55E77 /* SummaryViewController.m */; };
@@ -106,6 +107,8 @@
 		06A802631651E19E00BCAEBD /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
 		06A80266165229F200BCAEBD /* Underline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Underline.h; sourceTree = "<group>"; };
 		06A80267165229F200BCAEBD /* Underline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Underline.m; sourceTree = "<group>"; };
+		06AF0EA0166800F100482470 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Pods/Constants.h; sourceTree = "<group>"; };
+		06AF0EA1166800F100482470 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Pods/Constants.m; sourceTree = "<group>"; };
 		06B116EE16578C8900731B5E /* FXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXLabel.h; sourceTree = "<group>"; };
 		06B116EF16578C8900731B5E /* FXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXLabel.m; sourceTree = "<group>"; };
 		06BF3537163D4FBA00F34C75 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 				06312ABB16494A27003C62CC /* EditDrinkView.h */,
 				06312ABC16494A27003C62CC /* EditDrinkView.m */,
 				06A80266165229F200BCAEBD /* Underline.h */,
+				06AF0EA0166800F100482470 /* Constants.h */,
+				06AF0EA1166800F100482470 /* Constants.m */,
 				06A80267165229F200BCAEBD /* Underline.m */,
 				06A802501651CB6E00BCAEBD /* HistoryViewController.h */,
 				06A802511651CB6E00BCAEBD /* HistoryViewController.m */,
@@ -510,6 +515,7 @@
 				06B116F016578C8900731B5E /* FXLabel.m in Sources */,
 				06C51568165B19C900E55E77 /* SummaryViewController.m in Sources */,
 				06C5156C165B2D6600E55E77 /* BBLabel.m in Sources */,
+				06AF0EA2166800F100482470 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

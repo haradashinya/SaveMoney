@@ -5,17 +5,10 @@
   background: red;
   color: white; }
 
-#summary-header {
-  margin-bottom: 10px; }
-
-.summary-title {
-  text-align: center;
-  font-size: 50px; }
-
 .summary-li {
   background-color: rgba(237, 237, 237, 0.8);
   background-image: -webkit-linear-gradient(rgba(237, 237, 237, 0.8), rgba(235, 235, 235, 0.8));
-  margin: 0px 0.5px 0.5px 0px;
+  margin: 0px 0px 0.5px 0px;
   color: black;
   height: 50px;
   list-style-type: none;

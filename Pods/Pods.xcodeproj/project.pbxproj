@@ -12,6 +12,7 @@
 		03A477271D544A949148F7DC /* BlocksKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3FF043AEC57449AA40D3243 /* BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03EAB0219CBE478587794CD1 /* UIWebView+BlocksKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C289E7496F2B42119DA063FD /* UIWebView+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		064B503FB301429583F581CD /* NSMutableIndexSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EA38724E1A4C2F91BEC12E /* NSMutableIndexSet+BlocksKit.m */; };
+		06AF0E9E166800EC00482470 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AF0E9D166800EC00482470 /* Constants.m */; };
 		085B04BA08C64F49A6A02A18 /* fficonfig_i386.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBBFBB2247E4B7AAD772950 /* fficonfig_i386.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A04A06D09A444CEA5A98A84 /* BKMacros.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 746EDBCE824D40C5AFDC2E30 /* BKMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AB9304C0D66470D88119EA3 /* NSMutableDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DE20FB504748489DBFD2D492 /* NSMutableDictionary+BlocksKit.m */; };
@@ -213,6 +214,8 @@
 		04E52FD092E94D8093C080E6 /* JSONKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = JSONKit/JSONKit.h; sourceTree = SOURCE_ROOT; };
 		05700EE63E90462E89D3E3C7 /* NSMutableDictionary+BlocksKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+BlocksKit.h"; path = "BlocksKit/BlocksKit/NSMutableDictionary+BlocksKit.h"; sourceTree = SOURCE_ROOT; };
 		0598319C8AE646128ADBC0B3 /* NSDictionary+BlocksKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BlocksKit.h"; path = "BlocksKit/BlocksKit/NSDictionary+BlocksKit.h"; sourceTree = SOURCE_ROOT; };
+		06AF0E9C166800EC00482470 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		06AF0E9D166800EC00482470 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		0B815646B601477EB849572B /* GADInterstitial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GADInterstitial.h; path = AdMob/GADInterstitial.h; sourceTree = SOURCE_ROOT; };
 		0BB617753A10490E838CC8C4 /* NSMutableSet+BlocksKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableSet+BlocksKit.m"; path = "BlocksKit/BlocksKit/NSMutableSet+BlocksKit.m"; sourceTree = SOURCE_ROOT; };
 		0D0A31409B9E4917858F77B1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +359,8 @@
 		1E1B3A3B02C74A47844B1446 = {
 			isa = PBXGroup;
 			children = (
+				06AF0E9C166800EC00482470 /* Constants.h */,
+				06AF0E9D166800EC00482470 /* Constants.m */,
 				91267820226745989933FDBF /* Products */,
 				844E95EACF0F466C989E56E9 /* Pods */,
 				B376A2F4E5734829BF394031 /* Targets Support Files */,
@@ -659,6 +664,7 @@
 				A472009675DA4271A6E207C5 /* raw_api.c in Sources */,
 				033E99834D3146BB980C205F /* types.c in Sources */,
 				985154B784E049A4A45D45EE /* PodsDummy_Pods.m in Sources */,
+				06AF0E9E166800EC00482470 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

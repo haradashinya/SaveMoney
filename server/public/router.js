@@ -7,7 +7,8 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 		var Router = Backbone.Router.extend({
 			routes: {
 				"users/:uuid/drinks/edit": "editDrink",
-				"users/:uuid/drinks/summary":"showSummary"
+				"users/:uuid/drinks/summary":"showSummary",
+				"users/:uuid/drinks/summary*all":"showSummaryAll"
 			},
 
 			editDrink:function(uuid){
@@ -20,6 +21,11 @@ define(["zepto","underscore","backbone","drink_collection","drink_collection_vie
 				window.uuid = uuid;
 				var summaryView = new SummaryView({collection: drinks});
 				$("#content").html(summaryView.el);
+			},
+			showSummaryAll: function(uuid,all){
+				var summaryView = new SummaryView({collection: drinks});
+				$("#content").html(summaryView.renderAll().el);
+
 			}
 		});
 

@@ -33,7 +33,7 @@ define(["zepto","underscore","backbone","lib/text!templates/edit_drink.html",
 				return this;
 			},
 			showError:function(){
-				this.$el.html("<h1>There's no drinks</h1>");
+				this.$el.html("<h1 class='warning'>There's no drinks</h1>");
 				this.$el.css("text-align",'center');
 				this.$el.css("margin-top","10px");
 			},

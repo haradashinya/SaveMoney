@@ -19,6 +19,9 @@ define(["zepto","underscore","backbone","drink"],
 				},this);
 				return typeMap;
 			},
+			drinkAll:function(){
+				return this.toJSON();
+			},
 			drinksByFilteredThisMonth:function(){
 				var current = this.currentInfo();
 				var items = this.toJSON();

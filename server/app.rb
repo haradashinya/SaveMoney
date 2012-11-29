@@ -28,7 +28,6 @@ Mongoid.configure do |config|
 end
 
 get "/" do
-	p "callellelele"
 	File.read(File.join("public","index.html"))
 end
 
