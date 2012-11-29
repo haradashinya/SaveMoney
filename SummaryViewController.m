@@ -129,8 +129,8 @@
 -(void)tappedAllButton:(id)sender
 {
     NSLog(@"tappeed alll");
-    NSString *js = [NSString stringWithFormat:@"location.href = '#'"];
-    [webView stringByEvaluatingJavaScriptFromString:@"location.href='all'"];
+    NSString *js = [NSString stringWithFormat:@"location.hash = '#'"];
+    [webView stringByEvaluatingJavaScriptFromString:@"location.hash='all'"];
     
 }
 -(void)tappedCloseButton:(id)sender

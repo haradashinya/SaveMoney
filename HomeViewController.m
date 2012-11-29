@@ -34,8 +34,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [[Admob alloc] addAdmobOn:self];
+    
+    
+//    [[Admob alloc] addAdmobOn:self];
     
     user = [User shared];
     drink = [Drink shared];

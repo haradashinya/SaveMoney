@@ -58,6 +58,14 @@
     [self addObserver:self forKeyPath:@"currentCoffee" options:NSKeyValueObservingOptionNew context:nil];
     [drink addObserver:self forKeyPath:@"totalPrice" options:(NSKeyValueObservingOptionNew| NSKeyValueObservingOptionOld) context:nil];
     
+    
+    BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(-10, 0, 340, 54)];
+    navButton.color = [UIColor orangeColor];
+    navButton.isAccessibilityElement = NO;
+    navButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+    [navButton setTitle:@"Save" forState:UIControlStateNormal];
+    [navButton setUserInteractionEnabled:NO];
+    [self.view addSubview:navButton];
 }
 
 -(void)addCurrentPriceLabel
@@ -67,11 +75,9 @@
     if ([Helper isIphone5]){
         currentPriceLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0, 300 * TO_IPhone5, 320, 50 * TO_IPhone5)];
         lineLabel = [[Underline alloc] initWithFrame:CGRectMake(60,330 * TO_IPhone5,200,10 * 1.1)];
-        NSLog(@"ffff");
     }else{
         currentPriceLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0,300,320, 50)];
         lineLabel = [[Underline alloc] initWithFrame:CGRectMake(60,330,200,10)];
-        NSLog(@"helelleleell");
     }
     
     [currentPriceLabel setTextAlignment:NSTextAlignmentCenter];
@@ -116,9 +122,8 @@
 }
 -(void)addMoneyLabel
 {
-    moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(10,50, 320, 50)];
-    
-    moneyLabel.font = [UIFont boldSystemFontOfSize:24.0];
+    moneyLabel = [[FXLabel alloc] initWithFrame:CGRectMake(0,50,320, 50)];
+    moneyLabel.font = [UIFont boldSystemFontOfSize:26.0];
     [moneyLabel setTextAlignment:NSTextAlignmentCenter];
     moneyLabel.backgroundColor = [UIColor clearColor];
     
@@ -126,8 +131,9 @@
     
     BButton *btn;
     
-    btn = [[BButton alloc] initWithFrame:CGRectMake(5,52,60,44)];
-    btn.layer.cornerRadius = 22;
+    btn = [[BButton alloc] initWithFrame:CGRectMake(5,5,60,44)];
+    btn.layer.cornerRadius = 10;
+    btn.layer.zPosition = 50;
     
     btn.color = [UIColor orangeColor];
     [btn setTintColor:[UIColor yellowColor]];
@@ -176,9 +182,9 @@
     float screenHeight = [UIScreen mainScreen].bounds.size.height;
     BButton *btn = [[BButton alloc] init];
     if([Helper isIphone5]){
-        btn.frame = CGRectMake(-10,screenHeight * 0.75,340,50 * 1.4);
+        btn.frame = CGRectMake(-10,screenHeight * 0.76,340,50 * 1.4);
     }else{
-        btn.frame = CGRectMake(-10,screenHeight * 0.75, 340,50);
+        btn.frame = CGRectMake(-10,screenHeight * 0.76, 340,50);
     }
     btn.color = [UIColor orangeColor];
     [btn setTintColor:[UIColor yellowColor]];
@@ -247,7 +253,7 @@
 -(void)pressedSaveBtn:(id)sender
 {
     [drink performCreateWith:[self.currentCoffee valueForKey:@"name"]];
-    moneyLabel.text = @"updating.";
+    moneyLabel.text = @"Updating...";
     
 }
 - (void)didReceiveMemoryWarning
