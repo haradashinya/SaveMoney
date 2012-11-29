@@ -33,17 +33,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[Admob alloc] addAdmobOn:self];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self addCloseButton];
+    [self addNavButton];
+    [self addCloseAndAllButton];
     [self addSummaryView];
-    
-    
-    
-    
-    
-
-    
 	// Do any additional setup after loading the view.
 }
 -(void)addSummaryView
@@ -53,8 +46,7 @@
     NSString *uuid = [[User shared] uuid];
     NSString *urlStr = [NSString stringWithFormat:@"http://localhost:9393#users/%@/drinks/summary",uuid];
     
-    
-    webView =  [[UIWebView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 100, self.view.frame.size.width, self.view.frame.size.height - 98)];
+    webView =  [[UIWebView alloc] initWithFrame:CGRectMake(0,50, self.view.frame.size.width, self.view.frame.size.height - 48)];
     webView.delegate = self;
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
     [webView setBackgroundColor:[UIColor clearColor]];
@@ -99,18 +91,11 @@
 }
 
 
--(void)addCloseButton
+
+-(void)addCloseAndAllButton
 {
-    BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(0, 52, 340, 54)];
-    navButton.color = [UIColor orangeColor];
-    navButton.isAccessibilityElement = NO;
-    navButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
-    [navButton setTitle:[Helper currentTime] forState:UIControlStateNormal];
-    [navButton setUserInteractionEnabled:NO];
-    [self.view addSubview:navButton];
     
-    
-    BButton *closeButton = [[BButton alloc] initWithFrame:CGRectMake(242,55,73, 42)];
+    BButton *closeButton = [[BButton alloc] initWithFrame:CGRectMake(242,5,73, 42)];
     [closeButton setTitle:@"Close" forState:UIControlStateNormal];
     closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0];
     closeButton.color = [UIColor orangeColor];
@@ -118,7 +103,7 @@
     [self.view addSubview:closeButton];
     [closeButton addTarget:self action:@selector(tappedCloseButton:) forControlEvents:UIControlEventTouchUpInside];
     
-    BButton *allButton = [[BButton alloc] initWithFrame:CGRectMake(5,55,70, 42)];
+    BButton *allButton = [[BButton alloc] initWithFrame:CGRectMake(5,5,70, 42)];
     [allButton setTitle:@"All" forState:UIControlStateNormal];
     allButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0];
     allButton.color = [UIColor orangeColor];
@@ -126,11 +111,21 @@
     [self.view addSubview:allButton];
     [allButton addTarget:self action:@selector(tappedAllButton:) forControlEvents:UIControlEventTouchUpInside];
 }
+-(void)addNavButton
+{
+    BButton *navButton = [[BButton alloc] initWithFrame:CGRectMake(0,0, 340, 54)];
+    navButton.color = [UIColor orangeColor];
+    navButton.isAccessibilityElement = NO;
+    navButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+    [navButton setTitle:[Helper currentTime] forState:UIControlStateNormal];
+    [navButton setUserInteractionEnabled:NO];
+    [self.view addSubview:navButton];
+}
 -(void)tappedAllButton:(id)sender
 {
-    NSLog(@"tappeed alll");
-    NSString *js = [NSString stringWithFormat:@"location.hash = '#'"];
-    [webView stringByEvaluatingJavaScriptFromString:@"location.hash='all'"];
+    NSString *uuid = [[User shared] uuid];
+    NSString *hash = [NSString stringWithFormat:@"users/%@/drinks/summary/all",uuid];
+    NSString *js = [NSString stringWithFormat:@"location.hash = '#%@'",hash];
     
 }
 -(void)tappedCloseButton:(id)sender
